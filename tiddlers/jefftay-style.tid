@@ -1,0 +1,149 @@
+created: 20240323135233548
+creator: 马不前
+modified: 20240323140301163
+modifier: 马不前
+tags: $:/tags/Stylesheet
+title: jefftay-style
+
+/* 添加 $:/tags/Stylesheet 以应用 */
+.matched {background-color:#ffc;}
+.tw-context {
+  border:0px solid #eee;background-color:#eee;
+  word-break: break-all; word-wrap: break-word;}
+
+p {
+  color: #231E1A;
+}
+
+ul li {
+  color: #231E1A;
+}
+
+/* 标题阴影 */
+/*
+.tc-site-title {
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-shadow: 0em 0.2em 0.25em #bbb;
+}
+*/
+
+
+/* 增加条目框框圆角 */
+.tc-tiddler-frame {
+    border-radius: 15px;
+}
+
+/* 增加条目拉风箱效果 */
+/* credit: 韩宇 hahaha.cc */
+/* source: 阿杰的博客 veryjack.com */
+.tc-tiddler-frame:hover {
+    box-shadow: 0px 2px 20px rgba(153,153,153,0.2) !important;
+}
+
+/* 外部超链接增加箭头 */
+a.tc-tiddlylink-external::after {
+  content: "\2197";
+}
+
+
+/* 修改正文字间距和行高 */
+p {
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 1.8;
+}
+
+/* 修改有序和无效列表行间距 */
+ul li {
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.2px;
+  margin-left: -10px;
+}
+
+/* 修改主标题字体大小和重量 */
+.tc-site-title {
+  letter-spacing: 0.2px;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+/* 修改 H2 标题大小 */
+h2.tc-title {
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+/* 修改 blockquote 行高 */
+blockquote {
+  line-height: 1.7;
+}
+
+/* 修改框架曲率 */
+/*
+.tc-tiddler-frame, .tc-sidebar-lists input {
+  border-radius: 12px;
+}
+*/
+
+/* 修改 code block 字体 */
+
+code {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+/* 颜色设置 */
+
+/* 引用模块样式 */
+blockquote {
+  border-left: 6px solid #c4c4c4;
+}
+
+/* 条目副标题 */
+.tc-subtitle {
+  color: #ccc;
+}
+
+
+
+/* 条目标题
+h2.tc-title {
+  color: #284b63;
+}
+*/
+
+/* 选中文字 */
+::selection {
+  background-color: black;
+  color: white;
+}
+
+/* 侧边栏搜索框 */
+.tc-sidebar-lists input {
+  color: #244b54;
+}
+
+/* 颜色设置备份 */
+/*
+p {
+  color: #343c3f;
+}
+
+ul li {
+  color: #343c3f;
+}
+
+h2.tc-title {
+  color: #2d6d77;
+}
+*/
+
+.tc-powered-by-tiddlywiki-banner {
+	position: fixed;
+	right: 1em;
+	bottom: 0;
+    z-index: 2000;
+}
