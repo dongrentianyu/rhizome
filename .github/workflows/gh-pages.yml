@@ -26,15 +26,15 @@ jobs:
           node-version: '18'
 
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v3
         with:
           path: |
             **/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
-          
+
       - name: Install Dependency
         run: npm install
-        
+
       # - name: 运行zx构建
       #   run: npm run zx-build
 
@@ -52,4 +52,4 @@ jobs:
           path: ./public-dist
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.4
+        uses: actions/deploy-pages@v2.0.4
