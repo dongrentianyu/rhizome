@@ -1,5 +1,17 @@
 created: 20240328071854629
 creator: 马不前
-modified: 20240328071854629
+modified: 20240328083720515
 modifier: 马不前
 title: TiddlyWiki
+
+<<<
+__TiddlyWiki 是丰富的、交互式的工具，用于处理复杂的数据，不易融入如试算表或文字处理的传统工具的结构__。
+
+TiddlyWiki 旨在适应围绕您的大脑，帮助您处理不合适的事情。[[基本的理念|https://bramchen.github.io/tw5-docs/zh-Hans/#Philosophy%20of%20Tiddlers]]是更有用的、可重复使用信息，如果我们把它切成语义上有意义的片段 -- [[条目|https://bramchen.github.io/tw5-docs/zh-Hans/#Tiddlers]] -- 并赋予标题，以便他们可以用[[链接|https://bramchen.github.io/tw5-docs/zh-Hans/#Linking%20in%20WikiText]]、[[标签|https://bramchen.github.io/tw5-docs/zh-Hans/#Tagging]]、[[清单|https://bramchen.github.io/tw5-docs/zh-Hans/#ListField]]和[[宏|https://bramchen.github.io/tw5-docs/zh-Hans/#Macros]]等方式[[结构化|https://bramchen.github.io/tw5-docs/zh-Hans/#Structuring TiddlyWiki]]信息。条目使用 WikiText 标记，简明地表示广泛的文本格式和超文本特性。TiddlyWiki 旨在为处理条目提供流体接口，允许其聚合组成更长的故事。
+
+人们爱用 TiddlyWiki，因为它不须任何复杂的服务器基础设施、因为它是[[开放源码|https://bramchen.github.io/tw5-docs/zh-Hans/#OpenSource]]，它带给人们前所未有的自由来保持他们在自己的控制之下的珍贵信息。
+
+TiddlyWiki 最初是由 JeremyRuston 创建，现在则是一个忙碌的独立开发者[[社区|https://bramchen.github.io/tw5-docs/zh-Hans/#Community]]的蓬勃发展的开放源码项目。
+<<<
+
+在本站中，[[TiddlyWiki|https://tiddlywiki.com/]]被称为太微。上述内容来自[[太微官方中文文档|https://bramchen.github.io/tw5-docs/zh-Hans/]]。

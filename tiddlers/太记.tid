@@ -1,0 +1,13 @@
+created: 20240328072726644
+creator: 马不前
+modified: 20240328075530882
+modifier: 马不前
+title: 太记
+
+* [[Site|https://tidgi.fun/]]: `https://tidgi.fun/`
+* [[Code|https://github.com/tiddly-gittly/TidGi-Desktop/]]: `https://github.com/tiddly-gittly/TidGi-Desktop/`
+* [[Demo|https://tiddly-gittly.github.io/Tiddlywiki-NodeJS-Github-Template/]]: `https://tiddly-gittly.github.io/Tiddlywiki-NodeJS-Github-Template/`
+* [[DownLoad|https://github.com/tiddly-gittly/TidGi-Desktop/releases/latest/]]: `https://github.com/tiddly-gittly/TidGi-Desktop/releases/latest/`
+* [[Official-Website-Code|https://github.com/tiddly-gittly/TidGi-Official-Website/]]: `https://github.com/tiddly-gittly/TidGi-Official-Website/`
+
+太记是由林一二开发的[[TiddlyWiki]]桌面启动器。同时还开发了太记安卓端。太记本身可以不依赖Github发布网址，但需要内网穿透。
