@@ -1,6 +1,8 @@
+caption: {{$:/core/images/gitter}} 展示大纲按钮
 created: 20240323145913955
 creator: 马不前
-modified: 20240323152437553
+description: 展示大纲按钮
+modified: 20240328070934760
 modifier: 马不前
 tags: $:/tags/ViewToolbar
 title: 展示大纲按钮
