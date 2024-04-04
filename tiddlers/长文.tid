@@ -1,0 +1,12 @@
+created: 20240404055150272
+creator: 马不前
+modified: 20240404055742607
+modifier: 马不前
+tags: TableOfContents
+title: 长文
+
+我并不是特别喜欢写长文，我以为长文实际上是限制了思考的。但为了尽可能写得有深度，还是会写一些长文。
+
+<$list filter="[long-text-toc[yes]]">
+<$link><<currentTiddler>></$link>
+</$list>
