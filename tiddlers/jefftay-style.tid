@@ -1,8 +1,8 @@
 created: 20240323135233548
 creator: 马不前
-modified: 20240407152836898
+modified: 20240407164347650
 modifier: 马不前
-tags: $:/tags/Stylesheet
+tags: $:/tags/Stylesheet Configuration
 title: jefftay-style
 
 /* 添加 $:/tags/Stylesheet 以应用 */
@@ -17,11 +17,11 @@ p {
   color: #231E1A;
 }
 */
-
+/* 
 ul li {
   color: #231E1A;
 }
-
+*/
 /* 标题阴影 */
 /*
 .tc-site-title {
