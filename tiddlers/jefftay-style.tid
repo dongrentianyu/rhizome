@@ -1,6 +1,6 @@
 created: 20240323135233548
 creator: 马不前
-modified: 20240327161822802
+modified: 20240407152836898
 modifier: 马不前
 tags: $:/tags/Stylesheet
 title: jefftay-style
@@ -11,9 +11,12 @@ title: jefftay-style
   border:0px solid #eee;background-color:#eee;
   word-break: break-all; word-wrap: break-word;}
 
+/* 注释掉下面的颜色，不然在黑暗模式下，文字颜色也会是黑色的。 */
+/* 
 p {
   color: #231E1A;
 }
+*/
 
 ul li {
   color: #231E1A;
