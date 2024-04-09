@@ -2,7 +2,13 @@ GM-back-to-top: yes
 caption: 目录
 created: 20240323134544955
 creator: 马不前
-modified: 20240328063608146
+modified: 20240408161707025
 modifier: 马不前
 tags: $:/tags/SideBar
 title: TableOfContents
+
+<div class="tc-table-of-contents">
+
+<<toc-selective-expandable 'TableOfContents'>>
+
+</div>

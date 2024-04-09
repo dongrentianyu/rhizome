@@ -1,0 +1,17 @@
+caption: tabs加强版
+created: 20240408161650028
+creator: 马不前
+modified: 20240408161650028
+modifier: 马不前
+tags: $:/tags/TextEditor/Snippet
+title: $:/plugins/mabuqian/gumo-customisation/Snippet/tabs-enhancedtabs
+type: text/vnd.tiddlywiki
+
+<span class="myTOC">
+<$macrocall
+	$name="navx"
+	tag="TableOfContents"
+ selectedTiddler="$:/temp/toc/selectedTiddler"
+	unselectedText="<p>选择目录中的一个主题，点击箭头可展开主题。</p>"
+	missingText="<p>佚失条目。</p>"/>
+</span>
