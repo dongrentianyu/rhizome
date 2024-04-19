@@ -1,12 +1,13 @@
 created: 20240328065545840
 creator: 马不前
-modified: 20240407172255454
+modified: 20240419042337266
 modifier: 马不前
 tags: 关于系列
 title: 关于本站
 
-* [ext[Github|https://github.com/dongrentianyu/rhizome]]`https://github.com/dongrentianyu/rhizome/`
-* [ext[Site|https://dongrentianyu.github.io/rhizome]]`https://dongrentianyu.github.io/rhizome/`
+* <<nsite "Github" "https://github.com/dongrentianyu/rhizome">>
+* <<nsite "Site" "https://dongrentianyu.github.io/rhizome">>
+
 
 本站使用[[TiddlyWiki]]作为框架，使用[[太记]]作为启动器，使用[[Github|https://github.com/]]作为托管和发布平台。样式使用了[[zm]]博客的。
 
@@ -17,3 +18,4 @@ title: 关于本站
 * [[长文]]
 * [[谈讬]]
 * [[关于系列]]
+* [[我推荐的]]

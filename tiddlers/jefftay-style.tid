@@ -1,7 +1,7 @@
 created: 20240323135233548
 creator: 马不前
-list-after: $:/themes/tiddlywiki/vanilla/base
-modified: 20240410070919016
+list-after: $:/themes/linonetwo/itonnote/variables.css
+modified: 20240419035233921
 modifier: 马不前
 tags: $:/tags/Stylesheet Configuration
 title: jefftay-style
@@ -147,11 +147,16 @@ h2.tc-title {
 
 /* 修改编辑器按钮的颜色，不然默认透明的完全看不清楚。同时增大了边框，不然也很难使用。 */
 
+/*
+
+background-color: rgb(0 0 0);
+color: #aeaeae;
+fill: #aeaeae; 
+*/
+
 .tc-editor-toolbar button {
     vertical-align: middle;
-    background-color: rgb(0 0 0);
-    color: #aeaeae;
-    fill: #aeaeae;
+
     border-radius: 4px;
     padding: 8px;
     margin: 2px 0 2px 4px;
