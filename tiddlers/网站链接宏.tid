@@ -1,11 +1,11 @@
 code-body: yes
 created: 20240419040528151
 creator: 马不前
-modified: 20240419042120674
+modified: 20240420053339052
 modifier: 马不前
 tags: Configuration $:/tags/Macro
 title: 网站链接宏
 
 \define nsite(name,site)
-[[$name$|$site$]]`$site$`
+[[$name$|$site$]]<$button message="tm-copy-to-clipboard" param="$site$" tooltip="点击可复制网址">`$site$`</$button>
 \end
