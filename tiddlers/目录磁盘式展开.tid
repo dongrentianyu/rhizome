@@ -1,0 +1,8 @@
+created: 20240501115346018
+creator: 马不前
+modified: 20240501120615188
+modifier: 马不前
+tags: Configuration
+title: 目录磁盘式展开
+
+<$echarts $tiddler="目录磁盘式展开文件" $height="500px" dblclick="(params, parentWidget) => { console.log(params); parentWidget.dispatchEvent({ type: 'tm-navigate', navigateTo: params.data.name }) }" />
