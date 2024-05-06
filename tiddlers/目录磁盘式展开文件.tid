@@ -1,6 +1,6 @@
 created: 20240501115419313
 creator: 马不前
-modified: 20240501120632371
+modified: 20240505081639165
 modifier: 马不前
 tags: Configuration
 title: 目录磁盘式展开文件
@@ -20,7 +20,7 @@ title: 目录磁盘式展开文件
 <$list filter="[!is[system]tag[TableOfContents]sort[title]]" variable="pluginName" counter="counter1">
 `        {
           "name": "`<$list filter="[<pluginName>has[title]]"><$text text={{{ [<pluginName>get[title]] }}}/></$list>`",
-          "value": `<$text text={{{ [<pluginName>get[text]length[]else[0]] }}}/>`,
+          "value": `<$text text={{{ [all[tiddlers]in-tagtree-of<pluginName>count[]else[0]] }}}/>`,
           "children": [
 `
 <$list filter="[tag<pluginName>!is[system]]" variable="pluginShadow" counter="counter2">
