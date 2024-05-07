@@ -1,0 +1,33 @@
+created: 20240507100227338
+creator: 马不前
+modified: 20240507101448003
+modifier: 马不前
+node-pill: no
+tags: Configuration
+title: 快速查看文章
+
+选择日期，显示日期所在年月的修改条目，非创建条目。月份比日期展示要好一些，不然要反复点击查看内容。未来可能会换其他方式，暂时先这样。
+
+本站从2024-03开始。
+
+<$edit-text tiddler="$:/status/date-slect" field="date-slect" type="date" />
+
+<$let
+date={{$:/status/date-slect!!date-slect}}
+date-split={{{[<date>split[]first[7]join[]] }}}
+filter={{{ [!is[system]]:filter[get[modified]format:date[YYYY-0MM]match<date-split>] }}} >
+<% if [<filter>match[]] %>
+  <<date-split>>暂无内容，请选择其他日期。
+<% else %>
+<<date-split>>内容如下
+
+<div style="column-count:3;">
+
+<$list filter="[!is[system]]:filter[get[modified]format:date[YYYY-0MM]match<date-split>]" >
+
+<$link><<currentTiddler>></$link>
+
+</$list>
+</div>
+<% endif %>
+</$let>
