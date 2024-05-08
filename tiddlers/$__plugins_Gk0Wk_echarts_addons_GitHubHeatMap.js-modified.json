@@ -6,12 +6,12 @@
         "title": "$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js-modified",
         "type": "application/javascript",
         "module-type": "echarts-component",
-        "caption": "GitHubHeatMap",
+        "caption": "GitHubHeatMap.js-modified",
         "echarts.author": "Gk0Wk(Sttot)",
         "echarts.readme": "{{$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap-readme}}",
         "Modern.TiddlyDev#IncludeSource": "false",
         "Modern.TiddlyDev#Origin": "addons/Gk0Wk/GitHubHeatMap/GitHubHeatMap.ts",
-        "modified": "20240508155649541",
+        "modified": "20240508163003397",
         "modifier": "马不前",
         "tags": "Configuration"
     }

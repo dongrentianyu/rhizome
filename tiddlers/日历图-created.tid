@@ -1,10 +1,10 @@
 created: 20240507101508716
 creator: 马不前
-modified: 20240508152004000
+modified: 20240508163149209
 modifier: 马不前
 node-pill: no
-tags: 
-title: 日历图
+tags: Configuration
+title: 日历图-created
 
 <div style="max-width: 800px; height: 230px; margin: 0 auto;">
     <center style="font-size:20px;">
@@ -24,5 +24,5 @@ title: 日历图
             ►
         </$button>
     </center>
-    <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js" $width="100%" $height="100%" year={{$:/state/heatmap!!year}} subfilter="[all[tiddlers]!is[shadow]!is[system]]"/>
+    <$echarts $tiddler="$:/plugins/Gk0Wk/echarts/addons/GitHubHeatMap.js-created" $width="100%" $height="100%" year={{$:/state/heatmap!!year}} subfilter="[all[tiddlers]!is[shadow]!is[system]]"/>
 </div>
