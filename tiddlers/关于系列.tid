@@ -1,12 +1,10 @@
 created: 20240328062819696
 creator: 马不前
-modified: 20240430095437974
+modified: 20240511074005680
 modifier: 马不前
 tags: TableOfContents
 title: 关于系列
 
 关于即about，简单来说就是关于一些话题的想法。有的很短，有的也很长。之所以说是想法，是因为还没有系统认真去研究。所以只能称之为想法。但我尽可能写得丰厚一点，不至于太短。
 
-<$list filter="[tag<currentTiddler>]">
-<$link><<currentTiddler>></$link>
-</$list>
+<<card-x >>

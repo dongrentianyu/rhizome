@@ -1,0 +1,25 @@
+code-body: yes
+created: 20240511045603350
+creator: 马不前
+modified: 20240511065818306
+modifier: 马不前
+tags: $:/tags/Macro Configuration
+title: card-x
+
+\define dbadge-x(subject,status, type:"primary")
+<div class="dbadge"><span class="dbadge-subject">$subject$</span><br><span class="dbadge-status dbadge-$type$ ">$status$</span></div>
+\end
+
+\define card-x(filter:"[tag<currentTiddler>]",type:"primary")
+<div class="flex-row">
+ <$list filter="$filter$ :sort:number:reverse[get[text]length[]]">
+  <$let a={{{ [<currentTiddler>get[text]length[]]}}}>
+  <div style="flex: 0 0 33%; max-width:33%;padding-right: 5px; padding-left: 5px;margin-bottom: 15px;" >
+    <div class="text-center">
+		<h3><$link><$transclude $variable="dbadge-x" subject=<<currentTiddler>> status=<<a>> type="$type$"/></$link></h3>
+    </div>
+  </div>
+		</$let>
+	</$list>
+</div>
+\end
