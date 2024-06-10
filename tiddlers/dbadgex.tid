@@ -1,0 +1,10 @@
+created: 20240610142259113
+creator: 马不前
+modified: 20240610150533985
+modifier: 马不前
+tags: $:/tags/Macro 宏相关
+title: dbadgex
+
+\define dbadgex(subject,status, type-1:"dark", type-2:"primary")
+<div class="dbadge"><span class="dbadge-subject dbadge-$type-1$"><$button message="tm-copy-to-clipboard" param="$subject$" tooltip="点击可复制">$subject$</$button></span><span class="dbadge-status dbadge-$type-2$ "><$button message="tm-copy-to-clipboard" param="$status$" tooltip="点击可复制">$status$</$button></span></div>
+\end

@@ -1,8 +1,8 @@
 created: 20240521100927835
 creator: 马不前
-modified: 20240521150757057
+modified: 20240523150833726
 modifier: 马不前
-tags: Configuration
+tags: Echarts
 title: sunburst-filter-addon
 
 <$let 
@@ -16,7 +16,7 @@ graphRootTiddler=<<filter>>
      },
     "data":  [
 `
-<$list filter="[!is[system]tag[TableOfContents]sort[title]]" variable="pluginName" counter="counter1">
+<$list filter=<<filter>> variable="pluginName" counter="counter1">
 `        {
           "name": "`<$list filter="[<pluginName>has[title]]"><$text text={{{ [<pluginName>get[title]] }}}/></$list>`",
           

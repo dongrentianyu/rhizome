@@ -1,9 +1,9 @@
 code-body: yes
 created: 20240419040528151
 creator: 马不前
-modified: 20240420053339052
+modified: 20240525151855767
 modifier: 马不前
-tags: Configuration $:/tags/Macro
+tags: $:/tags/Macro 宏相关
 title: 网站链接宏
 
 \define nsite(name,site)

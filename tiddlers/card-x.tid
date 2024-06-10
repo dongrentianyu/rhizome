@@ -1,9 +1,9 @@
 code-body: yes
 created: 20240511045603350
 creator: 马不前
-modified: 20240511065818306
+modified: 20240525151910028
 modifier: 马不前
-tags: $:/tags/Macro Configuration
+tags: $:/tags/Macro 宏相关
 title: card-x
 
 \define dbadge-x(subject,status, type:"primary")

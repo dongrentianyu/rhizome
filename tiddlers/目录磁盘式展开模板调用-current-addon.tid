@@ -1,10 +1,13 @@
-created: 20240501115419313
+created: 20240523145944941
 creator: 马不前
-modified: 20240523145659526
+modified: 20240523150156794
 modifier: 马不前
-tags: Echarts
-title: 目录磁盘式展开文件
+tags: 目录磁盘式展开
+title: 目录磁盘式展开模板调用-current-addon
 
+<$let 
+graphRootTiddler=<<currentTiddler>>
+>
 `{
   "tooltip": {
     "trigger": "item"
@@ -17,7 +20,7 @@ title: 目录磁盘式展开文件
       "leafDepth": 1,
       "data": [
 `
-<$list filter="[!is[system]tag[TableOfContents]sort[title]]" variable="pluginName" counter="counter1">
+<$list filter="[!is[system]tag<graphRootTiddler>sort[title]]" variable="pluginName" counter="counter1">
 `        {
           "name": "`<$list filter="[<pluginName>has[title]]"><$text text={{{ [<pluginName>get[title]] }}}/></$list>`",
           "value": `<$text text={{{ [all[tiddlers]in-tagtree-of<pluginName>count[]else[0]] }}}/>`,
@@ -142,3 +145,4 @@ title: 目录磁盘式展开文件
     }
   ]
 }`
+</$let>

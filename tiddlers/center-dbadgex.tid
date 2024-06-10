@@ -1,0 +1,13 @@
+code-body: yes
+created: 20240610140258362
+creator: 马不前
+modified: 20240610152053686
+modifier: 马不前
+tags: $:/tags/Macro 宏相关
+title: center-dbadgex
+
+\define cen-dbx(cn,en,type-1:"dark", type-2:"primary")
+<h1><center>
+<$transclude $variable="dbadgex" subject="$cn$" status="$en$" type-1="$type-1$" type-2="$type-2$"/>
+</center></h1>
+\end
