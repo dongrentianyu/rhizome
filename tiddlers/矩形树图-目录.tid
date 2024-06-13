@@ -1,0 +1,8 @@
+created: 20240501115346018
+creator: 马不前
+modified: 20240613110537648
+modifier: 马不前
+tags: 矩形树图
+title: 矩形树图-目录
+
+<$echarts $tiddler="矩形树图-目录-addon" $height="500px" dblclick="(params, parentWidget) => { console.log(params); parentWidget.dispatchEvent({ type: 'tm-navigate', navigateTo: params.data.name }) }" />

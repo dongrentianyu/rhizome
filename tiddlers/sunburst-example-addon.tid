@@ -1,46 +1,39 @@
-created: 20240523150501315
+created: 20240521032756116
 creator: 马不前
-modified: 20240523150617756
+modified: 20240613111638022
 modifier: 马不前
-tags: 目录磁盘式展开
-title: 目录磁盘式展开模板调用-filter-addon
+tags: 旭日图
+title: sunburst-example-addon
 
-<$let 
-graphRootTiddler=<<filter>>
->
 `{
-  "tooltip": {
-    "trigger": "item"
-  },
-  "series": [
-    {
-      "type": "treemap",
-      "visibleMin": 300,
-      "name": "目录磁盘式展开",
-      "leafDepth": 1,
-      "data": [
+  "series": {
+    "type": "sunburst",
+     "emphasis": {
+         "focus": "ancestor"
+     },
+    "data":  [
 `
-<$list filter=<<filter>> variable="pluginName" counter="counter1">
+<$list filter="[!is[system]tag[TableOfContents]sort[title]]" variable="pluginName" counter="counter1">
 `        {
           "name": "`<$list filter="[<pluginName>has[title]]"><$text text={{{ [<pluginName>get[title]] }}}/></$list>`",
-          "value": `<$text text={{{ [all[tiddlers]in-tagtree-of<pluginName>count[]else[0]] }}}/>`,
+          
           "children": [
 `
 <$list filter="[tag<pluginName>!is[system]]" variable="pluginShadow" counter="counter2">
 `          {
             "name": "`<$text text={{{ [<pluginShadow>removeprefix<pluginName>removeprefix[/]else<pluginShadow>] }}}/>`",
-            "value": `<$text text={{{ [<pluginShadow>get[text]length[]else[0]] }}}/>`,
+            "value": `<$text text={{{ [<pluginShadow>get[text]length[]else[1]] }}}/>`,
             "children": [
 `
 <$list filter="[tag<pluginShadow>!is[system]]" variable="plugina" counter="counter3">
 `        {
 				     	"name": "`<$text text={{{ [<plugina>get[title]] }}}/>`",
-				     	"value": `<$text text={{{ [<plugina>get[text]length[]else[0]] }}}/>`,
+				     	"value": `<$text text={{{ [<plugina>get[text]length[]else[1]] }}}/>`,
 							"children": [
 							`<$list filter="[tag<plugina>!is[system]]" variable="pluginb" counter="counter4">`
 							{
 							"name": "`<$text text={{{ [<pluginb>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<pluginb>get[text]length[]else[0]] }}}/>`,
+							"value": `<$text text={{{ [<pluginb>get[text]length[]else[1]] }}}/>`,
 							"children": [
 							`<$list filter="[tag<pluginb>!is[system]]" variable="pluginc" counter="counter5">`
 							{
@@ -50,32 +43,32 @@ graphRootTiddler=<<filter>>
 							`<$list filter="[tag<pluginc>!is[system]]" variable="plugind" counter="counter6">`
 							{
 							"name": "`<$text text={{{ [<plugind>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<plugind>get[text]length[]else[0]] }}}/>`,
+							"value": `<$text text={{{ [<plugind>get[text]length[]else[1]] }}}/>`,
 							"children": [
 							`<$list filter="[tag<plugind>!is[system]]" variable="plugine" counter="counter7">`
 							{
 							"name": "`<$text text={{{ [<plugine>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<plugine>get[text]length[]else[0]] }}}/>`,
+							"value": `<$text text={{{ [<plugine>get[text]length[]else[1]] }}}/>`,
 							"children": [
 							`<$list filter="[tag<plugine>!is[system]]" variable="pluginf" counter="counter8">`
 							{
 							"name": "`<$text text={{{ [<pluginf>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<pluginf>get[text]length[]else[0]] }}}/>`,
+							"value": `<$text text={{{ [<pluginf>get[text]length[]else[1]] }}}/>`,
 							"children": [
 							`<$list filter="[tag<pluginf>!is[system]]" variable="pluging" counter="counter9">`
 							{
 							"name": "`<$text text={{{ [<pluging>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<pluging>get[text]length[]else[0]] }}}/>`,
+							"value": `<$text text={{{ [<pluging>get[text]length[]else[1]] }}}/>`,
 							"children": [
 								`<$list filter="[tag<pluging>!is[system]]" variable="pluginh" counter="counter10">`
 								{
 								"name": "`<$text text={{{ [<pluginh>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<pluginh>get[text]length[]else[0]] }}}/>`,
+							"value": `<$text text={{{ [<pluginh>get[text]length[]else[1]] }}}/>`,
 							"children": [
 							`<$list filter="[tag<pluginh>!is[system]]" variable="plugini" counter="counter11">`
 							{
 							"name": "`<$text text={{{ [<plugini>get[title]] }}}/>`",
-							"value": `<$text text={{{ [<plugini>get[text]length[]else[0]] }}}/>`
+							"value": `<$text text={{{ [<plugini>get[text]length[]else[1]] }}}/>`
 							}
 							`<$list filter="[<counter11-last>match[no]]">`,`</$list>`
 							`</$list>`
@@ -121,28 +114,41 @@ graphRootTiddler=<<filter>>
 </$list>
 `
       ],
-      "levels": [
-        {
-          "itemStyle": {
-            "borderColor": "#555",
-            "borderWidth": 4,
-            "gapWidth": 4
-          }
+
+ "radius": [0, '95%'],
+ 
+     "levels": [
+      {},
+      {
+        "r0": '15%',
+        "r": '35%',
+        "itemStyle": {
+          "borderWidth": 2
         },
-        {
-          "colorSaturation": [0.3, 0.6],
-          "itemStyle": {
-            "borderColorSaturation": 0.7,
-            "gapWidth": 2,
-            "borderWidth": 2
-          }
+        "label": {
+          "rotate": "tangential"
         }
-      ],
-      "upperLabel": {
-        "show": true,
-        "height": 30
+      },
+      {
+        "r0": "35%",
+        "r": "70%",
+        "label": {
+          "align": "right"
+        }
+      },
+      {
+        "r0": '70%',
+        "r": '72%',
+        "label": {
+          "position": "outside",
+          "padding": 3,
+          "silent": "false"
+        },
+        "itemStyle": {
+          "borderWidth": 3
+        }
       }
-    }
-  ]
+    ]
+		
+  }
 }`
-</$let>

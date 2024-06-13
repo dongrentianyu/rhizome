@@ -1,8 +1,8 @@
 created: 20240521004520610
 creator: 马不前
-modified: 20240523145758077
+modified: 20240613110917671
 modifier: 马不前
-tags: Echarts
+tags: 旭日图
 title: sunburst-example
 
 <$echarts $tiddler="sunburst-example-data" $height="800px"  dblclick="(params, parentWidget) => { console.log(params); parentWidget.dispatchEvent({ type: 'tm-navigate', navigateTo: params.data.name }) }" />

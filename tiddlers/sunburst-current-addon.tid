@@ -1,8 +1,8 @@
 created: 20240521095043690
 creator: 马不前
-modified: 20240523145758069
+modified: 20240613111837312
 modifier: 马不前
-tags: Echarts
+tags: 旭日图
 title: sunburst-current-addon
 
 <$let 
@@ -117,7 +117,7 @@ graphRootTiddler=<<currentTiddler>>
 </$list>
 `
       ],
-    "radius": ["0", "190%"],
+    "radius": ["0", "90%"],
     "label": {
       "rotate": "radial"
     }

@@ -1,6 +1,6 @@
 created: 20240328065545840
 creator: 马不前
-modified: 20240508163127015
+modified: 20240613105311747
 modifier: 马不前
 tags: 关于系列
 title: 关于本站
@@ -19,10 +19,10 @@ title: 关于本站
 * [[谈讬]]
 * [[关于系列]]
 * [[我推荐的]]
-* [[目录磁盘式展开]]
+* [[矩形树图-目录]]
 
-<$transclude tiddler="日历图-created" mode="block"/>
+<$transclude tiddler="日历图-created-示例" mode="block"/>
 
-<$transclude tiddler="日历图-modified" mode="block"/>
+<$transclude tiddler="日历图-modified-示例" mode="block"/>
 
 <$transclude tiddler="$:/plugins/mabuqian/gumo-customisation/homepage-footer" mode="block"/>
