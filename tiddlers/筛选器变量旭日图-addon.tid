@@ -1,10 +1,13 @@
-created: 20240521032756116
+created: 20240521100927835
 creator: 马不前
-modified: 20240613111638022
+modified: 20240613145940203
 modifier: 马不前
 tags: 旭日图
-title: sunburst-example-addon
+title: 筛选器变量旭日图-addon
 
+<$let 
+graphRootTiddler=<<filter>>
+>
 `{
   "series": {
     "type": "sunburst",
@@ -13,7 +16,7 @@ title: sunburst-example-addon
      },
     "data":  [
 `
-<$list filter="[!is[system]tag[TableOfContents]sort[title]]" variable="pluginName" counter="counter1">
+<$list filter=<<filter>> variable="pluginName" counter="counter1">
 `        {
           "name": "`<$list filter="[<pluginName>has[title]]"><$text text={{{ [<pluginName>get[title]] }}}/></$list>`",
           
@@ -152,3 +155,4 @@ title: sunburst-example-addon
 		
   }
 }`
+</$let>
