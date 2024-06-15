@@ -1,0 +1,17 @@
+created: 20240615180556732
+creator: 马不前
+modified: 20240615181303734
+modifier: 马不前
+tags: TiddlyWiki
+title: 新代码会覆盖旧代码
+
+感觉这算是tiddlywiki的强大之处了吧。
+
+可以查看[[TableOfContents]]的代码。因为这里要修改原版toc宏的一方面，把[[$:/core/macros/toc]]中的`toc-unlinked-selective-expandable-body`部分里使用的`{{$:/core/images/blank}}`图标替换成了`{{$:/core/images/file}}`，这样就从空白图案变成了文件夹图案。
+
+而且也不用重新写代码。我直接拿过来，改一下，这个变化肯定是只在[[TableOfContents]]中生效的，在其他条目不会生效。
+
+
+其实原代码里是可以调整图标的，但不知道为什么官方只设置了两个可调整的，明明最后条目展示的也要改成可调整的图标就好了。我也就不用这么麻烦了。但感觉提pr的话，会很难合并。
+
+当然也不得不感叹开发者的水平，这里的代码是真的复杂。看上去简单，实际上非常非常复杂。像迷宫又像数学题，最终不知道怎么调整。

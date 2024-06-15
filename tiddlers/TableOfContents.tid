@@ -2,13 +2,41 @@ GM-back-to-top: yes
 caption: 目录
 created: 20240323134544955
 creator: 马不前
-modified: 20240408161707025
+modified: 20240615180510754
 modifier: 马不前
 tags: $:/tags/SideBar
 title: TableOfContents
 
+\define toc-linked-selective-expandable-body(tag,sort:"",itemClassFilter,exclude,path)
+\whitespace trim
+<$qualify name="toc-state" title={{{ [[$:/state/toc]addsuffix<__path__>addsuffix[-]addsuffix<currentTiddler>] }}}>
+  <$set name="toc-item-class" filter=<<__itemClassFilter__>> emptyValue="toc-item-selected" value="toc-item" >
+    <li class=<<toc-item-class>>>
+      <$link to={{{ [<currentTiddler>get[target]else<currentTiddler>] }}}>
+          <$list filter="[all[current]tagging[]$sort$limit[1]]  -[subfilter<__exclude__>]" variable="ignore" emptyMessage="<$button class='tc-btn-invisible'>{{$:/core/images/file}}</$button>">
+          <$reveal type="nomatch" stateTitle=<<toc-state>> text="open">
+            <$button setTitle=<<toc-state>> setTo="open" class="tc-btn-invisible tc-popup-keep">
+            <$transclude tiddler=<<toc-closed-icon>> />
+            </$button>
+          </$reveal>
+          <$reveal type="match" stateTitle=<<toc-state>> text="open">
+            <$button setTitle=<<toc-state>> setTo="close" class="tc-btn-invisible tc-popup-keep">
+              <$transclude tiddler=<<toc-open-icon>> />
+            </$button>
+          </$reveal>
+        </$list>
+        <<toc-caption>>
+      </$link>
+      <$reveal type="match" stateTitle=<<toc-state>> text="open">
+        <$macrocall $name="toc-selective-expandable" tag=<<currentTiddler>> sort=<<__sort__>> itemClassFilter=<<__itemClassFilter__>> exclude=<<__exclude__>> path=<<__path__>>/>
+      </$reveal>
+    </li>
+  </$set>
+</$qualify>
+\end
+
+<$let toc-open-icon="$:/core/images/fold-button" toc-closed-icon="$:/core/images/folder" >
 <div class="tc-table-of-contents">
-
-<<toc-selective-expandable 'TableOfContents'>>
-
+<$transclude $variable="toc-selective-expandable" tag="TableOfContents" itemClassFilter="tc-btn-invisible tc-btn-mini"/>
 </div>
+</$let>
