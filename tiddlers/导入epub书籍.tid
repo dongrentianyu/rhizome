@@ -1,6 +1,6 @@
 created: 20240618002322914
 creator: 马不前
-modified: 20240618022014824
+modified: 20240618061340937
 modifier: 马不前
 tags: SuperMemo
 title: 导入epub书籍
@@ -30,7 +30,18 @@ epub格式相对来说好处理一点。而pdf格式则要转换成epub格式。
 ## 目的都是确保安装pip和pipx
 ## 并确保使用版本能够运行程序
 ## 并添加环境变量
-# 可能出现的问题，这里是直接把readme上的内容移过来了，方便参考
+# 更新程序
+## 下载新的whl程序包，用pipx再安装
+## 可能会出现如下的提示
+### 'supermemo-toolkit' already seems to be installed. Not modifying existing installation in
+### 你可以通过`pipx install --force  supermemo_toolkit-0.1.5-py3-none-any.w`来强制安装
+## 这种方式是合理的，会重新安装或者更新内容
+### 重新安装后需要输入命令`pipx ensurepath`来重置环境变量
+## 从0.1.5版本开始，程序内置版本号
+### 可以通过输入`smtk --version`查看程序版本号
+
+# 可能出现的问题
+## 这里是直接把readme上的内容移过来了，方便参考
 
 问题1：若出现ERROR: No matching distribution found for XXX，一般是网络问题，切换PYPI源即可，可以使用下列方式切换PYPI源。
 
