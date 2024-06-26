@@ -1,6 +1,6 @@
 created: 20240618002322914
 creator: 马不前
-modified: 20240618061340937
+modified: 20240619130851123
 modifier: 马不前
 tags: SuperMemo
 title: 导入epub书籍
@@ -77,21 +77,19 @@ python -m pip install --upgrade pip
 # 设置supermemo的软件路径
 ## 找到sm18.exe的文件夹路径。示例`C:\Users\Snowy\Desktop\sm18\`或`D:\SUPERMEMO`，下面会有sm18.exe，不要复制成`C:\Users\Snowy\Desktop\sm18\sm18.exe`，不要包含运行程序
 ## 打开cmd命令行窗口，并执行命令`smtk config set program "文件夹路径" `
-## 如果运行失败则可以尝试执行`smtk.exe路径 config set program "文件夹路径" `
-### 显示结果`{'program':'<上面的sm18.exe的文件夹路径>'}`
+## 显示结果`{'program':'<上面的sm18.exe的文件夹路径>'}`
 ## 可以执行命令`smtk clist`查看集合
 ## 使用命令`smtk pathpix  <集合名>`，可以整理当前集合的图片，放到`systems\<集合名>\elements\local_pic`文件夹里。以前的图片也一样能打开。
 ## 文档中还有群友提供的另一种方案，可以方便在公司或多台电脑里设置，可以参考。
 # 转换epub书籍
-## 打开命令行窗口，使用命令`smtk e2sm -l "D:\BaiduNetdiskDownload\社会学类\社会学的想象力.epub" "D:\BaiduNetdiskDownload\社会学类\001"`这样就会把转换后的文件放到同级的文件夹里001了。要确保001文件夹存在，不存在的话就会报错。
+## 打开命令行窗口，使用命令`smtk e2sm –linear "D:\BaiduNetdiskDownload\社会学类\社会学的想象力.epub" "D:\BaiduNetdiskDownload\社会学类\001"`这样就会把转换后的文件放到同级的文件夹里001了。要确保001文件夹存在，不存在的话就会报错。
 ### 转换有其他命令可以选择，同样仓库里的readme内容移过来方便参考
-### smtk e2sm -t epub_file out_folder（需要图书有良好的目录，没有需使用calibre生成并整理目录）
-### smtk e2sm -l epub_file out_folder（有书即可，不按照EPUB目录文件生成，而是按照EPUB图书内文档文件的线性顺序生成，比较适合PDF版epub，效果查看文件：./docs/Snipaste_2024-03-24_09-17-23.png）
-### smtk e2sm -c epub_file out_folder（有书即可，EPUB转换为一个SuperMemo Topic，一本书即是一篇文章，配合SuperMemo阅读点使用更佳。）
+### smtk e2sm --toc epub_file out_folder  #（需要图书有良好的目录，没有需使用calibre生成并整理目录）
+### smtk e2sm --linear epub_file out_folder  #（有书即可，不按照EPUB目录文件生成，而是按照EPUB图书内文档文件的线性顺序生成，比较适合PDF版epub，效果查看文件：./docs/Snipaste_2024-03-24_09-17-23.png）
+### smtk e2sm --topic epub_file out_folder  #（有书即可，EPUB转换为一个SuperMemo Topic，一本书即是一篇文章，配合SuperMemo阅读点使用更佳。）
 ## 转换成功后会显示。打开上面`D:\BaiduNetdiskDownload\社会学类\001`文件夹路径，可以发现有了两个文件，一个是`SheHuiXueDeXiangXiangLi.xml`，另一个是`SheHuiXueDeXiangXiangLi`文件夹，里面放的是图片。
 ### 这里转换后显示的是拼音，不用太在意
 # 导入转换后的资源
 ## 把文件夹`D:\BaiduNetdiskDownload\社会学类\001\SheHuiXueDeXiangXiangLi`复制或剪切到`systems\<集合名>\elements\local_pic`文件夹里
 ## 启动supermemo，选择`文件`，选择`导入`，再选择`xml导入`，找到`D:\BaiduNetdiskDownload\社会学类\001\SheHuiXueDeXiangXiangLi.xml`并等待导入完成
 ## 这样就基本上导入完成了。一本书会自动生成一个概念，但不影响
-

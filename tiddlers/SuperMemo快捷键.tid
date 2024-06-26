@@ -1,6 +1,6 @@
 created: 20240617070413581
 creator: 马不前
-modified: 20240618002249681
+modified: 20240620111504716
 modifier: 马不前
 tags: SuperMemo
 title: SuperMemo快捷键
@@ -9,6 +9,7 @@ title: SuperMemo快捷键
 
 * Alt类
 ** Alt+P 调整优先级
+** Alt+C 快速展开当前节点在目录树中
 ** Alt+⬅️ 查看挖看的结果
 ** Alt+X 摘录卡片
 ** Alt+D 设置标题，方便后面形成知识树
