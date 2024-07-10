@@ -1,11 +1,11 @@
 GM-back-to-top: yes
-caption: Contents
-created: 20240323134544955
+caption: Index
+created: 20240708232618940
 creator: 马不前
-modified: 20240710112921698
+modified: 20240710112932841
 modifier: 马不前
 tags: $:/tags/SideBar
-title: TableOfContents
+title: Index
 
 \define toc-linked-selective-expandable-body(tag,sort:"",itemClassFilter,exclude,path)
 \whitespace trim
@@ -37,6 +37,6 @@ title: TableOfContents
 
 <$let toc-open-icon="$:/core/images/fold-button" toc-closed-icon="$:/core/images/folder" >
 <div class="tc-table-of-contents">
-<$transclude $variable="toc-selective-expandable" tag="TableOfContents" itemClassFilter="tc-btn-invisible tc-btn-mini"/>
+<$transclude $variable="toc-selective-expandable" tag="Index" itemClassFilter="tc-btn-invisible tc-btn-mini"/>
 </div>
 </$let>
