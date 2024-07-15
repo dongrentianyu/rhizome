@@ -1,0 +1,18 @@
+caption: MobileSync
+created: 20240711135219169
+creator: 马不前
+modified: 20240711135220945
+modifier: 马不前
+tags: 
+title: $:/plugins/linonetwo/tw-mobile-sync/ui/Sidebar/SidebarTab
+type: text/vnd.tiddlywiki
+
+<!-- only display Sync With Desktop tab in Tiddloid, which will use content scheme to load -->
+<!-- <$reveal type="nomatch" state="$:/info/url/protocol" text="content:"> -->
+<!-- use css to hide and display, so it is easier to test on desktop -->
+<div class="tw-mobile-sync-sidebar-mobile-content">
+  {{$:/plugins/linonetwo/tw-mobile-sync/ui/Sidebar/SidebarMobileContent}}
+</div>
+<div class="tw-mobile-sync-sidebar-desktop-content">
+  {{$:/plugins/linonetwo/tw-mobile-sync/ui/Sidebar/SidebarDesktopContent}}
+</div>

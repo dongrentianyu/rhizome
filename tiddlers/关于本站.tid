@@ -1,6 +1,6 @@
 created: 20240328065545840
 creator: 马不前
-modified: 20240626034701853
+modified: 20240710135349950
 modifier: 马不前
 tags: 关于系列
 title: 关于本站
@@ -15,13 +15,7 @@ title: 关于本站
 
 ! 推荐阅读
 
-* [[长文]]
-* [[谈讬]]
-* [[关于系列]]
-* [[关于朋友]]
-* [[我推荐的]]
-* [[矩形树图-目录]]
-
+<$transclude $variable="card-x" filter="[[长文]] [[谈讬]] [[关于系列]] [[关于朋友]] [[我推荐的]] [[构建网目录]]" />
 <$transclude tiddler="日历图-created-示例" mode="block"/>
 
 <$transclude tiddler="日历图-modified-示例" mode="block"/>
