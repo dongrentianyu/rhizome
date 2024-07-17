@@ -1,0 +1,12 @@
+created: 20240717115823038
+creator: 马不前
+modified: 20240717120256348
+modifier: 马不前
+tags: 自学编程
+title: NPM与PNPM
+
+大多数编程里都只会提到npm，但实际上npm非常慢，完全可以用pnpm，而且两者可以等价起来，只不过pnpm会更快一点。
+
+同时还有npm换源的问题。如果用了VPN，可能还需要把VPN的全局模式关了，改成规则模式。
+
+[[NPM换源的方法|https://juejin.cn/post/7100751629820887047]]
