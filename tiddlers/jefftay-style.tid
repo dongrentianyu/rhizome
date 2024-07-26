@@ -1,7 +1,7 @@
 created: 20240323135233548
 creator: 马不前
 list-after: $:/themes/linonetwo/itonnote/variables.css
-modified: 20240525152034674
+modified: 20240720135324837
 modifier: 马不前
 tags: $:/tags/Stylesheet 配色相关
 title: jefftay-style
@@ -45,11 +45,12 @@ ul li {
     box-shadow: 0px 2px 20px rgba(153,153,153,0.2) !important;
 }
 
-/* 外部超链接增加箭头 */
+/* 外部超链接增加箭头，还是注释掉了，因为在一些文本中，看上去不太好，感觉很突兀，如果是那种小一点，在右上角的那种风格还不错。以后有机会再考虑改进吧。 */
+/*
 a.tc-tiddlylink-external::after {
   content: "\2197";
 }
-
+*/
 
 /* 修改正文字间距和行高 */
 p {
