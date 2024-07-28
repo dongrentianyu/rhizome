@@ -1,6 +1,6 @@
 created: 20240323135233548
 creator: 马不前
-modified: 20240728044521029
+modified: 20240728045245097
 modifier: 马不前
 tags: $:/tags/Stylesheet 配色相关
 title: jefftay-style-modified
@@ -186,7 +186,7 @@ fill: #aeaeae;
 
 html {
   color: #333;
-  background: #fff;
+  background: #edece5;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
