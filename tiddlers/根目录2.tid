@@ -1,9 +1,9 @@
 created: 20240708232453154
 creator: 马不前
 list-after: $:/core/ui/ViewTemplate/title
-modified: 20240708232534954
+modified: 20240726130020228
 modifier: 马不前
-tags: $:/tags/ViewTemplate Configuration
+tags: $:/tags/ViewTemplate Configuration 关于根目录
 title: 根目录2
 
 <$transclude $variable="cell-rock" root="Index" namx="Index" true-gate="true" long="15" text="Index"/>

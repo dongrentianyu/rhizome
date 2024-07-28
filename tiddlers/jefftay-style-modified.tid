@@ -1,11 +1,11 @@
 created: 20240323135233548
 creator: 马不前
-list-after: $:/themes/linonetwo/itonnote/variables.css
-modified: 20240720135324837
+modified: 20240728044521029
 modifier: 马不前
 tags: $:/tags/Stylesheet 配色相关
-title: jefftay-style
+title: jefftay-style-modified
 
+/* 部分内容已修改，需要原版本的请从原博客网站下载，名称为jefftay-style */
 /* 添加 $:/tags/Stylesheet 以应用 */
 .matched {background-color:#ffc;}
 .tw-context {
@@ -54,9 +54,10 @@ a.tc-tiddlylink-external::after {
 
 /* 修改正文字间距和行高 */
 p {
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.2px;
-  line-height: 1.8;
+  line-height: 1.6;
+	font-size: 22px;
 }
 
 /* 修改有序和无效列表行间距 */
@@ -157,7 +158,6 @@ fill: #aeaeae;
 
 .tc-editor-toolbar button {
     vertical-align: middle;
-
     border-radius: 4px;
     padding: 8px;
     margin: 2px 0 2px 4px;
@@ -169,4 +169,112 @@ fill: #aeaeae;
 	right: 1em;
 	bottom: 0;
     z-index: 2000;
+}
+
+
+/* 以下是从其他样式表中复制过来的，测试一下 */
+
+:root {
+  --active-file-bg-color: #dadada;
+  --active-file-bg-color: rgba(32, 43, 51, 0.63);
+  --active-file-text-color: white;
+  --bg-color: #fff;
+  --text-color: #333;
+  --side-bar-bg-color: #f5f5f5;
+  --control-text-color: #666;
+}
+
+html {
+  color: #333;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: initial;
+}
+
+html body, .tc-sidebar-scrollable-backdrop {
+	font-family: "Arvo","楷体", "LXGW WenKai Lite", "Times";
+}
+
+/* 去掉各Table cell 的边距并让其边重合 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 去除默认边框 */
+fieldset, img {
+  border: 0;
+}
+
+/* 块/段落引用 */
+blockquote {
+  position: relative;
+  color: #999;
+  font-weight: 400;
+  border-left: 55px solid #1abc9c;
+  padding-left: 1em;
+  margin: 1em 3em 1em 2em;
+}
+
+* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
+abbr {
+  cursor: help;
+}
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
+ul, ol {
+  list-style: none;
+}
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+caption, th {
+  text-align: left;
+}
+
+q:before, q:after {
+  content: " ";
+}
+
+/* 统一上标和下标 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+:root sub, :root sup {
+  vertical-align: baseline; /* for ie9 and other modern browsers */
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 让链接在 hover 状态下显示下划线 */
+a {
+  color: #1abc9c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tc-drafts-list {
+    z-index: 2000;
+    position: fixed;
+    font-size: 0.8em;
+    left: 0;
+    bottom: 0;
+		background-color: #edece5;
 }
