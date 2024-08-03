@@ -1,6 +1,6 @@
 created: 20240323135233548
 creator: 马不前
-modified: 20240728045245097
+modified: 20240728145806794
 modifier: 马不前
 tags: $:/tags/Stylesheet 配色相关
 title: jefftay-style-modified
@@ -228,10 +228,6 @@ address, caption, cite, code, dfn, th, var {
   font-weight: 400;
 }
 
-/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
-ul, ol {
-  list-style: none;
-}
 
 /* 对齐是排版最重要的因素, 别让什么都居中 */
 caption, th {
@@ -268,13 +264,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.tc-drafts-list {
-    z-index: 2000;
-    position: fixed;
-    font-size: 0.8em;
-    left: 0;
-    bottom: 0;
-		background-color: #edece5;
 }
