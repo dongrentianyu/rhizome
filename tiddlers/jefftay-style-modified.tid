@@ -1,6 +1,6 @@
 created: 20240323135233548
 creator: 马不前
-modified: 20240728145806794
+modified: 20240810152059515
 modifier: 马不前
 tags: $:/tags/Stylesheet 配色相关
 title: jefftay-style-modified
@@ -213,9 +213,9 @@ blockquote {
   position: relative;
   color: #999;
   font-weight: 400;
-  border-left: 55px solid #1abc9c;
+  border-left: 25px solid #1abc9c;
   padding-left: 1em;
-  margin: 1em 3em 1em 2em;
+  margin: 1em 2em 1em 2em;
 }
 
 * 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
