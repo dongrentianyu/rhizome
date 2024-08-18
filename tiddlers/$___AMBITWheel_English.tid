@@ -1,0 +1,57 @@
+created: 20240818050336572
+creator: 马不前
+modified: 20240818050411621
+modifier: 马不前
+tags: AMBITWheel
+title: $:/_AMBITWheel/English
+
+<$vars 
+	text-outer-line-1-nne="Managing"
+	text-outer-line-2-nne="risk"
+	text-outer-line-1-ene="Meeting Multiple"
+	text-outer-line-2-ene="Needs"
+	text-outer-line-1-wnw="Individual key"
+	text-outer-line-2-wnw="relationship"
+	text-outer-line-1-nnw="Scaffolding"
+	text-outer-line-2-nnw="relationships"
+	text-outer-line-1-ssw="Respect for local"
+	text-outer-line-2-ssw="practice and expertise"
+	text-outer-line-1-wsw="Keyworker well-"
+	text-outer-line-2-wsw="connected to the team"
+	text-outer-line-1-ese="Integrating "
+	text-outer-line-2-ese="the help"
+	text-outer-line-1-sse="Respect"
+	text-outer-line-2-sse="for evidence"
+	text-inner-line-1-n="Working with"
+	text-inner-line-2-n="your CLIENT"
+	text-inner-line-small-1-n=""
+	text-inner-line-1-e="Working with"
+	text-inner-line-2-e="your"
+	text-inner-line-3-e="NETWORKS"
+	text-inner-line-small-1-e=""
+	text-inner-line-small-2-e=""
+	text-inner-line-1-s="LEARNING"
+	text-inner-line-2-s="at work"
+	text-inner-line-small-1-s=""
+	text-inner-line-1-w="Working"
+	text-inner-line-2-w="with"
+	text-inner-line-3-w="your TEAM"
+	text-inner-line-small-1-w=""
+	text-inner-line-small-2-w=""
+	text-middle="Mentalizing"
+	link-ring-outer-nne="Managing Risk"
+	link-ring-outer-ene="Working in multiple domains"
+	link-ring-outer-wnw="KeyWorker"
+	link-ring-outer-nnw="Scaffolding existing relationships"
+	link-ring-outer-ssw="Respect local practice and expertise"
+	link-ring-outer-wsw="Keyworker well-connected to wider team"
+	link-ring-outer-ese="Addressing Dis-integration"
+	link-ring-outer-sse="Respect for Evidence"
+	link-ring-inner-n="Working with your CLIENT"
+	link-ring-inner-e="Working with your NETWORKS"
+	link-ring-inner-s="LEARNING at work"
+	link-ring-inner-w="Working with your TEAM"
+	link-middle="Mentalization"
+	>
+<$transclude tiddler="$:/_AMBITWheel/Template" mode="inline"/>
+</$vars>

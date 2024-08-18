@@ -1,0 +1,18 @@
+created: 20240817165246869
+creator: 马不前
+modified: 20240818060442741
+modifier: 马不前
+tags: Configuration
+title: AMBITWheel
+
+[[https://manuals.annafreud.org/ambit/]]
+
+里面有一个好看轮盘样式，想搞一下。
+
+网站可以下载，但网站上代码条目都是`type: application/x-tiddler`，在太记中重新加载一下就会缺失一部分内容。用github查看是能看到文件中有内容的，但没有加载出来。
+
+所以可以重新建立相应的条目，内容复制过去就行。我这里也稍微改了一些样式。把内部的四个字体大小放大了。
+
+而且原版的是一个区域两三行内容，我都删除变成一个内容了。
+
+[[AMBITWheel-Template-X]]

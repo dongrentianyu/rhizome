@@ -1,0 +1,37 @@
+created: 20240817180113184
+creator: 马不前
+modified: 20240818063901325
+modifier: 马不前
+tags: AMBITWheel
+title: 转盘展示
+
+<$vars 
+	text-outer-line-nne="关于朋友"
+	text-outer-line-ene="人生的困惑"
+	text-outer-line-wnw="爱和自我拯救"
+	text-outer-line-nnw="关于我"
+	text-outer-line-ssw="图书馆"
+	text-outer-line-wsw="游戏的学习成本"
+	text-outer-line-ese="艺术家人格"
+	text-outer-line-sse="开源软件还是商业软件？"
+	text-inner-line-n="关于系列"
+	text-inner-line-e="谈讬"
+	text-inner-line-s="转动命运之轮"
+	text-inner-line-w="试图思考"
+	text-middle="关于本站"
+	link-ring-outer-nne="关于朋友"
+	link-ring-outer-ene="人生的困惑"
+	link-ring-outer-wnw="爱和自我拯救"
+	link-ring-outer-nnw="关于我"
+	link-ring-outer-ssw="图书馆"
+	link-ring-outer-wsw="游戏的学习成本"
+	link-ring-outer-ese="艺术家人格"
+	link-ring-outer-sse="开源软件还是商业软件？"
+	link-ring-inner-n="关于系列"
+	link-ring-inner-e="谈讬"
+	link-ring-inner-s="转动命运之轮"
+	link-ring-inner-w="试图思考"
+	link-middle="关于本站"
+	>
+<$transclude tiddler="AMBITWheel-Template-X" mode="inline"/>
+</$vars>

@@ -1,0 +1,23 @@
+created: 20240818050434423
+creator: 马不前
+modified: 20240818063947299
+modifier: 马不前
+tags: $:/tags/Macro AMBITWheel
+title: $:/_AMBITWheel/Macros
+
+\define ambit-wheel(size,language:"English")
+<$vars
+	wheel-size="$size$"
+>
+<$transclude tiddler="$language$" mode="inline"/>
+</$vars>
+\end
+
+\define ambit-wheel-iconic(ring,language:"English")
+<$vars
+	svg-classes="no-text faded unfade-$ring$"
+	wheel-size="50px"
+>
+<$transclude tiddler="$:/_AMBITWheel/$language$" mode="inline"/>
+</$vars>
+\end

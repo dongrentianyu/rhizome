@@ -1,0 +1,154 @@
+created: 20240818053804471
+creator: 马不前
+modified: 20240818053851099
+modifier: 马不前
+tags: AMBITWheel
+title: $:/_AMBITWheel/Template
+
+<svg width={{{ [<wheel-size>] ~[[500px]] }}} height={{{ [<wheel-size>] ~[[500px]] }}} viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class={{{ ambit-wheel [<svg-classes>] +[join[ ]]}}}>
+	<g stroke="none" fill="#000">
+		<!-- Background -->
+		<circle class="circle-background" cx="249" cy="249" r="249"></circle>
+		<!-- Outer rings -->
+		<$link to=<<link-ring-outer-nne>> class="ring-outer ring-outer-nne">
+			<path class="path-ring-outer path-ring-outer-nne" d="M249.980442,0 C318.014091,0 379.700478,27.1758611 424.776451,71.2644313 L384.579724,111.461003 C350.611236,78.4525586 304.544048,57.8285743 253.665668,56.8765571 L253.664188,0.0293536996 L249.980442,0 Z"></path>
+			<g transform="rotate(22.5 250 250)" class="text-outer text-outer-nne">
+				<text>
+					<tspan x="250" y="26"><<text-outer-line-1-nne>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="46"><<text-outer-line-2-nne>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-ene>> class="ring-outer ring-outer-ene">
+			<path class="path-ring-outer path-ring-outer-ene" d="M499.96088,246.841053 L443.111556,246.841053 L443.112459,246.805781 C442.288715,195.999648 421.849272,149.961896 389.037447,115.935839 L429.235942,75.7371432 C472.336608,120.064838 499.136956,180.324498 499.96088,246.841053 Z"></path>
+			<g transform="rotate(67.5 250 250)" class="text-outer text-outer-ene">
+				<text>
+					<tspan x="250" y="26"><<text-outer-line-1-ene>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="46"><<text-outer-line-2-ene>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-wnw>> class="ring-outer ring-outer-wnw">
+			<path class="path-ring-outer path-ring-outer-wnw" d="M71.2443388,75.2045366 L111.441588,115.400569 C78.3189623,149.486488 57.6665866,195.754938 56.8478317,246.842547 L0.0062929926,246.842547 L0.0139343633,245.865793 C1.09044628,179.469671 28.0508378,119.365662 71.2443388,75.2045366 Z"></path>
+			<g transform="rotate(292.5 250 250)" class="text-outer text-outer-wnw">
+				<text>
+					<tspan x="250" y="26"><<text-outer-line-1-wnw>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="46"><<text-outer-line-2-wnw>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-nnw>> class="ring-outer ring-outer-nnw">
+			<path class="path-ring-outer path-ring-outer-nnw" d="M247.348398,0.0135848288 L247.348398,56.8630379 L246.817736,56.8674745 C195.99881,57.6832808 149.948798,78.1246403 115.915643,110.943609 L75.717765,70.7443242 C120.162352,27.5300886 180.622994,0.702232997 247.348398,0.0135848288 Z"></path>
+			<g transform="rotate(337.5 250 250)" class="text-outer text-outer-nnw">
+				<text>
+					<tspan x="250" y="26"><<text-outer-line-1-nnw>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="46"><<text-outer-line-2-nnw>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-ssw>> class="ring-outer ring-outer-ssw">
+			<path class="path-ring-outer path-ring-outer-ssw" d="M247.348398,443.140321 L247.348398,499.977775 L245.877757,499.967016 C179.735509,498.902814 119.835458,472.152319 75.7172374,429.255163 L115.916451,389.05717 C150.067821,421.989756 196.319482,442.458677 247.348398,443.140321 Z"></path>
+			<g transform="rotate(22.5 250 250)" class="text-outer text-outer-ssw">
+				<text>
+					<tspan x="250" y="460"><<text-outer-line-1-ssw>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="480"><<text-outer-line-2-ssw>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-wsw>> class="ring-outer ring-outer-wsw">
+			<path class="path-ring-outer path-ring-outer-wsw" d="M0,253.159736 L56.8483983,253.157895 L56.8484244,253.194219 C57.6765004,304.267536 78.3271306,350.522187 111.442123,384.599981 L71.2443172,424.795441 C27.8396148,380.418372 0.827164392,319.942125 0,253.159736 Z"></path>
+			<g transform="rotate(67.5 250 250)" class="text-outer text-outer-wsw">
+				<text>
+					<tspan x="250" y="460"><<text-outer-line-1-wsw>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="480"><<text-outer-line-2-wsw>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-ese>> class="ring-outer ring-outer-ese">
+			<path class="path-ring-outer path-ring-outer-ese" d="M499.980442,250 C499.980442,317.766192 473.01783,379.23493 429.235195,424.263625 L389.037331,384.064281 C421.857142,350.030002 442.298577,303.978194 443.113051,253.157441 L499.954714,253.156722 L499.980442,250 Z"></path>
+			<g transform="rotate(292.5 250 250)" class="text-outer text-outer-ese">
+				<text>
+					<tspan x="250" y="460"><<text-outer-line-1-ese>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="480"><<text-outer-line-2-ese>></tspan>
+				</text>
+			</g>
+		</$link>
+		<$link to=<<link-ring-outer-sse>> class="ring-outer ring-outer-sse">
+			<path class="path-ring-outer path-ring-outer-sse" d="M384.579039,388.539663 L424.776506,428.735515 C380.515854,472.02665 320.24023,499.011362 253.665217,499.973387 L253.665217,443.123451 C304.543433,442.171554 350.610516,421.547816 384.579039,388.539663 Z"></path>
+			<g transform="rotate(337.5 250 250)" class="text-outer text-outer-sse">
+				<text>
+					<tspan x="250" y="460"><<text-outer-line-1-sse>></tspan>
+				</text>
+				<text>
+					<tspan x="250" y="480"><<text-outer-line-2-sse>></tspan>
+				</text>
+			</g>
+		</$link>
+		<!-- Inner rings -->
+		<$link to=<<link-ring-inner-n>> class="ring-inner ring-inner-n">
+			<path class="path-ring-inner path-ring-inner-n" d="M249.473661,62.1188274 C299.944603,62.1188274 345.754692,82.0743083 379.444237,114.525578 L296.436658,197.533183 C283.958377,186.004833 267.275457,178.960933 248.947346,178.960933 C230.887053,178.960933 214.424222,185.800479 202.007734,197.030691 L119.503086,114.525578 C153.192631,82.0743083 199.00272,62.1188274 249.473661,62.1188274 Z"></path>
+			<text class="text-inner text-inner-large text-inner-n">
+				<tspan x="250" y="115"><<text-inner-line-1-n>></tspan>
+				<tspan x="250" y="140"><<text-inner-line-2-n>></tspan>
+			</text>
+			<text class="text-inner text-inner-small text-inner-n">
+				<tspan x="250" y="154"><<text-inner-line-small-1-n>></tspan>
+			</text>
+		</$link>
+		<$link to=<<link-ring-inner-e>> class="ring-inner ring-inner-e">
+			<path class="path-ring-inner path-ring-inner-e" d="M436.842082,249.487248 C436.842082,299.95819 416.886602,345.768279 384.435332,379.457824 L300.877587,295.900544 C312.107799,283.484056 318.947346,267.021225 318.947346,248.960933 C318.947346,230.901149 312.108184,214.438736 300.877587,202.02237 L383.919234,118.982989 C416.674894,152.721632 436.842082,198.749291 436.842082,249.487248 Z"></path>
+			<text class="text-inner text-inner-large text-inner-e">
+				<tspan x="375" y="220"><<text-inner-line-1-e>></tspan>
+				<tspan x="375" y="244"><<text-inner-line-2-e>></tspan>
+				<tspan x="375" y="268"><<text-inner-line-3-e>></tspan>
+			</text>
+			<text class="text-inner text-inner-small text-inner-e">
+				<tspan x="375" y="300"><<text-inner-line-small-1-e>></tspan>
+				<tspan x="375" y="320"><<text-inner-line-small-2-e>></tspan>
+			</text>
+		</$link>
+		<$link to=<<link-ring-inner-s>> class="ring-inner ring-inner-s">
+			<path class="path-ring-inner path-ring-inner-s" d="M296.436658,300.388682 L379.978981,383.931792 C346.240241,416.688059 300.21215,436.855669 249.473661,436.855669 C198.735704,436.855669 152.708045,416.688481 118.969402,383.932821 L202.008783,300.892123 C214.425149,312.121771 230.887562,318.960933 248.947346,318.960933 C267.275457,318.960933 283.958377,311.917033 296.436658,300.388682 Z"></path>
+			<text class="text-inner text-inner-large text-inner-s">
+				<tspan x="250" y="368"><<text-inner-line-1-s>></tspan>
+				<tspan x="250" y="392"><<text-inner-line-2-s>></tspan>
+			</text>
+			<text class="text-inner text-inner-small text-inner-s">
+				<tspan x="250" y="407"><<text-inner-line-small-1-s>></tspan>
+			</text>
+		</$link>
+		<$link to=<<link-ring-inner-w>> class="ring-inner ring-inner-w">
+			<path class="path-ring-inner path-ring-inner-w" d="M115.029118,118.981929 L197.519596,201.471621 C185.991246,213.949901 178.947346,230.632821 178.947346,248.960933 C178.947346,267.289044 185.991246,283.971964 197.519596,296.450245 L114.511991,379.457824 C82.0607213,345.768279 62.1052404,299.95819 62.1052404,249.487248 C62.1052404,198.74876 82.2728509,152.720668 115.029118,118.981929 Z"></path>
+			<text class="text-inner text-inner-large text-inner-w">
+				<tspan x="125" y="220"><<text-inner-line-1-w>></tspan>
+				<tspan x="125" y="244"><<text-inner-line-2-w>></tspan>
+				<tspan x="125" y="268"><<text-inner-line-3-w>></tspan>
+			</text>
+			<text class="text-inner text-inner-small text-inner-w">
+				<tspan x="125" y="300"><<text-inner-line-small-1-w>></tspan>
+				<tspan x="125" y="320"><<text-inner-line-small-2-w>></tspan>
+			</text>
+		</$link>
+		<!-- Middle Text -->
+		<$link to=<<link-middle>> class="middle">
+	        <circle class="circle-middle" cx="249" cy="249" r="62"></circle>
+			<text class="text-middle">
+				<tspan alignment-baseline="middle" x="250" y="250"><<text-middle>></tspan>
+			</text>
+		</$link>
+	</g>
+</svg>

@@ -1,0 +1,181 @@
+created: 20240818050148082
+creator: 马不前
+modified: 20240818063353130
+modifier: 马不前
+tags: $:/tags/Stylesheet AMBITWheel
+title: $:/_AMBITWheel/Styles
+
+\define colour-background() #fff
+\define colour-outer-ring-background() #4f4f4f
+\define colour-outer-ring-background-faded() #fff
+\define colour-inner-ring-background() #03070a
+\define colour-inner-ring-background-faded() #f4f4f4
+\define colour-north-text() #ed73aa
+\define colour-east-text() #ffe516
+\define colour-south-text() #64c3d7
+\define colour-west-text() #73be6e
+\define colour-middle-background() #fff
+\define colour-middle-text() #232d5a
+
+\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
+
+/* Variants */
+
+.ambit-wheel.faded .path-ring-outer {
+	fill: <<colour-outer-ring-background-faded>>;
+}
+
+.ambit-wheel.faded .path-ring-inner {
+	fill: <<colour-inner-ring-background-faded>>;
+}
+
+/* Remove default link styling */
+
+.ambit-wheel a.tc-tiddlylink-missing {
+	font-style: normal;
+}
+
+.ambit-wheel a.tc-tiddlylink:hover {
+	text-decoration: none;
+}
+
+/* Ring colours */
+
+.ambit-wheel .circle-background {
+	fill: <<colour-background>>;
+}
+
+.ambit-wheel .path-ring-outer {
+	fill: <<colour-outer-ring-background>>;
+}
+
+.ambit-wheel .ring-outer-nne:hover .path-ring-outer,
+.ambit-wheel .ring-outer-nnw:hover .path-ring-outer,
+.ambit-wheel.unfade-outer-nne .path-ring-outer-nne,
+.ambit-wheel.unfade-outer-nnw .path-ring-outer-nnw {
+	fill: <<colour-north-text>>;
+}
+
+.ambit-wheel .ring-outer-ene:hover .path-ring-outer,
+.ambit-wheel .ring-outer-ese:hover .path-ring-outer,
+.ambit-wheel.unfade-outer-ene .path-ring-outer-ene,
+.ambit-wheel.unfade-outer-ese .path-ring-outer-ese {
+	fill: <<colour-east-text>>;
+}
+
+.ambit-wheel .ring-outer-sse:hover .path-ring-outer,
+.ambit-wheel .ring-outer-ssw:hover .path-ring-outer,
+.ambit-wheel.unfade-outer-ssw .path-ring-outer-ssw,
+.ambit-wheel.unfade-outer-sse .path-ring-outer-sse {
+	fill: <<colour-south-text>>;
+}
+
+.ambit-wheel .ring-outer-wsw:hover .path-ring-outer,
+.ambit-wheel .ring-outer-wnw:hover .path-ring-outer,
+.ambit-wheel.unfade-outer-wnw .path-ring-outer-wnw,
+.ambit-wheel.unfade-outer-wsw .path-ring-outer-wsw {
+	fill: <<colour-west-text>>;
+}
+
+.ambit-wheel .ring-outer:hover .text-outer {
+	fill: <<colour-outer-ring-background>>;
+}
+
+.ambit-wheel .path-ring-inner {
+	fill: <<colour-inner-ring-background>>;
+}
+
+.ambit-wheel .ring-inner-n:hover .path-ring-inner,
+.ambit-wheel.unfade-inner-n .path-ring-inner-n {
+	fill: <<colour-north-text>>;
+}
+
+.ambit-wheel .ring-inner-e:hover .path-ring-inner,
+.ambit-wheel.unfade-inner-e .path-ring-inner-e {
+	fill: <<colour-east-text>>;
+}
+
+.ambit-wheel .ring-inner-s:hover .path-ring-inner,
+.ambit-wheel.unfade-inner-s .path-ring-inner-s {
+	fill: <<colour-south-text>>;
+}
+
+.ambit-wheel .ring-inner-w:hover .path-ring-inner,
+.ambit-wheel.unfade-inner-w .path-ring-inner-w {
+	fill: <<colour-west-text>>;
+}
+
+.ambit-wheel .ring-inner:hover .text-inner {
+	fill: <<colour-inner-ring-background>>;
+}
+
+.ambit-wheel .text-outer-nne,
+.ambit-wheel .text-outer-nnw,
+.ambit-wheel .text-inner-n {
+	fill: <<colour-north-text>>;
+}
+
+.ambit-wheel .text-outer-ene,
+.ambit-wheel .text-outer-ese,
+.ambit-wheel .text-inner-e {
+	fill: <<colour-east-text>>;
+}
+
+.ambit-wheel .text-outer-sse,
+.ambit-wheel .text-outer-ssw,
+.ambit-wheel .text-inner-s {
+	fill: <<colour-south-text>>;
+}
+
+.ambit-wheel .text-outer-wnw,
+.ambit-wheel .text-outer-wsw,
+.ambit-wheel .text-inner-w {
+	fill: <<colour-west-text>>;
+}
+
+/* Middle colours */
+
+.ambit-wheel .middle .circle-middle {
+	fill: <<colour-middle-background>>;
+}
+
+.ambit-wheel .middle .text-middle {
+	fill: <<colour-middle-text>>;
+}
+
+.ambit-wheel .middle:hover .circle-middle {
+	fill: <<colour-middle-text>>;
+}
+
+.ambit-wheel .middle:hover .text-middle {
+	fill: <<colour-middle-background>>;
+}
+
+/* Text styles */
+
+.ambit-wheel .text-outer,
+.ambit-wheel .text-inner,
+.ambit-wheel .text-middle {
+	text-anchor: middle;
+	font-family: Helvetica-Bold, Helvetica;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.ambit-wheel .text-inner {
+	font-size: 22px;
+}
+
+.ambit-wheel .text-middle {
+	font-size: 24px;
+}
+
+/* Variants */
+
+.ambit-wheel.no-text {
+	pointer-events: none;
+}
+
+.ambit-wheel.no-text text {
+	display: none;
+}
