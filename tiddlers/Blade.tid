@@ -1,6 +1,6 @@
 created: 20240824144050487
 creator: 马不前
-modified: 20240828023210525
+modified: 20240901125220663
 modifier: 马不前
 tags: 被虚构的
 title: Blade
@@ -10,5 +10,19 @@ The Jealousy and Roar Blade
 * <<nsite "Github" "https://github.com/dongrentianyu/blade">>
 * <<nsite "Site" "https://dongrentianyu.github.io/blade/">>
 
+<iframe
+  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="100%"
+  height="500"
+  src="https://dongrentianyu.github.io/blade/">
+</iframe>
+
 ---
 这次总算是搭建好了。估计以后很长一段时间都会是在这上面发布。直到我写出一个比这更好的框架来，但得好多好多年之后了。
+
+这次也学习到了不少知识。比如可以隐藏标题，隐藏标签，隐藏作者与编辑时间。
+
+然后也使用了官网中[[introduction|https://tiddlywiki.com/editions/introduction/]]的`$:/themes/tiddlywiki/hidefurniture`主题。但这个主题我是调整了很多之后才用起来的。之前也不知道为什么经常会加载不出来样式。
+
+最终的效果也只能说是比较满意。但还有诸多可以改进的地方。但目前tiddlywiki确实可以成为一个丰富的诗歌载体。至少可以加入各种链接。
