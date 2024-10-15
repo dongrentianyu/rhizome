@@ -1,0 +1,25 @@
+created: 20241015062333696
+creator: 马不前
+modified: 20241015062334963
+modifier: 马不前
+tags: $:/tags/Section/Macro
+title: $:/plugins/kookma/section/macros/definition
+type: text/vnd.tiddlywiki
+
+\define se-styleTid()    $:/config/section-editor/style-in-use
+\define se-hlevelTid()   $:/config/section-editor/hlevel
+
+\define se-config-visibility-toolbar() $:/config/section-editor/config-visibility-toolbar
+\define se-editor()  $:/config/section-editor/config-editor-type
+
+\define se-readermodeTid() $:/config/section-editor/reader-mode
+
+<!-- patchwork tiddler setting -->
+\define se-patchworkheaderTid() $:/config/section-editor/patchwork-header-mode
+\define se-patchworkfooterTid() $:/config/section-editor/patchwork-footer-mode
+
+
+<!-- state and temporary tiddlers -->
+\define stateTid() $:/state/section-editor/state/$(source)$
+\define editTid()  $:/state/section-editor/content/$(source)$/$(counter)$ 
+\define foldstatusTid()  $:/temp/section-editor/foldstate/$(source)$/$(counter)$ 
