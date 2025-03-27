@@ -1,0 +1,14 @@
+caption: {{$:/language/codemirror6/useSound/caption}}
+caption-zh: {{$:/language/codemirror6/zh/useSound/caption}}
+created: 20250327215406861
+creator: 马不前
+description: {{$:/language/codemirror6/useSound/description}}
+description-zh: {{$:/language/codemirror6/zh/useSound/description}}
+id: 1
+modified: 20250327215406861
+modifier: 马不前
+settings-group: general
+settings-template: input-switch
+title: $:/config/codemirror-6/useSound
+
+yes

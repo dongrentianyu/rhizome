@@ -1,5 +1,6 @@
 {
     "extended-subtitle": "hide",
     "tw-version": "hide",
-    "toolbar-controls-on-shadows": "show"
+    "toolbar-controls-on-shadows": "show",
+    "source-toggle-button": "show"
 }
