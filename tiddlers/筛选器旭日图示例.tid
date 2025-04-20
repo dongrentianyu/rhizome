@@ -1,8 +1,0 @@
-created: 20240521004520610
-creator: 马不前
-modified: 20240613170702711
-modifier: 马不前
-tags: 旭日图
-title: 筛选器旭日图示例
-
-<$echarts $tiddler="筛选器旭日图-addon" $height="500px"  dblclick="(params, parentWidget) => { console.log(params); parentWidget.dispatchEvent({ type: 'tm-navigate', navigateTo: params.data.name }) }" />
