@@ -1,16 +1,29 @@
 created: 20240323133654324
 creator: 马不前
-modified: 20240501055703962
+modified: 20250423181344878
 modifier: 马不前
-tags: 
+tags: untagged
 title: rhizome
 
 不知道你发现没有，网站标题上的单词首字母是大写的，而本条目则没有大写。本意上我是喜欢小写的，但没有大写字母作为网站标题，又缺少了什么。所以网站标题还是大写了。
 
-rhizome不是一个常见的单词。其名为根茎，比如树根很长的根茎。但我更愿意翻译成块茎。因为块茎有横截面的意思在里面。
+rhizome不是一个常见的单词。其名为根茎，比如树根很长的根茎。但我更愿意翻译成块茎，块茎有横截面的意思在里面。实际上rhizome在本站里并不是指代树根里的根茎，而是源自[[德勒兹]]的哲学术语。我个人以为块茎能比游牧更贴切表达德勒兹的哲学思想，至少在使用[[TiddlyWiki]]时，我觉得块茎会比游牧更好。而块茎这原本植物学里的概念，也让我想到尼采的名言。
 
-实际上rhizome在本站里并不是指代树根里的根茎，而是源自[[德勒兹]]的哲学术语。我个人以为块茎能比游牧更贴切表达德勒兹的哲学思想，至少在使用[[TiddlyWiki]]时，我觉得块茎会比游牧更好。
+> 其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。
 
-而块茎这原本植物学里的概念，也让我想到尼采的名言。
+* <<nsite "Github" "https://github.com/dongrentianyu/rhizome">>
+* <<nsite "Site" "https://dongrentianyu.github.io/rhizome">>
 
->其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。
+<a class="tc-float-right"><<ambit-wheel size:490px; language:"转盘展示">></a>
+
+本站使用[[TiddlyWiki]]作为框架，使用[[太记]]作为启动器，使用[[Github|https://github.com/]]作为托管和发布平台。样式使用了[[陈仓颉|zm]]博客的。
+
+本站不定期更新。所以不必期待每天或者每周都有更新，可能一个月更新，也可能半年一更新。本站在线网址直接保存并不能打开，如有需要，可以fork仓库后用[[太记]]加载，或导出所有条目。小小地夸赞一下自己和太微，阅读效果真不错，很多时候感觉比那些动态网站博客观感要好很多。
+
+<$tiddler tiddler="TableOfContents">
+<div style="font-size: 1.5em;">
+<<first-level "[is[current]tagging[]]">>
+</div>
+</$tiddler>
+
+<$transclude tiddler="$:/plugins/mabuqian/gumo-customisation/homepage-footer" mode="block"/>

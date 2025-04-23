@@ -1,0 +1,74 @@
+created: 20250423174713752
+creator: 马不前
+modified: 20250423174837912
+modifier: 马不前
+tags: Configuration $:/tags/Macro
+title: simple-recursion
+
+\define each-other-level(filter)
+<$let stateRecursionID={{{ [[$:/state/recursion/]addsuffix{!!title}] }}} >
+<%if [<currentTiddler>tagging[]count[]compare:number:gt[0]] %>
+<$reveal type="nomatch" state=<<stateRecursionID>> text="show">
+<$button
+	tooltip="展开内容"
+	aria-label="展开内容"
+	class="badge badge-secondary text-white"
+  set=<<stateRecursionID>>  setTo="show"
+>
+<$text text=<<currentTiddler>>/>
+</$button>
+</$reveal>
+<$reveal type="match" state=<<stateRecursionID>> text="show">
+<div class="card mb-3 text-info" style="width:100%; background: white;">
+<div class="card-body">
+<div class="h3 card-title">
+<span style="float: right;" >
+<$button
+  to=<<currentTiddler>>
+	tooltip="跳转内容"
+	aria-label="跳转内容"
+	class="badge badge-warning text-white"
+>
+<$text text=<<currentTiddler>>/>
+</$button>
+<$button 
+	tooltip="隐藏内容"
+	aria-label="隐藏内容"
+	class="badge badge-dark text-white"
+  set=<<stateRecursionID>> setTo="hide">
+<$text text="隐藏"/></$button></span>
+</div>
+<div class="card-text" >
+<$list filter="$filter$">
+   <<each-other-level $filter$>>
+</$list>
+</div>
+</div>
+</div>
+</$reveal>
+<%else%>
+<$button
+  to=<<currentTiddler>>
+	tooltip="跳转内容"
+	aria-label="跳转内容"
+	class="badge badge-primary text-white"
+>
+<$text text=<<currentTiddler>>/>
+</$button>
+<%endif%>
+</$let>
+\end
+\define first-level(filter)
+<$list filter="$filter$">
+   <<each-other-level $filter$>>
+</$list>
+\end
+
+Start in [[TableOfContents]]<br>
+`<<first-level "[is[current]tagging[]]">>`
+
+<$tiddler tiddler="TableOfContents">
+
+<<first-level "[is[current]tagging[]]">>
+
+</$tiddler>

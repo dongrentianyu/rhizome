@@ -1,0 +1,16 @@
+created: 20250423171836201
+creator: 马不前
+modified: 20250423171859968
+modifier: 马不前
+tags: Configuration $:/tags/Stylesheet
+title: 朱雀仿宋字体
+
+html body, .tc-sidebar-scrollable-backdrop {
+	font-family: "朱雀仿宋（预览测试版）","Arvo", "Times";
+}.tc-page-controls svg {
+	
+-webkit-filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.9));
+	-moz-filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.9));
+		filter: drop-shadow(1px 1px 2px rgba(255,255,255,0.9));
+
+}

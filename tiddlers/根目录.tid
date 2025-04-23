@@ -1,9 +1,9 @@
 created: 20240708232241550
 creator: 马不前
 list-after: $:/core/ui/ViewTemplate/title
-modified: 20250420203723653
+modified: 20250423172157404
 modifier: 马不前
-tags: $:/tags/ViewTemplate Configuration
+tags: Configuration
 title: 根目录
 
 <$transclude $variable="cell-rock" root="TableOfContents" namx="TableOfContents" true-gate="true" long="15" text="TableOfContents"/>
