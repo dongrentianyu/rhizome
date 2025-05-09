@@ -1,12 +1,15 @@
 created: 20240323135233548
 creator: 马不前
-modified: 20240810152059515
+modified: 20250509125944335
 modifier: 马不前
 tags: $:/tags/Stylesheet 配色相关
 title: jefftay-style-modified
 
 /* 部分内容已修改，需要原版本的请从原博客网站下载，名称为jefftay-style */
 /* 添加 $:/tags/Stylesheet 以应用 */
+pre, code {
+    line-height: 1.25;
+}
 .matched {background-color:#ffc;}
 .tw-context {
   border:0px solid #eee;background-color:#eee;
@@ -56,14 +59,14 @@ a.tc-tiddlylink-external::after {
 p {
   font-weight: 300;
   letter-spacing: 0.2px;
-  line-height: 1.6;
-	font-size: 22px;
+  line-height: 1.5;
+  font-size: 22px;
 }
 
 /* 修改有序和无效列表行间距 */
 ul li {
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.2px;
   margin-left: -10px;
 }
@@ -84,7 +87,7 @@ h2.tc-title {
 
 /* 修改 blockquote 行高 */
 blockquote {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 /* 修改框架曲率 */
@@ -168,7 +171,7 @@ fill: #aeaeae;
 	position: fixed;
 	right: 1em;
 	bottom: 0;
-    z-index: 2000;
+  z-index: 2000;
 }
 
 
@@ -186,13 +189,13 @@ fill: #aeaeae;
 
 html {
   color: #333;
-  background: #edece5;
+
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: initial;
 }
-
+/*   去除背景颜色的影响 background: #edece5; */
 html body, .tc-sidebar-scrollable-backdrop {
 	font-family: "Arvo","楷体", "LXGW WenKai Lite", "Times";
 }
@@ -215,7 +218,6 @@ blockquote {
   font-weight: 400;
   border-left: 25px solid #1abc9c;
   padding-left: 1em;
-  margin: 1em 2em 1em 2em;
 }
 
 * 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */

@@ -8,15 +8,11 @@ ambit-orange: #eb7837
 ambit-brown: #786e65
 ambit-light-grey: #e2e2e2
 ambit-very-light-grey: #f2f2f2
-
 ambit-mid: rgba(232, 232, 232, 0.84)
-
 top-menu-background: <<colour ambit-purple>>
 top-menu-foreground: <<colour ambit-white>>
-
 page-footer-background: <<colour ambit-green>>
 page-footer-foreground: <<colour ambit-white>>
-
 alert-background: <<colour ambit-white>>
 alert-border: #b99e2f
 alert-highlight: #881122
