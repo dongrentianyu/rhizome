@@ -3,6 +3,12 @@
   "plugins": [],
   "themes": [],
   "languages": [],
+  "includeWikis": [
+    {
+      "path": "../Forge",
+      "read-only": true
+    }
+  ],
   "build": {
     "index": [
       "--rendertiddler",
