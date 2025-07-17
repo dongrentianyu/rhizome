@@ -1,0 +1,43 @@
+created: 20250717165432820
+creator: 马不前
+modified: 20250717165710452
+modifier: 马不前
+tags: $:/tags/StartupAction/Browser Configuration
+title: apply-dark-or-light-mode
+
+\procedure selectpalette(t,f)
+<<f>>:
+<$select tiddler=<<t>> index=<<f>> style.width="80%">
+  <optgroup label={{{ [<f>titlecase[]] }}}>
+    <$list filter="[all[tiddlers+shadows]tag[$:/tags/Palette]color-scheme<f>sort[]]">
+      <option value=<<currentTiddler>>><$view field="name"/> -- <$view field="description"/></option>
+    </$list>
+  </optgroup>
+  <optgroup label="No Color Scheme or Other Scheme">
+   <$list filter="[all[tiddlers+shadows]tag[$:/tags/Palette]!has[color-scheme]sort[]]">
+      <option value=<<currentTiddler>>><$view field="name"/> -- <$view field="description"/></option>
+   </$list>
+  </optgroup>
+</$select>
+\end
+
+\procedure setpalette()
+<$tiddler tiddler="apply-light-or-dark-mode">
+<$let apply-mode={{{ [{$:/info/darkmode}match[yes]then{light-or-dark-mode-palette##dark}else{light-or-dark-mode-palette##light}] }}}>
+<$action-setfield $tiddler="$:/palette" $value=<<apply-mode>> $timestamp="no"/>
+</$let>
+</$tiddler>
+\end
+
+<$eventcatcher $change=<<setpalette>>>
+<<selectpalette "light-or-dark-mode-palette" "light">><br>
+<<selectpalette "light-or-dark-mode-palette" "dark">>
+</$eventcatcher>
+
+<<setpalette>>
+
+* [[$:/palette]]
+** {{$:/palette}}
+* [[light-or-dark-mode-palette]]
+** light-mode {{light-or-dark-mode-palette##light}}
+** dark-mode {{light-or-dark-mode-palette##dark}}
