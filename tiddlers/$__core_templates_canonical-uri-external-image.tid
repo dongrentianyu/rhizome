@@ -1,0 +1,31 @@
+created: 20200412025117549
+creator: LinOnetwo
+modified: 20250718150905428
+modifier: 马不前
+title: $:/core/templates/canonical-uri-external-image
+type: text/vnd.tiddlywiki
+
+\procedure canonical-uri-external-image()
+<%if [<currentTiddler>prefix[$:/]] %>
+<%if [<currentTiddler>has[type]get[type]prefix[image/jpeg]] %>
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] +[addsuffix[.jpg]] }}} />
+<%elseif [<currentTiddler>has[type]get[type]prefix[image/png]] %>
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] +[addsuffix[.png]] }}} />
+<%elseif [<currentTiddler>has[type]get[type]prefix[image/svg+xml]] %>
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] +[addsuffix[.svg]] }}} />
+<%else%>
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] }}} />
+<%endif%>
+<%else%>
+<$view field="title" format="urlencoded"/>
+<%endif%>
+\end
+
+<!--
+
+This template is used to assign the ''_canonical_uri'' field to external images.
+
+Change the `./images/` part to a different base URI. The URI can be relative or absolute.
+
+-->
+https://raw.githubusercontent.com/{{$:/GitHub/Repo}}/{{$:/GitHub/Branch}}/{{$:/config/linonetwo/github-external-image/tiddler-folder-name}}/<$view field="title" format="urlencoded"/>
