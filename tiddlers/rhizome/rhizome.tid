@@ -1,6 +1,6 @@
 created: 20240323133654324
 creator: 马不前
-modified: 20250718044013697
+modified: 20250718111154684
 modifier: 马不前
 tags: untagged
 title: rhizome
@@ -11,17 +11,8 @@ rhizome不是一个常见的单词。其名为根茎，比如树根很长的根�
 
 > 其实人跟树是一样的，越是向往高处的阳光，它的根就越要伸向黑暗的地底。
 
-* Github: https://github.com/dongrentianyu/rhizome
-* Site: https://dongrentianyu.github.io/rhizome
+{{网站说明}}
 
-本站使用[[TiddlyWiki]]作为框架，使用[[太记]]作为启动器，使用[[Github|https://github.com/]]作为托管和发布平台。样式使用了[[陈仓颉|zm]]博客的。
-
-本站不定期更新。所以不必期待每天或者每周都有更新，可能一个月更新，也可能半年一更新。本站在线网址直接保存并不能打开，如有需要，可以fork仓库后用[[太记]]加载，或导出所有条目。小小地夸赞一下自己和太微，阅读效果真不错，很多时候感觉比那些动态网站博客观感要好很多。
-
-<$tiddler tiddler="TableOfContents">
-<div style="font-size: 1.5em;">
-<<first-level "[is[current]tagging[]]">>
-</div>
-</$tiddler>
+{{推荐阅读}}
 
 <$transclude tiddler="$:/plugins/mabuqian/gumo-customisation/homepage-footer" mode="block"/>
