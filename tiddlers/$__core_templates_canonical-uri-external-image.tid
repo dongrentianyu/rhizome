@@ -1,6 +1,6 @@
 created: 20200412025117549
 creator: LinOnetwo
-modified: 20250718150958845
+modified: 20250718151435594
 modifier: 马不前
 title: $:/core/templates/canonical-uri-external-image
 type: text/vnd.tiddlywiki
@@ -8,13 +8,13 @@ type: text/vnd.tiddlywiki
 \procedure canonical-uri-external-image()
 <%if [<currentTiddler>prefix[$:/]] %>
 <%if [<currentTiddler>has[type]get[type]prefix[image/jpeg]] %>
-<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] +[addsuffix[.jpg]] }}} />
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[:/],[__]] +[encodeuricomponent[]] +[addsuffix[.jpg]] }}} />
 <%elseif [<currentTiddler>has[type]get[type]prefix[image/png]] %>
-<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] +[addsuffix[.png]] }}} />
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[:/],[__]] +[encodeuricomponent[]] +[addsuffix[.png]] }}} />
 <%elseif [<currentTiddler>has[type]get[type]prefix[image/svg+xml]] %>
-<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] +[addsuffix[.svg]] }}} />
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[:/],[__]] +[encodeuricomponent[]] +[addsuffix[.svg]] }}} />
 <%else%>
-<$text text={{{ [<currentTiddler>search-replace:g:regexp[$:/],[$__]] +[encodeuricomponent[]] }}} />
+<$text text={{{ [<currentTiddler>search-replace:g:regexp[:/],[__]] +[encodeuricomponent[]] }}} />
 <%endif%>
 <%else%>
 <$view field="title" format="urlencoded"/>
