@@ -1,0 +1,15 @@
+created: 20250308151154525
+creator: 马不前
+modified: 20250308164840610
+modifier: 马不前
+tags: homepage-Control-Panel-250309
+title: homepage-Digest-Old
+
+
+```shell
+模仿`$:/core/ui/ControlPanel/Toolbars/PageControls`，并修改了其中[[ControlPanel-Toolbars-PageControls]]`config-base`的配置。这个会生成一系列的配置文件。标题如`$:/config/homepage/Visibility/$:/core/ui/Buttons/advanced-search`也就是前缀加条目名字。一开始我并不想设置成系统条目。但是不设置成系统条目，又会显示在旁边最近条目中。最终还是改成了系统条目。
+
+接着又模仿了核心中的`$:/core/ui/PageTemplate/pagecontrols`，这个就是根据上面的配置条目来生成的。我就放进了[[$:/config/EmptyStoryMessage]]，并增加了分栏，分成了两栏。
+
+最终效果就呈现出来了。
+```

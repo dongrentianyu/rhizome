@@ -1,0 +1,20 @@
+created: 20230214141631257
+creator: 马不前
+modified: 20250418055007092
+modifier: 马不前
+tags: 太微自用模块
+title: 调用api来显示书籍封面
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+\define openlibrary-cover-url(value,key:"isbn",size:"M")  https://covers.openlibrary.org/b/$key$/$value$-$size$.jpg
+
+<img src=<<openlibrary-cover-url value:"9780907563150" size:"L">>/>
+
+<img src=<<openlibrary-cover-url value:"9787570211180" size:"L">>/>
+
+上面的网址只支持外文书籍。不支持中文的，不过理论上也可以调用国内网站的数据的api来实现。
+
+[[论坛|https://talk.tiddlywiki.org/t/api-for-displaying-images-of-book-covers/5469]]
+
+后来我抄别人的抄了一个实现能够在不同wiki里搜索本站条目，并嵌入进去显示的操作。

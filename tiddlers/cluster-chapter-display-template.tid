@@ -1,0 +1,43 @@
+code-body: yes
+created: 20250430214659142
+creator: 马不前
+modified: 20250502065204935
+modifier: 马不前
+tags: cluster-chapter
+title: cluster-chapter-display-template
+
+<$parameters realFilter="" captionText="">
+<$let 
+default={{{ [<currentTiddler>get[display]else[link]] }}}
+display={{{ [[$:/state/cluster/chapter/display]get[text]else<default>] }}}>
+<%if [<display>match[slider-reveal]] %>
+<$transclude $variable="slider-reveal" filter=<<realFilter>> name=<<currentTiddler>> />
+<%elseif [<display>match[one-reveal]] %>
+<$transclude $variable="one-reveal" filter=<<realFilter>> state=<<currentTiddler>> />
+<%elseif [<display>match[link]] %>
+<$list filter=<<realFilter>> >
+<$button class="mist-button" >
+<$action-navigate $to=<<currentTiddler>> />
+<<currentTiddler>>
+</$button>
+</$list>
+<%elseif [<display>match[table]] %>
+<$transclude  $variable="table-dynamic" 
+filter=<<realFilter>> 
+fields={{{ [<currentTiddler>get[TableFields]else{cluster-aggregation-default-fields}] }}}
+caption={{{ [<captionText>else<currentTiddler>] }}}
+class="thead-secondary w-100 table-hover-yellow table-striped-row" 
+editButton="yes" 
+pagination="no" 
+stateTiddler=<<currentTiddler>>
+emptyMessage="filter input is empty"/>
+<%else%>
+<$list filter=<<realFilter>> >
+<$button class="mist-button" >
+<$action-navigate $to=<<currentTiddler>> />
+<<currentTiddler>>
+</$button>
+</$list>
+<%endif%>
+</$let>
+</$parameters>

@@ -1,0 +1,25 @@
+caption: 悬浮编辑器工具栏
+created: 20250227105645730
+creator: 马不前
+modified: 20250227105737007
+modifier: 马不前
+tags: $:/tags/Stylesheet
+title: $:/plugins/mabuqian/gumo-customisation/hover-editor-toolbar
+type: text/vnd.tiddlywiki
+
+<$reveal state="$:/config/gumo-customisation/hover-editor-toolbar" type="match" text="show">
+.tc-editor-toolbar {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 80px !important; 
+    background: fafaf1;
+    z-index: 500;
+}
+
+.tc-tiddler-preview {
+    overflow: unset;
+}
+</$reveal>

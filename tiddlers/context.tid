@@ -1,0 +1,54 @@
+caption: {{images-context}} 展示上下文
+created: 20250429063607016
+creator: 马不前
+description: 展示上下文
+list-before: $:/core/ui/Buttons/open-window
+modified: 20250612051257451
+modifier: 马不前
+tags: $:/tags/ViewToolbar 自用按钮
+title: context
+
+\whitespace trim
+
+<%if [<currentTiddler>!is[system]] %>
+<$set name="popupstate" value=<<qualify "$:/state/popup/context">> >
+<$button popup=<<popupstate>>
+	tooltip="展示上下文"
+	aria-label="展示上下文"
+	class=<<tv-config-toolbar-class>>
+	selectedClass="tc-selected"
+>
+	<%if [<tv-config-toolbar-icons>match[yes]] %>
+		{{images-context}}
+	<%endif%>
+	<%if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text">
+			<$text text="展示上下文"/>
+		</span>
+	<%endif%>
+</$button>
+<$reveal state=<<popupstate>>  type="popup" position="belowleft" >
+	<div class="tc-drop-down-wrapper">
+		<div class="xp-popup tc-popup-keep" style="min-width:680px;max-height: 280px;overflow-y:auto;">
+			<div class="xp-popup-text">
+
+<$list filter="[[context-filter]get[text]enlist-input[]]" variable="root-name">
+
+<$transclude $variable="context-root" tiddler=<<currentTiddler>> name=<<root-name>>  tid-name=<<root-name>> use-true="true" limit="15" />
+
+</$list>
+
+<$list filter="[all[current]!is[system]!is[shadow]]">
+<div style="font-size: 1.25em;">
+<$tiddler tiddler=<<currentTiddler>> >
+	<$transclude $tiddler="$:/plugins/mabuqian/gumo-customisation/node-explorer-colorful"/>
+</$tiddler>
+</div>
+</$list>
+
+			</div>
+		</div>
+	</div>
+</$reveal>
+</$set>
+<%endif%>

@@ -1,0 +1,27 @@
+code-body: yes
+created: 20250711050401937
+creator: 马不前
+modified: 20250711092330589
+modifier: 马不前
+tags: 标签丸增强
+title: 标签丸增强按钮代码
+
+<span style=" display: flex;" >
+<$button tooltip="Copy Tag to Clipboard" message="tm-copy-to-clipboard" param=<<currentTiddler>> class="tc-btn-invisible">
+{{$:/core/images/copy-clipboard}} 复制
+</$button>
+<$button class="tc-btn-invisible" tooltip="Create a new tiddler with this tag">
+<$action-sendmessage $message="tm-new-tiddler" tags={{{ [<currentTiddler>format:titlelist[]] }}}  />
+{{$:/core/images/new-button}} 新建
+</$button>
+<$button class="tc-btn-invisible" tooltip="Remove this tag">
+<$action-listops $tiddler=<<storyTiddler>>  $field="tags" $subfilter="-[{!!title}]"/>
+{{$:/core/images/delete-button}} 移除
+</$button>
+<%if [<currentTiddler>is[missing]] %>
+<$button class="tc-btn-invisible" tooltip="Creating the current tiddler">
+<$action-sendmessage $message="tm-new-tiddler" title=<<currentTiddler>>/>
+<span style="fill: red;">{{$:/core/images/opacity}}</span> 创建
+</$button>
+<%endif%>
+</span>

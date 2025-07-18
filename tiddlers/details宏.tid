@@ -1,0 +1,20 @@
+code-body: yes
+created: 20230509123150390
+creator: 马不前
+modified: 20241102235149601
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: details宏
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+\define det(name text)
+<details>
+<summary  style="cursor: pointer">$name$</summary>
+<p style="margin-left: 1em">$text$</p>
+</details>
+\end
+
+<<det "一九八四" "老大哥在看你">>
+
+<!--这个宏更好用，比设拉子的要好用一些好像，当然可调整的内容不多。--->

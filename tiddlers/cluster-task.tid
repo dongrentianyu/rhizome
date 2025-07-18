@@ -1,0 +1,16 @@
+cluster: task
+created: 20250604115107651
+creator: 马不前
+modified: 20250606051713146
+modifier: 马不前
+tags: cluster
+title: cluster-task
+
+<$let
+stateID={{{ [[$:/state/cluster/task/]addsuffix{!!title}] }}} >
+<$transclude $tiddler="cluster-task-button" mode="block"/>
+
+<$tiddler tiddler=<<currentTiddler>> >
+<$transclude $tiddler={{{ [<stateID>get[text]addprefix[cluster-task-]] }}} mode="block"/>
+</$tiddler>
+</$let>

@@ -1,12 +1,14 @@
 caption: {{$:/language/codemirror6/foldByIndent/caption}}
 caption-zh: {{$:/language/codemirror6/zh/foldByIndent/caption}}
-created: 20240828073840108
+created: 20250313111640246
 creator: 马不前
 description: {{$:/language/codemirror6/foldByIndent/description}}
 description-zh: {{$:/language/codemirror6/zh/foldByIndent/description}}
-modified: 20240828073840108
+id: 4
+modified: 20250313111640246
 modifier: 马不前
-settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+settings-group: fold
+settings-template: input-switch
 title: $:/config/codemirror-6/foldByIndent
 
 yes

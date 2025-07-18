@@ -1,0 +1,25 @@
+author: Mohammad
+code-body: yes
+created: 20221209101315650
+creator: Hulu12
+modified: 20250415173047815
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: macro-calendarcount
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+\define calendarcount(tag)
+
+<$let
+$tag$start={{{ [all[tiddlers]tag[$tag$]has:field[startDate]get[startDate]format:date[YYYY-0MM-0DD 0hh:0mm:0ss.0XXX]convertdate[timestamp]sum[]] }}}
+$tag$end={{{ [all[tiddlers]tag[$tag$]has:field[endDate]get[endDate]format:date[YYYY-0MM-0DD 0hh:0mm:0ss.0XXX]convertdate[timestamp]sum[]] }}}
+$tag$H={{{ [<$tag$end>subtract<$tag$start>divide[3600000]fixed[2]] }}}
+$tag$D={{{ [<$tag$end>subtract<$tag$start>divide[86400000]fixed[2]] }}}
+$tag$M={{{ [<$tag$end>subtract<$tag$start>divide[60000]fixed[0]] }}}
+>
+ 
+<ol>$tag$： <mark class="bg-secondary"><<$tag$D>>天  </mark>  <<hspace width:"100px">>   <mark class="bg-light"><<$tag$H>>小时</mark>   <<hspace width:"100px">> <mark class="bg-success"><<$tag$M>>分</mark>  </ol>
+</$let>
+
+\end

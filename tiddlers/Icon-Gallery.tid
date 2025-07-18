@@ -1,0 +1,13 @@
+caption: 图标示例
+created: 20250416081251552
+creator: 马不前
+modified: 20250416081624192
+modifier: 马不前
+tags: content-snippet
+title: Icon-Gallery
+
+\define copyActions() <$action-sendmessage $message="tm-copy-to-clipboard" $param=<<imageTitle>>/>
+
+<div class="tc-image-chooser">
+<$macrocall $name="image-picker-list" filter="[all[shadows+tiddlers]tag[$:/tags/Image]]" actions=<<copyActions>> />
+</div>

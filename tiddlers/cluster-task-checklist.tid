@@ -1,0 +1,9 @@
+code-body: yes
+created: 20250606051942985
+creator: 马不前
+modified: 20250606052030816
+modifier: 马不前
+tags: cluster-task
+title: cluster-task-checklist
+
+<$transclude $variable="checklist" tiddler=<<currentTiddler>> />

@@ -1,0 +1,64 @@
+code-body: yes
+created: 20250715150634934
+creator: 马不前
+modified: 20250715154854606
+modifier: 马不前
+tags: cluster
+title: cluster-post
+
+\procedure postDate()
+<%if [<currentTiddler>has[postDate]] %>
+	<%if [<currentTiddler>get[postDate]is[tiddler]] %>
+	<$link to={{!!postDate}}>{{!!postDate}}</$link>
+	<%else%>
+	{{!!postDate}}
+	<%endif%>
+<%else%>
+<small>Null</small>
+<%endif%>
+\end
+
+\procedure postTopic()
+<%if [<currentTiddler>has[postTopic]] %>
+	<%if [<currentTiddler>get[postTopic]is[tiddler]] %>
+	<$link to={{!!postTopic}}>{{!!postTopic}}</$link>
+	<%else%>
+	{{!!postTopic}}
+	<%endif%>
+<%else%>
+<small>Null</small>
+<%endif%>
+\end
+
+\procedure postRef()
+<%if [<currentTiddler>has[postRef]] %>
+	<$list filter="[<currentTiddler>get[postRef]enlist-input[]]" variable="refItem">
+	<%if [<refItem>is[tiddler]] %>
+	<$link to=<<refItem>>><<refItem>></$link>
+	<%else%>
+	<<refItem>>
+	<%endif%>
+	</$list>
+<%else%>
+<small>Null</small>
+<%endif%>
+\end
+
+\procedure postPoint()
+<%if [<currentTiddler>has[postPoint]] %>
+	{{!!postPoint}}
+<%else%>
+<small>Null</small>
+<%endif%>
+\end
+
+<div style="font-size: 1.25em;line-height: 1.2em;" >
+
+|tc-max-width tc-first-col-min-width tc-edit-max-width tc-table-no-border tc-first-link-nowrap|k
+|Date |<<postDate>>|
+|Topic |<<postTopic>>|
+|Ref |<<postRef>>|
+|Point |<<postPoint>>|
+|<$transclude mode="block"/>|<|
+
+</div>

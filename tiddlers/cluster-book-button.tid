@@ -1,0 +1,31 @@
+created: 20250521171957338
+creator: 马不前
+modified: 20250521180942000
+modifier: 马不前
+tags: cluster-book
+title: cluster-book-button
+
+\function listSuffix() [[note copy summary topic toc card]]
+\function realTid() [<currentTiddler>removesuffix[-button]]
+\function prefixName() [[]addprefix<suffixName>addprefix[-]addprefix<realTid>]
+\function next-title() [range[1],[99]] +[pad[2]addprefix[-]addprefix<prefixName>!has[title]] +[first[]]
+
+<$let 
+tocName={{{ [<realTid>addsuffix[-toc]] }}}
+chapterSelectID={{{ [[$:/state/cluster/select/chapter]addsuffix{!!title}] }}}
+chapterSelectIDText={{{ [<chapterSelectID>get[text]] }}} 
+selectNameChapter={{{ [<chapterSelectIDText>get[chapter]] }}}>
+<$select tiddler=<<chapterSelectID>> class="mySelectClass" >
+<option value="">Empty</option>
+<$list filter="[tag<tocName>sort[title]] -[suffix[adrift]]" >
+<option value=<<currentTiddler>> ><$view field="chapter"/></option>
+</$list>
+</$select>
+<br>
+<$list filter="[<listSuffix>split[ ]] +[enlist-input[]]" variable="suffixName">
+<$button class="crow-blue-black-btn">
+<$action-sendmessage $message="tm-new-tiddler" title=<<next-title>> tags=<<prefixName>> chapter=<<selectNameChapter>> />
+<$transclude $variable="transform" case="capitalize" src=<<suffixName>>/>
+</$button>
+</$list>
+</$let>

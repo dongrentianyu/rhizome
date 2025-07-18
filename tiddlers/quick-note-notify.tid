@@ -1,0 +1,12 @@
+created: 20250411025132617
+creator: 马不前
+modified: 20250415101426053
+modifier: 马不前
+tags: quick-note
+title: quick-note-notify
+
+<%if [{$:/state/self/quick-note}length[]compare:number:lteq[0]] %>
+<h1><<no-text>></h1>
+<%else%>
+<h1><<yes-text>></h1>
+<%endif%>

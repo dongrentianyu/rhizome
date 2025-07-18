@@ -1,0 +1,30 @@
+caption: {{$:/core/images/down-arrow}} more-buttons-enhance
+created: 20250714104554957
+creator: 马不前
+description: more-buttons-enhance
+list-before: $:/core/ui/Buttons/more-tiddler-actions
+modified: 20250714155035371
+modifier: 马不前
+tags: $:/tags/ViewToolbar 自用按钮
+title: more-buttons-enhance
+
+\whitespace trim
+
+<$button popup=<<qualify "$:/state/popup/more-x">>
+	tooltip={{$:/language/Buttons/More/Hint}}
+	aria-label={{$:/language/Buttons/More/Caption}}
+	class=<<tv-config-toolbar-class>>
+	selectedClass="tc-selected"
+>
+	<%if [<tv-config-toolbar-icons>match[yes]] %>
+		{{$:/core/images/down-arrow}}
+	<%endif%>
+	<%if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text">
+			<$text text="more-buttons-enhance"/>
+		</span>
+	<%endif%>
+</$button>
+<$reveal state=<<qualify "$:/state/popup/more-x">> type="popup" position="belowleft" animate="yes" class="tc-popup-keep">
+{{||more-buttons-enhance-content}}
+</$reveal>

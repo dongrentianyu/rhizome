@@ -1,0 +1,9 @@
+@@.tc-site-title
+
+@@
+
+<$list filter='[tag[$:/tags/LeftMenu]][plugintiddlers[]tag[$:/tags/LeftMenu]]+[nsort[left_menu_order]]'>
+
+<$transclude/>
+
+</$list>

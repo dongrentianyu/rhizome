@@ -1,0 +1,30 @@
+code-body: yes
+created: 20250508123521506
+creator: 马不前
+modified: 20250509003627601
+modifier: 马不前
+tags: cluster
+title: cluster-toc
+
+<$let 
+tocSelectID={{{ [[$:/state/cluster/toc/]addsuffix{!!title}] }}}
+tocSelectIDText={{{ [<tocSelectID>get[text]] }}}
+tocAdrift={{{ [{!!title}addsuffix[-adrift]] }}}>
+<$select tiddler=<<tocSelectID>> class="mySelectClass" >
+<option value="">Empty</option>
+<$list filter="[tag<currentTiddler>sort[title]] -[suffix[adrift]]">
+<option value=<<currentTiddler>>><$view field="chapter"/></option>
+</$list>
+<option value="adrift">Adrift</option>
+</$select>
+
+<%if [<tocSelectIDText>!match[adrift]] %>
+<$tiddler tiddler=<<tocSelectIDText>> >
+<$transclude $tiddler="cluster-chapter" mode="block"/>
+</$tiddler>
+<%else%>
+<$tiddler tiddler=<<tocAdrift>> >
+<$transclude $tiddler="cluster-chapter-adrift" mode="block"/>
+</$tiddler>
+<%endif%>
+</$let>

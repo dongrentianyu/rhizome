@@ -1,0 +1,24 @@
+caption: BMF
+code-body: yes
+created: 20250414080606626
+creator: 马不前
+modified: 20250415182543169
+modifier: 马不前
+tags: quick-edit-fields-type
+title: quick-edit-fields-type-BMF
+
+<%if [<showTiddler>has[super-tag]] %>
+  <%if [<showTiddler>super-tag[Book]] %>
+    <br>
+    {{{ [<showTiddler>] ||book-info }}}
+  <%elseif [<showTiddler>super-tag[Fimls]] %>
+    <br>
+    {{{ [<showTiddler>] ||fimls-info }}}
+  <%elseif [<showTiddler>super-tag[Games]] %>
+    <br>
+    {{{ [<showTiddler>] ||games-info }}}
+  <%endif%>
+ <%else%>
+<br/>
+不是BMF条目
+<%endif%>

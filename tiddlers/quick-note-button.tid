@@ -1,0 +1,24 @@
+created: 20241206053407902
+creator: 马不前
+description: 保存当前笔记
+icon: $:/images/templarian-material-design/credit-card-outline
+modified: 20250416073311438
+modifier: 马不前
+tags: quick-note
+title: quick-note-button
+
+<$button  class="w-100">
+<%if [{$:/state/self/quick-note}length[]compare:number:lteq[0]] %>
+  <$action-sendmessage $message="tm-notify" $param="quick-note-notify" no-text="无笔记存在，不保存！！！"/>
+<%else%>
+  <$action-createtiddler 
+  $basetitle=<<unusedtitle baseName:"quick-note" separator:"-">> 
+  tags="quick-note-file" 
+  text={{{ [[$:/state/self/quick-note]get[text]] }}}
+  />
+    <$action-sendmessage $message="tm-notify" $param="quick-note-notify" yes-text="笔记己保存！！！"/>
+    <$action-timeout delay=3500
+   actions='<$action-setfield $tiddler="$:/state/self/quick-note" text=""/>'/>
+<%endif%>
+Save
+</$button>

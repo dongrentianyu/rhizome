@@ -1,0 +1,23 @@
+created: 20250514034613662
+creator: 马不前
+modified: 20250514074609971
+modifier: 马不前
+tags: Pagination
+title: Pagination-content
+
+<$let
+stateName="$:/state/pagination"
+statePage={{{ [<stateName>get[page]else[1]] }}}
+stateLimit={{{ [<statePage>multiply[15]else[15]] }}}
+stateRest={{{ [<statePage>multiply[15]add[-15]else[0]] }}}
+statePageNumber={{{ [<stateName>get[pageNumber]else[1]] }}} >
+<div>
+<$transclude tiddler="Pagination-content-button" mode="block"/>
+</div>
+<div style="max-height: 200px;overflow: auto;">
+<$transclude tiddler="Pagination-content-display" mode="block"/>
+</div>
+<div>
+<$transclude tiddler="Pagination-content-footer" mode="block"/>
+</div>
+</$let>

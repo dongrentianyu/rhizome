@@ -1,0 +1,26 @@
+created: 20250715063852625
+creator: 马不前
+modified: 20250715063947672
+modifier: 马不前
+tags: More-Page-Controls-Buttons
+title: More-Page-Controls-Buttons-checkbox
+
+\define lingo-base() $:/language/TiddlerInfo/
+
+\define config-base() $:/config/forge/More-Page-Controls-Buttons/Visibility
+
+<$set name="tv-config-toolbar-icons" value="yes">
+<$set name="tv-config-toolbar-text" value="yes">
+<span class="tc-links-draggable-list">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageControls]]" variable="listItem" >
+<$reveal type="match" state=`$:/config/PageControlButtons/Visibility/$(listItem)$` text="hide">
+
+<$tiddler tiddler=<<listItem>>>
+	<$transclude $tiddler="homepage-Toolbars-ItemTemplate"/>
+</$tiddler>
+
+</$reveal>
+</$list>
+</span>
+</$set>
+</$set>

@@ -1,0 +1,130 @@
+created: 20230819075212867
+creator: 马不前
+modified: 20250223095024008
+modifier: 马不前
+tags: Configuration-BMF
+title: Book简易搜索
+wiki-source: BMF
+wl-field-name-text: text
+
+<<list-searchx filter:"[!is[system]super-tag[Book]]" class:"alert  alert-secondary  w-100" placeholder:"查询图书条目" >>
+
+<div class="flex-row">
+  <div class="flex-col borderless">
+    展示类型<$select tiddler='$:/state/book/list-searchx'
+             tooltip='选择展示类型'
+             default="不展示">
+      <option>不展示</option>
+      <option>简单展示</option>
+      <option>表格展示</option>
+    </$select>
+  </div>
+  <div class="flex-col borderless">
+  标签  <<select-field-search "tags" "tags" "[super-tag[Book]!prefix[$:/]]">>
+  </div>
+  <div class="flex-col borderless">
+  国家  <<select-field-search "国家" "国家" "[super-tag[Book]has[国家]]">>
+  </div>
+  <div class="flex-col borderless">
+    <<select-field-search "author" "author" "[super-tag[Book]has[author]]">>
+  </div>
+</div>
+
+<div class="flex-row">
+  <div class="flex-col borderless">
+    <<select-field-search "译者" "译者" "[has[译者]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "阅读状态" "阅读状态" "[super-tag[Book]has[阅读状态]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "语言" "语言" "[has[语言]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "出版社" "出版社" "[has[出版社]]">>
+  </div>
+</div>
+
+<div class="flex-row">
+  <div class="flex-col borderless">
+    <<select-field-search "洲域" "洲域" "[has[洲域]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "通俗文学" "通俗文学" "[has[通俗文学]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "丛书" "丛书" "[has[丛书]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "时代" "时代" "[has[时代]]">>
+  </div>
+</div>
+
+<div class="flex-row">
+  <div class="flex-col borderless">
+    <<select-field-search "题材" "题材" "[has[题材]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "学术分类" "学术分类" "[has[学术分类]]">>
+  </div>
+  <div class="flex-col borderless">
+  <<select-field-search "出品方" "出品方" "[has[出品方]]">>
+  </div>
+</div>
+
+
+<$reveal type="match"
+         state="$:/state/book/list-searchx"
+         text="简单展示">
+  <div style="column-count:2;">
+    <$list filter="[!is[system]super-tag[Book]] 
+    +[search:tags:{$:/state/select-field-search/tags}] 
+    +[search:国家:{$:/state/select-field-search/国家}] 
+    +[search:author:{$:/state/select-field-search/author}]
+    +[search:译者:{$:/state/select-field-search/译者}]
+    +[search:阅读状态:{$:/state/select-field-search/阅读状态}]
+    +[search:丛书:{$:/state/select-field-search/丛书}]
+    +[search:出版社:{$:/state/select-field-search/出版社}]
+    +[search:洲域:{$:/state/select-field-search/洲域}]
+    +[search:通俗文学:{$:/state/select-field-search/通俗文学}]
+    +[search:语言:{$:/state/select-field-search/语言}]
+    +[search:时代:{$:/state/select-field-search/时代}]
+    +[search:题材:{$:/state/select-field-search/题材}]
+    +[search:学术分类:{$:/state/select-field-search/学术分类}]
+    +[search:出品方:{$:/state/select-field-search/出品方}]">
+
+      <$link>
+        <<currentTiddler>>
+      </$link>
+
+    </$list>
+  </div>
+</$reveal>
+
+<$reveal type="match"
+         state="$:/state/book/list-searchx"
+         text="表格展示">
+
+  <$macrocall $name=table-dynamic
+              filter="[!is[system]super-tag[Book]] 
+    +[search:tags:{$:/state/select-field-search/tags}] 
+    +[search:国家:{$:/state/select-field-search/国家}] 
+    +[search:author:{$:/state/select-field-search/author}]
+    +[search:译者:{$:/state/select-field-search/译者}]
+    +[search:阅读状态:{$:/state/select-field-search/阅读状态}]
+    +[search:丛书:{$:/state/select-field-search/丛书}]
+    +[search:出版社:{$:/state/select-field-search/出版社}]
+    +[search:洲域:{$:/state/select-field-search/洲域}]
+    +[search:通俗文学:{$:/state/select-field-search/通俗文学}]
+    +[search:语言:{$:/state/select-field-search/语言}]
+    +[search:时代:{$:/state/select-field-search/时代}]
+    +[search:题材:{$:/state/select-field-search/题材}]
+    +[search:学术分类:{$:/state/select-field-search/学术分类}]
+    +[search:出品方:{$:/state/select-field-search/出品方}]"
+              class="w-100 thead-secondary table-hover-cyan"
+              fields="tbl-expand title tags author 阅读状态"
+              caption=<<now "YYYY-0MM-0DD hh:0mm:0ss">>
+    stateTiddler="$:/state/book/list-searchx/table-dynamic"
+    />
+
+</$reveal>

@@ -1,0 +1,68 @@
+created: 20250514034901765
+creator: 马不前
+modified: 20250514075013430
+modifier: 马不前
+tags: Pagination-content
+title: Pagination-content-footer
+
+<div style="display: flex;flex-grow: 1; justify-content: space-around;" >
+<$button class="mist-button" >
+当前页码 <<statePage>>
+</$button>
+<$button
+	tooltip="展示上下文"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> pageNumber={{{ [<stateName>get[pageNumber]add[-1]] }}}/>
+Previous
+</$button>
+<$button
+	tooltip="下一个"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> page=<<statePageNumber>> />
+<<statePageNumber>>
+</$button>
+<$button
+	tooltip="下一个"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> page={{{ [<statePageNumber>add[1]] }}} />
+<$text text={{{ [<statePageNumber>add[1]] }}} />
+</$button>
+<$button
+	tooltip="下一个"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> page={{{ [<statePageNumber>add[2]] }}} />
+<$text text={{{ [<statePageNumber>add[2]] }}} />
+</$button>
+<$button
+	tooltip="下一个"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> page={{{ [<statePageNumber>add[3]] }}} />
+<$text text={{{ [<statePageNumber>add[3]] }}} />
+</$button>
+<$button
+	tooltip="下一个"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> page={{{ [<statePageNumber>add[4]] }}} />
+<$text text={{{ [<statePageNumber>add[4]] }}} />
+</$button>
+<$button
+	tooltip="下一个"
+	aria-label="展示上下文"
+	class="mist-button"
+>
+<$action-setfield $tiddler=<<stateName>> pageNumber={{{ [<stateName>get[pageNumber]add[1]] }}}/>
+Next
+</$button>
+</div>

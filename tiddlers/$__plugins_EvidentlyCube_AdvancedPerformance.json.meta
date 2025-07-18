@@ -1,0 +1,11 @@
+author: Maurycy Zarzycki
+core-version: >=5.2.3
+dependents: 
+description: Additional functionalities to measure your TW's performance.
+list: readme license history
+name: Advanced Performance
+plugin-type: plugin
+source: https://github.com/EvidentlyCube/TW5-AdvancedPerformance
+title: $:/plugins/EvidentlyCube/AdvancedPerformance
+type: application/json
+version: 1.1.4

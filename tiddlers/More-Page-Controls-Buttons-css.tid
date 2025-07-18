@@ -1,0 +1,27 @@
+created: 20250715023931443
+creator: 马不前
+modified: 20250715065656789
+modifier: 马不前
+tags: $:/tags/Stylesheet More-Page-Controls-Buttons
+title: More-Page-Controls-Buttons-css
+
+.xnote-rightmenu {
+  z-index: 1300 !important;    /* 提升整个容器的层级 */
+  overflow: visible !important;/* 放开子元素溢出 */
+  opacity: 1;
+}
+.popup-box {
+  position: absolute;
+  z-index: 1400;        /* 确保最高 */
+  overflow: visible;
+  right: 0px;
+  border: 1px solid #ccc;
+  background: white;
+  padding: 1em;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+.popup-btn{
+position:absolute;
+right: 10px;
+opacity: 1;
+}

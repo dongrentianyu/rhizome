@@ -1,0 +1,13 @@
+[
+    {
+        "created": "20230822065623057",
+        "creator": "马不前",
+        "text": "",
+        "title": "$:/TraitTag/Paper",
+        "modified": "20230822143751368",
+        "modifier": "马不前",
+        "tags": "$:/SuperTag/TraitTag",
+        "wl-field-name-text": "schema",
+        "schema": "{\n  \"type\": \"object\",\n  \"title\": \"title\",\n  \"properties\": {\n    \"文献类型\": {\n      \"type\": \"string\",\n      \"default\": \"期刊\"\n    },\n    \"url\": {\n      \"type\": \"string\"\n    },\n    \"副标题\": {\n      \"type\": \"string\"\n    },\n    \"中图分类号\": {\n      \"type\": \"string\"\n    },\n    \"文章编号\": {\n      \"type\": \"string\"\n    },\n    \"关键词\": {\n      \"type\": \"string\"\n    },\n    \"语言\": {\n      \"type\": \"string\"\n    },\n    \"author\": {\n      \"type\": \"string\",\n      \"title\": \"作者\"\n    },\n    \"机构\": {\n      \"type\": \"string\",\n      \"description\": \"一般为大学或研究所\"\n    },\n    \"学院\": {\n      \"type\": \"string\"\n    },\n    \"基金项目\": {\n      \"type\": \"string\"\n    },\n    \"期刊名\": {\n      \"type\": \"string\"\n    },\n    \"卷数\": {\n      \"type\": \"string\"\n    },\n    \"期数\": {\n      \"type\": \"string\"\n    },\n    \"页数\": {\n      \"type\": \"string\"\n    },\n    \"出版年份\": {\n      \"type\": \"string\"\n    },\n    \"DOI\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"文献类型\",\n    \"author\",\n    \"机构\",\n    \"出版年份\",\n    \"DOI\",\n    \"期刊名\",\n    \"卷数\",\n    \"期数\",\n    \"副标题\",\n    \"关键词\",\n    \"文章编号\",\n    \"中图分类号\",\n    \"学院\",\n    \"基金项目\",\n    \"语言\",\n    \"页数\",\n    \"url\"\n  ]\n}"
+    }
+]

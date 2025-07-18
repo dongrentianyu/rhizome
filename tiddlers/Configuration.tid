@@ -1,0 +1,14 @@
+created: 20230902121731345
+creator: 马不前
+list: 笔记 查询相关条目 批量拆分处理器 摘录 自定义修改侧边栏标签 book-view-fields cluster-book-info-fields Configuration-BMF jefftay-style-modified paper字段管理 super-tag Unused-Configuration
+modified: 20250523073252375
+modifier: 马不前
+tags: Forge
+title: Configuration
+wiki-source: lifewiki
+
+放一些配置内容。先不添加`OtherThings`标签，如果有很多内容，再往前分类。
+
+把所有wiki相关的配置文件都放在这边，只要是跟代码相关且在本站中使用的，都统一放在这边维护管理。包括宏，样式表，以及由宏和微件构建出来的独立的功能。
+
+目前分类还比较混乱。有几种分类方式，一种按不同的wiki分类。好处是什么wiki使用了什么立即就能找到并修改。但缺点在于除了BMF内容比较多外，很多wiki并没有太多的配置文件。另一种方式是按使用状态分类，分为两类，一类正在使用，一类没有使用。还有一种分类方式是直接按内容上去分类，比如某些是跟笔记的supertag相关的，那就放在一起。

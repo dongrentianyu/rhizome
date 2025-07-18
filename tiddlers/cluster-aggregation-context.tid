@@ -1,0 +1,20 @@
+created: 20250418183357426
+creator: 马不前
+modified: 20250615074850019
+modifier: 马不前
+tags: cluster-aggregation
+title: cluster-aggregation-context
+
+<$list filter="[[context-filter]get[text]enlist-input[]]" variable="root-name">
+
+<$transclude $variable="context-root" tiddler=<<currentTiddler>> name=<<root-name>>  tid-name=<<root-name>> use-true="true" limit="15" />
+
+</$list>
+
+<$list filter="[all[current]!is[system]!is[shadow]]">
+<div style="font-size: 1.5em;">
+<$tiddler tiddler=<<currentTiddler>> >
+	<$transclude $tiddler="$:/plugins/mabuqian/gumo-customisation/node-explorer-colorful"/>
+</$tiddler>
+</div>
+</$list>

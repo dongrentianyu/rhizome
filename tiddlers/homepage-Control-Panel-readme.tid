@@ -1,0 +1,32 @@
+created: 20250305120526929
+creator: 马不前
+modified: 20250603214652805
+modifier: 马不前
+tags: homepage-Control-Panel
+title: homepage-Control-Panel-readme
+
+缘起：Obsidian有一个界面，进去打开就有新建条目的按钮，我在想TiddlyWiki能不能模仿一下。于是我找到了`oeyoews-neotw-homepage`插件，并修改了里面的内容。但我发现我想展示页面按钮，还需要再深入研究……
+
+原本内容放在了[[EmptyStoryMessage-origin]]，这是`oeyoews-neotw-homepage`插件中自带的，我修改了其中内容。我想展示页面按钮，但并不像所有都展示。也不想一个个去添加。我就开始研究TiddlyWiki本身的设置。
+
+在[[旧稿|homepage-Digest-Old]]中，我是和TiddlyWiki本身一样，几乎没有太大的修改。但那种设置会生成大量诸如` $:/config/homepage/Visibility/$:/core/ui/Buttons/save-wiki`的条目，并且只存储一个值，那就是hide或show。我认为这样太占用空间了，当我发现kookma使用json类型文件存储插件的配置时，我便想着可以再深入模仿一下。
+
+于是我找到了原始模板`$:/core/ui/ControlPanel/Toolbars/ItemTemplate`，并修改成了[[homepage-Toolbars-ItemTemplate]]。里面代码的变化也很简单，只是修改了生成的参数而己。现在只会生成一个json文件，然后把配置内容放进里面。如下面代码。
+
+
+```json
+{
+    "$:/core/ui/Buttons/home": "show",
+    "$:/plugins/mabuqian/xnote/ui/Buttons/PageControls": "hide",
+    "$:/core/ui/Buttons/close-all": "hide",
+    "$:/core/ui/Buttons/fold-all": "hide",
+    "$:/core/ui/Buttons/unfold-all": "hide",
+    "$:/core/ui/Buttons/permaview": "hide",
+    "$:/core/ui/Buttons/more-page-actions": "hide"
+}
+```
+
+同样修改[[$:/config/EmptyStoryMessage]]代码，使用了`jsonget`筛选器，这样就可以获得和之前一样的效果了。
+
+* 增加[[homepage-Control-Panel-default]]，把上面的模板放里面了。
+* 同时也增加了一个[[homepage-Control-Panel-config]]条目，允许改变这个条目来改变上述模式，这样就不容易产生冲突。

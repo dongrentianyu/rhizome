@@ -1,0 +1,23 @@
+created: 20250428102408337
+creator: 马不前
+modified: 20250503075920467
+modifier: 马不前
+tags: cluster
+title: cluster-chapter
+
+<$let
+stateFilterName={{{ [[$:/state/cluster/chapter/filter/]addsuffix{!!title}] }}}
+stateID={{{ [[$:/state/cluster/chapter/]addsuffix{!!title}] }}} 
+popupstate=<<qualify "$:/state/cluster/chapter/display">> 
+chapterText={{{ [<currentTiddler>get[chapter]] }}} 
+stateIDText={{{ [<stateID>get[text]else[-copy]] }}} 
+rootTag={{{ [<currentTiddler>tags[]tags[]] }}} 
+captionText={{{ [<currentTiddler>has[caption]get[caption]] }}} >
+
+<$transclude $tiddler="cluster-chapter-button"/>
+
+<$tiddler tiddler=<<currentTiddler>> >
+	<$transclude $variable="cluster-chapter-procedure" realSuffix=<<stateIDText>>  littleFilter=`[chapter[$(chapterText)$]]` stateFilterName=<<stateFilterName>> rootTag=<<rootTag>> captionText=<<captionText>>/>
+</$tiddler>
+
+</$let>

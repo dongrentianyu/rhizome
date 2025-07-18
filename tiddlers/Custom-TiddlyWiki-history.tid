@@ -1,0 +1,17 @@
+created: 20250417183914701
+creator: 马不前
+modified: 20250417184628462
+modifier: 马不前
+tags: Custom-TiddlyWiki
+title: Custom-TiddlyWiki-history
+
+* 刚接触TiddlyWiki时，基本上是在不同的wiki里保存不同的设置
+** 当时的想法是，TiddlyWiki可能承受不了那么多数据，所以最好用不同的wiki来保存不同的数据，但后来证明这个想法并不好，至少目前还需要考虑这个问题
+* 之后折腾各种插件，有些是把插件修改了，有些是把插件和TiddlyWiki的微件结合起来
+* 中间曾经过一个定制化的版本，但现在已停更了，见[[个人定制版本]]
+* 再之后有[[Modern.TiddlyDev]]插件，可以很方便地构建插件了
+** 再之后就是直接打包插件，上架CPL
+* 最后使用一个大的wiki管理所有的笔记
+** 现在还在用[[WPS多维表格]]，但也有一段时间没用了
+** 最终是TiddlyWiki胜出还是WPS多维表格胜出，就看对TiddlyWiki的使用程度了
+* 刚开始折腾时，经常找[[霆枢]]讨论，但现在他很少再用TiddlyWiki了

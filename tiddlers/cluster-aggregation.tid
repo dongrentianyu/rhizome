@@ -1,0 +1,17 @@
+created: 20250418182438016
+creator: 马不前
+modified: 20250526212232589
+modifier: 马不前
+tags: cluster
+title: cluster-aggregation
+
+<$let
+stateID={{{ [[$:/state/cluster/aggregation]addsuffix{!!title}] }}} >
+
+<$transclude $tiddler="cluster-aggregation-button"/>
+
+<$tiddler tiddler=<<currentTiddler>> >
+	<$transclude $tiddler={{{ [<stateID>get[text]else[cluster-aggregation-toc]] }}}/>
+</$tiddler>
+
+</$let>

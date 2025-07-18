@@ -1,0 +1,19 @@
+created: 20241109142357607
+creator: 马不前
+modified: 20241109201545850
+modifier: 马不前
+tags: 太微自用模块
+title: select-tabs
+
+以前用作`wikis`的内容，但现在换成了button的样式。
+
+```
+<$select tiddler='$:/state/tab/wikis'>
+<$list filter='[tag[wikis]]'>
+<option><$view field='title'/></option>
+</$list>
+</$select>
+<$link to={{$:/state/tab/wikis}} tooltip="自定义工具提示">{{$:/state/tab/wikis}}</$link>
+{{wikis-template}}
+
+```

@@ -1,0 +1,42 @@
+created: 20250526222419235
+creator: 马不前
+modified: 20250526232156858
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: moon-x
+
+.moon-x .tamasha-presentation-frame, 
+.moon-x .tamasha-overlay {
+	color:#333;
+	background-color: #f7fbfc;
+}
+
+.moon-x .tamasha-slide-content {
+	font-size: 2rem;
+	font-family: "朱雀仿宋（预览测试版）","Arvo", "Times", sans-serif;
+	font-weight:400;
+}
+
+.moon-x .tamasha-slide-content h2{
+	font-family: "朱雀仿宋（预览测试版）","News Cycle", "Times", sans-serif;
+	font-size:3rem;
+/*	font-weight:300;*/
+}
+
+.moon-x .tamasha-overlay.open .tamasha-slide-content {	
+	height:unset;
+	width:unset;
+}
+
+.moon-x .tamasha-slide-content .tamasha-slide-title{ /* used with vanilla template*/
+	font-weight:300;
+}
+
+/* ---------- code ---------- */
+.moon-x .tamasha-slide-content  code,
+.moon-x .tamasha-slide-content  pre {
+	font-family:'Inconsolata', monospace;
+	font-size:0.9em;
+	line-height:1.2em;
+	text-align:left;
+}

@@ -1,0 +1,12 @@
+created: 20230319131645569
+creator: 马不前
+modified: 20250429175318490
+modifier: 马不前
+tags: Custom-TiddlyWiki
+title: 自用样式
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+* 在本wiki中启用的样式会保存在当前条目下
+* 打包成插件的则放在[[Custom-TiddlyWiki-unused]]下
+* 通常是可以普遍使用的，如果是组件的样式，则放在组件下

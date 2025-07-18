@@ -1,0 +1,10 @@
+author: inmysocks
+core-version: >=5.1.6
+dependents: 
+description: An alternate menu system that can go on top of other themes
+name: IconMenus
+plugin-type: plugin
+source: http://ooktech.com/iconmenus/
+title: $:/plugins/inmysocks/IconMenus
+type: application/json
+version: 0.0.4

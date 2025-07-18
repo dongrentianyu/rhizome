@@ -1,0 +1,41 @@
+created: 20250310095701207
+creator: 马不前
+modified: 20250310100711545
+modifier: 马不前
+tags: jefftay-style-modified $:/tags/Stylesheet
+title: code样式
+
+/* 代码文本样式 */
+code {
+    color: red;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* 代码注释样式 */
+code .comment {
+    color: #5c6370;
+    font-style: italic;
+}
+
+/* 字符串样式 */
+code .string {
+    color: #98c379;
+}
+
+/* 关键字样式 */
+code .keyword {
+    color: #c678dd;
+    font-weight: bold;
+}
+
+/* 数字样式 */
+code .number {
+    color: #d19a66;
+}
+
+/* 函数名样式 */
+code .function {
+    color: #61afef;
+}

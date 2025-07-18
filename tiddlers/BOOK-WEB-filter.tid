@@ -1,0 +1,59 @@
+created: 20240317130326745
+creator: 马不前
+modified: 20240908100630025
+modifier: 马不前
+tags: BOOK-WEB
+title: BOOK-WEB-filter
+wiki-source: BMF
+
+<div style="height: 250px; border: 1px solid #ccc; overflow: auto; padding: 10px;">
+
+<$transclude 
+$variable="button-field-search"
+field="tags"
+tid="$:/state/book/web-search"
+name="标签"
+filter="[super-tag[Book]!prefix[$:/]]"
+/>
+
+<$transclude 
+$variable="button-field-search"
+field="时代"
+tid="$:/state/book/web-search"
+name="时代"
+filter="[super-tag[Book]!prefix[$:/]]"
+/>
+
+<$transclude 
+$variable="button-field-search"
+field="阅读状态"
+tid="$:/state/book/web-search"
+name="阅读状态"
+filter="[super-tag[Book]!prefix[$:/]]"
+/>
+
+<$transclude 
+$variable="button-field-search"
+field="题材"
+tid="$:/state/book/web-search"
+name="题材"
+filter="[super-tag[Book]!prefix[$:/]]"
+/>
+
+<$transclude 
+$variable="select-field-search-2"
+field="出品方"
+tid="$:/state/book/web-search"
+name="出品方"
+filter="[super-tag[Book]!prefix[$:/]]"
+/>
+
+<$transclude 
+$variable="select-field-search-2"
+field="出版社"
+tid="$:/state/book/web-search"
+name="出版社"
+filter="[super-tag[Book]!prefix[$:/]]"
+/>
+
+</div>

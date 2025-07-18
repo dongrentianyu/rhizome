@@ -1,0 +1,10 @@
+code-body: yes
+created: 20250603220853990
+creator: 马不前
+list-before: $:/config/FieldEditorFilters/default
+modified: 20250612135453873
+modifier: 马不前
+tags: cluster $:/tags/FieldEditorFilter
+title: cluster-Edit-Template-Cascades
+
+[[cluster-Edit-Template-filters]get[text]enlist-input[]match<currentField>then[cluster-Edit-Template]]

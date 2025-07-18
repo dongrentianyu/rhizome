@@ -1,0 +1,16 @@
+created: 20250411095041831
+creator: 马不前
+modified: 20250421080734978
+modifier: 马不前
+tags: quick-snippet
+title: quick-snippet-readme
+
+* 制作了一个按钮[[quick-snippet-button]]，在编辑栏启动页面
+** 图标[[$:/images/google-material-design/image/sharp/24px/photo-filter]]
+* 内容在[[quick-snippet-param]]展示
+* 状态条目`$:/state/tab/quick-snippet`，用来快速选择
+* 标签[[quick-snippet-content]]下的内容是按钮切换的内容
+** [[plugins-snippet]]，显示插件和核心带的snippet
+** [[modal-snippet]]，一般自己使用的snippet
+** [[TW-snippet]]，太微相关的，一般是条件快捷语法，按钮等。
+** 除了[[plugins-snippet]]外，其他按钮的内容，都是放在其自身下面。

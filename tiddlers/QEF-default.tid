@@ -1,0 +1,29 @@
+created: 20250429163658110
+creator: 马不前
+modified: 20250429163725539
+modifier: 马不前
+tags: quick-edit-fields-type-template
+title: QEF-default
+
+<div class="sh-multicol2 " >
+<h2>选择编辑的字段</h2>
+<div style="height: 150px; overflow-y: scroll;">
+<div style="font-size: 32px;" >
+<$list filter="[!is[system]fields[]unique[]] -[{quick-edit-fields-filters}enlist-input[]] ">
+
+{{{ [<currentTiddler>] || quick-edit-fields-quote }}}
+
+</$list>
+</div>
+</div>
+<h2>选择己有的值</h2>
+<div style="height: 150px; overflow-y: scroll;">
+<div style="font-size: 32px;" >
+<$list filter='[all[shadows+tiddlers]has{$:/state/quick-edit-fields/fields}get{$:/state/quick-edit-fields/fields}unique[]]'>
+
+ {{{ [<currentTiddler>] || quick-edit-fields-select}}}
+
+</$list>
+</div>
+</div>
+</div>

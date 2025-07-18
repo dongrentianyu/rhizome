@@ -1,0 +1,14 @@
+caption: {{$:/language/codemirror6/bracketMatching/caption}}
+caption-zh: {{$:/language/codemirror6/zh/bracketMatching/caption}}
+created: 20250420185030107
+creator: 马不前
+description: {{$:/language/codemirror6/bracketMatching/description}}
+description-zh: {{$:/language/codemirror6/zh/bracketMatching/description}}
+id: 34
+modified: 20250420185030107
+modifier: 马不前
+settings-group: general
+settings-template: input-switch
+title: $:/config/codemirror-6/bracketMatching
+
+yes

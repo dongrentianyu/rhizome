@@ -1,0 +1,39 @@
+caption: {{images-supertag}} 编辑非系统字段
+created: 20250612104402684
+creator: 马不前
+description: 编辑非系统字段
+list-after: context
+modified: 20250617214434271
+modifier: 马不前
+super-tag: 
+tags: $:/tags/ViewToolbar 自用按钮
+title: display-fields-super-tag
+
+\whitespace trim
+
+<%if [is[current]!is[system]!cluster[book-info]] %>
+<$let stateID={{{ [[$:/state/super-tag/]addsuffix<currentTiddler>] }}} >
+<$button
+	tooltip="编辑字段"
+	aria-label="编辑字段"
+	class=<<tv-config-toolbar-class>>
+	selectedClass="tc-selected"
+>
+<$action-setfield $tiddler=<<stateID>> text="show"/>
+<%if [<stateID>get[text]match[show]] %>
+		<$action-setfield $tiddler=<<stateID>> text="hide"/>
+<%endif%>
+<%if [<stateID>get[text]match[hide]] %>
+		<$action-setfield $tiddler=<<stateID>> text="show"/>
+<%endif%>
+	<%if [<tv-config-toolbar-icons>match[yes]] %>
+		{{images-supertag}}
+	<%endif%>
+	<%if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text">
+			<$text text="编辑字段"/>
+		</span>
+	<%endif%>
+</$button>
+</$let>
+<%endif%>

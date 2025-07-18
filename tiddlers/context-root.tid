@@ -1,0 +1,19 @@
+code-body: yes
+created: 20250415065520649
+creator: 马不前
+modified: 20250415174650383
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: context-root
+
+\define context-root(tiddler,name,tid-name,use-true,limit)
+<$list filter="[[$tiddler$]!prefix[$:/]in-tagtree-of:inclusive[$name$]]">
+<$set name=CurrentTag value="$tiddler$"  >
+		<$set name=TheFilter filter='[is[current]]' >
+			<$transclude $variable="breadcrumbs" apex_tag-4="$name$" tid-4="$tid-name$" use_apex_tag-4="$use-true$" length_limit-2="$limit$" />
+		</$set>
+</$set>
+\end
+
+
+<$transclude $variable="context-root" tiddler="" name="WENAI" tid-name="WENAI" use-true="true" limit="15" />

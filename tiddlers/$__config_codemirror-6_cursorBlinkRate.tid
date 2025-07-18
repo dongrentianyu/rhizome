@@ -1,0 +1,14 @@
+caption: {{$:/language/codemirror6/cursorBlinkRate/caption}}
+caption-zh: {{$:/language/codemirror6/zh/cursorBlinkRate/caption}}
+created: 20250420185014542
+creator: 马不前
+description: {{$:/language/codemirror6/cursorBlinkRate/description}}
+description-zh: {{$:/language/codemirror6/zh/cursorBlinkRate/description}}
+id: 27
+modified: 20250420185014542
+modifier: 马不前
+settings-group: general
+settings-template: input
+title: $:/config/codemirror-6/cursorBlinkRate
+
+0

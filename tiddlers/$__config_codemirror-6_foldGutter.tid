@@ -1,12 +1,14 @@
 caption: {{$:/language/codemirror6/foldGutter/caption}}
 caption-zh: {{$:/language/codemirror6/zh/foldGutter/caption}}
-created: 20240828073839292
+created: 20250313111638774
 creator: 马不前
 description: {{$:/language/codemirror6/foldGutter/description}}
 description-zh: {{$:/language/codemirror6/zh/foldGutter/description}}
-modified: 20240828073839292
+id: 3
+modified: 20250313111638774
 modifier: 马不前
-settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input-switch
+settings-group: fold
+settings-template: input-switch
 title: $:/config/codemirror-6/foldGutter
 
 yes

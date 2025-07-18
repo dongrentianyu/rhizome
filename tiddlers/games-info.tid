@@ -1,0 +1,19 @@
+created: 20241104005042467
+creator: 马不前
+modified: 20241104010553138
+modifier: 马不前
+tags: BMF-info
+title: games-info
+
+\import [[BMF-info-marco]]
+
+<$transclude $variable="details-3-list-form" field1="游玩状态" field2="游戏简单评价" field3="有无修改器"/>
+<$transclude $variable="details-3-list-form" field1="游戏来源" field2="游戏内部分类" field3="游戏外部分类"/>
+<details class="list-form-details">
+<summary>购买时间 游戏时长 金额</summary>
+<div style="list-style-type: none; padding: 0; columns: 3;">
+<$transclude $variable="form-list-date" tid-2=<<currentTiddler>> fieldname-2="购买时间"/>
+<$transclude $variable="form-list-text" tid-2=<<currentTiddler>> fieldname-2="游戏时长" />
+<$transclude $variable="form-list-text" tid-2=<<currentTiddler>> fieldname-2="金额"/>
+</div>
+</details>

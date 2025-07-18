@@ -1,0 +1,75 @@
+created: 20230822084732468
+creator: 马不前
+modified: 20241112064711444
+modifier: 马不前
+tags: 太微自用模块
+title: 新建时的快捷按钮
+wiki-source: BMF
+
+Book︰ <$edit-text tiddler="$:/state/new-button-Book" tag="input" default="" class="w-50"/>&nbsp;&nbsp;<$button>
+<$action-createtiddler 
+$basetitle={{$:/state/new-button-Book}} 
+super-tag="Book"
+出版年份=""
+出版社=""
+出品方=""
+丛书=""
+副标题=""
+时代=""
+所看书目类型="自购"
+译者=""
+阅读状态="未读"
+字数="0"
+页数="0"
+author=""
+ISBN="0" >
+<$action-navigate $to=<<createTiddler-title>>/>
+</$action-createtiddler>
+Book
+</$button>&nbsp;&nbsp;
+<$button>
+<$action-setfield $tiddler="$:/state/new-button-Book" text=""/>
+delete
+</$button>
+
+Fiml︰ <$edit-text tiddler="$:/state/new-button-Fimls" tag="input" default="" class="w-50"/>&nbsp;&nbsp;<$button>
+<$action-createtiddler 
+$basetitle={{$:/state/new-button-Fimls}} 
+super-tag="Fimls"
+ >
+<$action-navigate $to=<<createTiddler-title>>/>
+</$action-createtiddler>
+Fimls
+</$button>&nbsp;&nbsp;
+<$button>
+<$action-setfield $tiddler="$:/state/new-button-Fimls" text=""/>
+delete
+</$button>
+
+Game︰ <$edit-text tiddler="$:/state/new-button-Games" tag="input" default="" class="w-50"/>&nbsp;&nbsp;<$button>
+<$action-createtiddler 
+$basetitle={{$:/state/new-button-Games}} 
+super-tag="Games"
+ >
+<$action-navigate $to=<<createTiddler-title>>/>
+</$action-createtiddler>
+Games
+</$button>&nbsp;&nbsp;
+<$button>
+<$action-setfield $tiddler="$:/state/new-button-Games" text=""/>
+delete
+</$button>
+
+Paper︰ <$edit-text tiddler="$:/state/new-button-Paper" tag="input" default="" class="w-50"/>&nbsp;&nbsp;<$button>
+<$action-createtiddler 
+$basetitle={{$:/state/new-button-Paper}} 
+super-tag="Paper"
+ >
+<$action-navigate $to=<<createTiddler-title>>/>
+</$action-createtiddler>
+Paper
+</$button>&nbsp;&nbsp;
+<$button>
+<$action-setfield $tiddler="$:/state/new-button-Paper" text=""/>
+delete
+</$button>

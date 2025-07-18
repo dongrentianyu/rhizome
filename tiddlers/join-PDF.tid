@@ -1,0 +1,34 @@
+created: 20241111153750884
+creator: 马不前
+modified: 20241114162805255
+modifier: 马不前
+tags: 自定义宏 $:/tags/Macro
+title: join-PDF
+
+\define join-PDF(label,filter,target)
+<$button> $label$
+   <$wikify name="out" text="""<$list filter="$filter$">!!! <$text text={{!!title}}/>
+
+<$text text={{!!text}}/>
+
+</$list>""">
+      <$action-setfield $tiddler="$target$" text=<<out>> />
+   </$wikify>
+</$button>
+\end
+
+
+filter: <$edit-text tiddler="$:/state/join-PDF/filter" field="text" tag=input class="w-50"/>
+
+---
+
+target:<$edit-text tiddler="$:/state/join-PDF/target" field="text" tag=input />
+
+<$transclude $variable="join-PDF" label="把筛选器的条目保存在目标中" filter={{$:/state/join-PDF/filter}} target={{$:/state/join-PDF/target}}/>
+
+<$link to={{$:/state/join-PDF/target}} />
+
+
+```shell
+https://kookma.github.io/TW-Scripts/#Concatenate Different Tiddlers in one Tiddler
+```

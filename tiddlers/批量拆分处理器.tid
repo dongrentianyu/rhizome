@@ -1,0 +1,11 @@
+created: 20230821082820789
+creator: 马不前
+modified: 20240908101503411
+modifier: 马不前
+tags: Configuration
+title: 批量拆分处理器
+wiki-source: readingwiki
+
+我发现在tiddlywiki里也可以实现我之前用quicker实现的批量拆分处理。主要是通过筛选器split拆分字符串，感觉还是可以记录下来的。
+
+理论上我可以实现标题直接从文本中截取，但现在我并不想这样做。通过给定默认的标题，让标题在一定程度上失去语义表达，从而自动生成某种暗示，暗示我去完成覆盖原有标题。

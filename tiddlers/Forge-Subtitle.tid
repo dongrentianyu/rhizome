@@ -1,0 +1,11 @@
+code-body: yes
+created: 20250523091404154
+creator: 马不前
+modified: 20250523092734761
+modifier: 马不前
+tags: $:/tags/ViewTemplate/Subtitle Forge-untagged
+title: Forge-Subtitle
+
+<$list filter="[is[current]!prefix[$:/]in-tagtree-of:inclusive[Forge]]"> 
+<span style="color: red; float: right;">来自Forge</span>
+</$list>

@@ -1,0 +1,53 @@
+created: 20250419184940386
+creator: 马不前
+modified: 20250419195307416
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: list-badge-text
+
+\define list-badge-text(filter)
+<$list filter="$filter$">
+<$let stateBadgeID={{{ [[$:/state/badge/]addsuffix{!!title}] }}} >
+<$reveal type="nomatch" state=<<stateBadgeID>> text="show">
+<$button
+	tooltip="展开内容"
+	aria-label="展开内容"
+	class="badge badge-info text-white"
+  set=<<stateBadgeID>>  setTo="show"
+>
+<$text text=<<currentTiddler>>/>
+</$button>
+</$reveal>
+<$reveal type="match" state=<<stateBadgeID>> text="show">
+<div class="card mb-3 text-info" style="width:100%; background: #eee8d5;">
+<div class="card-body">
+<div class="h3 card-title">
+<div style="float: right;" >
+<$button
+  to=<<currentTiddler>>
+	tooltip="跳转内容"
+	aria-label="跳转内容"
+	class="badge badge-primary text-white"
+>
+<$text text=<<currentTiddler>>/>
+</$button>
+<$button 
+	tooltip="隐藏内容"
+	aria-label="隐藏内容"
+	class="badge badge-dark text-white"
+  set=<<stateBadgeID>> setTo="hide">
+<$text text="隐藏"/></$button></div>
+</div>
+<div class="card-text" >
+<$transclude tiddler=<<currentTiddler>> mode="block"/>
+</div>
+</div>
+</div>
+</$reveal>
+</$let>
+</$list>
+\end
+
+`<<list-badge-text "[tag[太微使用笔记]]" >>`，用来实现一个滑块的效果，且可以多个条目共同打开，效果感觉还是不错的。
+
+<<list-badge-text "[tag[太微使用笔记]]" >>

@@ -1,0 +1,17 @@
+created: 20250309092623824
+creator: 马不前
+modified: 20250309093252140
+modifier: 马不前
+tags: homepage-Control-Panel
+title: homepage-Control-Panel-Time
+
+* 2025-03-05
+** 产生模仿Obsidian界面UI的想法
+** 当天找到了`oeyoews-neotw-homepage`插件
+** 并修改了插件中`$:/config/EmptyStoryMessage`内容
+** 实现了类似核心的点击设置方式，代码见[[EmptyStoryMessage-OLD]]，这里的重点是直接实现了三列的方式。
+** 写下了相关笔记。
+* 2025-03-08
+** 学习了kookma插件设置json条目的方式
+** 实现了用json条目来控制配置条目，避免了很多细琐的条目。
+** 更新了相关笔记。

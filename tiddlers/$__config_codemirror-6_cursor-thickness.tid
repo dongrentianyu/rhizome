@@ -1,12 +1,14 @@
 caption: {{$:/language/codemirror6/cursor-thickness/caption}}
 caption-zh: {{$:/language/codemirror6/zh/cursor-thickness/caption}}
-created: 20240828072507409
+created: 20250313111709174
 creator: 马不前
 description: {{$:/language/codemirror6/cursor-thickness/description}}
 description-zh: {{$:/language/codemirror6/zh/cursor-thickness/description}}
-modified: 20240828073828917
+id: 26
+modified: 20250421075923713
 modifier: 马不前
-settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
+settings-group: general
+settings-template: input
 title: $:/config/codemirror-6/cursor-thickness
 
 2px

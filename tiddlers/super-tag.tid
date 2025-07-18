@@ -1,0 +1,16 @@
+code-body: yes
+created: 20230822070116087
+creator: 马不前
+modified: 20240912055338735
+modifier: 马不前
+tags: Configuration
+title: super-tag
+wiki-source: BMF
+
+$:/tags/ViewTemplate
+
+<$list filter="[<currentTiddler>has[super-tag]!prefix[$:/]]">
+
+<$json-editor-form filter="[all[current]enlist{!!super-tag}tags[]] :filter[tags[]match[$:/SuperTag/TraitTag]] :and[get[schema]]" tiddler=<<currentTiddler>> />
+
+</$list>

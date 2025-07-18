@@ -1,0 +1,80 @@
+created: 20250416091017251
+creator: 马不前
+modified: 20250416091319087
+modifier: 马不前
+tags: 链接样式
+title: 链接样式-code
+
+
+```
+\define linkcss(text,link,style)
+<a href=<<__link__>> class="tc-btn-big-green" style="$style$" target="_blank" rel="noopener noreferrer"><$text text=<<__text__>>/></a>
+\end
+```
+
+
+```
+\define linkgithub(text,link) 
+<a href=<<__link__>> target="_blank" class="tc-btn-big-green" 
+style="background-color: gray;
+	border: 1px solid gray; /* 灰色边框 */
+  color: white; /* github */
+  padding: 4px 10px; /* 内边距离 */
+  cursor: pointer; /* 指针/手形图标 */
+	font-size: 12px;" 
+	rel="noopener noreferrer">{{$:/core/images/github}}  ''<$text text=<<__text__>>/>''</a>
+\end
+```
+
+
+```
+\define linkcode(link) 
+<a href=<<__link__>> target="_blank" class="tc-btn-big-blue" 
+style="
+    border-radius:17px;   
+    display:inline-block;
+    cursor:pointer;
+    padding:6px 13px;
+    text-decoration:none;
+"> ''$link$''</a>
+\end
+```
+
+
+```
+\define linkdemo(link) 
+<a href=<<__link__>> target="_blank" class="tc-btn-big-green" 
+style=" 
+	background-color:#e4685d;
+	border-radius:17px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	"> ''Demo''</a>
+\end
+```
+
+
+```
+\define linkb(text,link) 
+<a href=<<__link__>> target="_blank" class="tc-btn-big-green" 
+style="background-color: #FFB6C1;
+border-radius:4px;
+  color: white; 
+  cursor: pointer; /* 指针/手形图标 */
+	font-size: 16px;" 
+	rel="noopener noreferrer">''<$text text=<<__text__>>/>''</a>
+\end
+```
+
+
+```
+\define linktalk(text,link)
+<a href=<<__link__>> class="tc-btn-big-green" style="border-radius:4px;background-color:#FF8C19;" target="_blank" rel="noopener noreferrer">{{$:/core/images/help}}''<$text text=<<__text__>>/>''</a>
+\end
+
+```

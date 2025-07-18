@@ -1,0 +1,31 @@
+code-body: yes
+created: 20250617212250173
+creator: 马不前
+modified: 20250617214213605
+modifier: 马不前
+tags: $:/tags/Macro
+title: single-field-edit
+
+\procedure single-field-edit(fieldFilter)
+<div class="tc-edit-fields">
+<table class="tc-edit-fields  tc-edit-fields-small">
+<tbody>
+<$list filter="[subfilter<fieldFilter>] :and[sort[title]]" variable="currentField" storyview="pop">
+<tr class="tc-edit-field">
+<td class="tc-edit-field-name">
+<$text text=<<currentField>>/>:</td>
+<td class="tc-edit-field-value">
+<$transclude tiddler={{{ [<currentField>] :cascade[all[shadows+tiddlers]tag[$:/tags/FieldEditorFilter]!is[draft]get[text]] :and[!is[blank]else{$:/core/ui/EditTemplate/fieldEditor/default}] }}} />
+</td>
+<td class="tc-edit-field-remove">
+<$button class="tc-btn-invisible" tooltip={{$:/language/EditTemplate/Field/Remove/Hint}} aria-label={{$:/language/EditTemplate/Field/Remove/Caption}}>
+<$action-deletefield $field=<<currentField>>/>
+{{$:/core/images/delete-button}}
+</$button>
+</td>
+</tr>
+</$list>
+</tbody>
+</table>
+</div>
+\end

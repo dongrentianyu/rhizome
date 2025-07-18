@@ -1,0 +1,16 @@
+caption: quick snippet
+condition: [<targetTiddler>!has[type]] [<targetTiddler>get[type]prefix[text/vnd.tiddlywiki]]
+condition-disabled: [[quick-snippet-button]get[state-disabled]else[no]]
+created: 20250411093558490
+creator: 马不前
+description: quick snippet
+icon: $:/images/google-material-design/image/sharp/24px/photo-filter
+modified: 20250415073222946
+modifier: 马不前
+tags: $:/tags/EditorToolbar quick-snippet
+title: quick-snippet-button
+
+<$action-sendmessage $message="tm-modal" $param="quick-snippet-param" />
+<%if [{$:/state/tab/quick-snippet}length[]compare:number:lteq[1]] %>
+  <$action-setfield $tiddler="$:/state/tab/quick-snippet" text="plugins-snippet"/>
+<%endif%>

@@ -1,0 +1,77 @@
+created: 20230821082748612
+creator: 马不前
+modified: 20241112064644655
+modifier: 马不前
+tags: 太微自用模块
+title: 批量拆分处理器-只有标注文本
+wiki-source: readingwiki
+
+<div class="flex-row">
+<div class="flex-col borderless">
+prefix_title: <$edit-text tiddler="$:/state/tft/quickly-split/multiple/title" field="text" class="w-100"  tag=input/>
+</div>
+<div class="flex-col borderless">
+tags: <$edit-text tiddler="$:/state/tft/quickly-split/multiple/tags" field="text" class="w-100" tag=input />
+</div>
+<div class="flex-col borderless">
+chapter: <$edit-text tiddler="$:/state/tft/quickly-split/multiple/chapter" field="text" class="w-100" tag=input />
+</div>
+<div class="flex-col borderless">
+section: <$edit-text tiddler="$:/state/tft/quickly-split/multiple/section" field="text" class="w-100" tag=input />
+</div>
+<div class="flex-col borderless">
+split: <$edit-text tiddler="$:/state/tft/quickly-split/multiple/split" field="text" class="w-100" tag=input />
+</div>
+</div>
+
+<$edit-text tiddler="$:/state/tft/quickly-split/multiple" field="text" class="w-100" tag=textarea minHeight=400px/>
+
+<$set name="multipleList" value={{$:/state/tft/quickly-split/multiple}}>
+<$button>
+<$let SPLIT={{{ [[$:/state/tft/quickly-split/multiple/split]get[text]] }}} >
+<$list filter="[<multipleList>split<SPLIT>]" variable="thisTitle">
+<$action-createtiddler 
+$basetitle={{$:/state/tft/quickly-split/multiple/title}}
+text={{{ [<thisTitle>removeprefix[ ]] }}}
+tags={{$:/state/tft/quickly-split/multiple/tags}}
+chapter={{$:/state/tft/quickly-split/multiple/chapter}}
+section={{$:/state/tft/quickly-split/multiple/section}}
+quickly-split={{$:/state/tft/quickly-split/multiple/tags}}
+super-tag="摘录"
+笔记状态="待处理"
+/>
+</$list>
+</$let>
+快速拆分
+</$button>
+</$set>
+<$button>
+<$action-setfield $tiddler="$:/state/tft/quickly-split/multiple" text=""/>
+清除编辑框中的内容
+</$button>
+<$button>
+<$action-setfield $tiddler="$:/state/tft/quickly-split/multiple/chapter" text=""/>
+清除chapter
+</$button>
+<$button>
+<$action-setfield $tiddler="$:/state/tft/quickly-split/multiple/section" text=""/>
+清除section
+</$button>
+<$button>
+<$list filter="[has[quickly-split]]" variable="thisTitle">
+<$action-deletefield $tiddler=<<thisTitle>> $field="quickly-split"/>
+</$list>
+清除quickly-split字段
+</$button>
+<$let
+a="["
+b="]"
+c="quickly-split"
+d={{$:/state/tft/quickly-split/multiple/tags}}
+e={{{ [<c>addsuffix<a>addsuffix<d>addsuffix<b>addsuffix<b>addprefix<a>]  }}}
+>
+<$button message="tm-copy-to-clipboard" param=<<e>> >
+<$action-navigate $to="$:/Commander"/>
+复制筛选器表达式
+</$button>
+</$let>

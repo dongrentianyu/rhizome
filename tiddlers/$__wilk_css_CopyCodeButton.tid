@@ -1,0 +1,19 @@
+created: 20240306203326726
+creator: wilk
+modified: 20240307123354169
+modifier: wilk
+tags: $:/tags/Stylesheet $:/wilk/tweaks/CopyCodeButton
+title: $:/wilk/css/CopyCodeButton
+
+div.wilk-copy-code-button {
+	position: relative;
+}
+div.wilk-copy-code-button > button.tc-btn-invisible {
+	position: absolute;
+	right: 0;
+	padding: 0.1em 0.2em;
+	fill: <<colour tiddler-controls-foreground>>;
+}
+div.wilk-copy-code-button > button.tc-btn-invisible:hover {
+	fill: <<colour tiddler-controls-foreground-hover>>;
+}

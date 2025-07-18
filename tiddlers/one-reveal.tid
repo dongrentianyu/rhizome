@@ -1,0 +1,38 @@
+created: 20250430032111884
+creator: 马不前
+modified: 20250501005426640
+modifier: 马不前
+tags: 自定义宏 $:/tags/Macro
+title: one-reveal
+
+\define one-reveal(filter,state)
+<$let stateOneRevealID={{{ [[$:/state/OneReveal/]addsuffix<state>] }}} >
+<$list filter="$filter$" variable="state">
+<$button class="slate-button" >
+<$action-setfield $tiddler=<<stateOneRevealID>> text=<<state>> />
+<<state>>
+</$button>
+</$list>
+<%if [<stateOneRevealID>has[text]] %>
+<%if [<stateOneRevealID>get[text]get[text]minlength[1]] %>
+<div class="yellow-dark-text">
+	<span style="float: right;" >
+	<$button class="grey-dark">
+	<$action-setfield $tiddler=<<stateOneRevealID>> text="" />
+	隐藏</$button>
+	</span>
+	<$transclude tiddler={{{ [<stateOneRevealID>get[text]] }}} mode="block"/>
+</div>
+<%else%>
+
+<$button class="grey-dark">
+<$action-navigate $to={{{ [<stateOneRevealID>get[text]] }}} />
+<$action-setfield $tiddler=<<stateOneRevealID>> text="" />
+<$text text={{{ [<stateOneRevealID>get[text]] }}} /> 不存在正文内容 请添加或删除
+</$button>
+<%endif%>
+<%endif%>
+</$let>
+\end
+
+<<one-reveal "[tag[wikis]]" "test2">>

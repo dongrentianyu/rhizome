@@ -1,0 +1,48 @@
+caption: {{$:/core/images/plugin-generic-theme}} Plugins
+created: 20250715071200069
+creator: 马不前
+description: Plugins
+modified: 20250715073241873
+modifier: 马不前
+tags: More-Page-Controls-Buttons
+title: More-Page-Controls-Buttons-plugins
+
+\whitespace trim
+
+<$button popup=<<qualify "$:/state/popup/more">>
+	tooltip={{$:/language/Buttons/More/Hint}}
+	aria-label={{$:/language/Buttons/More/Caption}}
+	class=<<tv-config-toolbar-class>>
+	selectedClass="tc-selected">
+	<%if [<tv-config-toolbar-icons>match[yes]] %>
+		{{$:/core/images/plugin-generic-theme}}
+	<%endif%>
+	<%if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text">
+			<$text text="Plugins"/>
+		</span>
+	<%endif%>
+</$button>
+<$reveal state=<<qualify "$:/state/popup/more">> type="popup" position="aboveleft" animate="yes" class="tc-popup-keep">
+<div class="popup-btn">
+<div class="tc-drop-down more-buttons-enhance-drop-down">
+		<$let tv-config-toolbar-icons="yes" tv-config-toolbar-text="yes" tv-config-toolbar-class="tc-btn-invisible">
+			<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageControls]prefix[$:/]!has[draft.of]] -[[$:/core/ui/Buttons/more-page-actions]]"
+				variable="listItem">
+<%if [<listItem>shadowsource[]!match[$:/core]] %>
+				<$reveal type="match" state=`$:/config/PageControlButtons/Visibility/$(listItem)$` text="hide">
+<$let config-title={{{ [[$:/config/forge/More-Page-Controls-Buttons/Visibility]get[text]jsonget<listItem>] }}} >
+<%if [<config-title>!match[show]] %>
+					<$set name="tv-config-toolbar-class"
+						filter="[<tv-config-toolbar-class>] [<listItem>encodeuricomponent[]addprefix[tc-btn-]]">
+						<$transclude tiddler=<<listItem>> mode="inline"/>
+					</$set>
+<%endif%>
+</$let>
+				</$reveal>
+				<%endif%>
+			</$list>
+		</$let>
+	</div>
+	</div>
+</$reveal>

@@ -1,0 +1,13 @@
+caption: 导入
+created: 20241013185354012
+creator: 马不前
+modified: 20250523093218610
+modifier: 马不前
+tags: $:/tags/SideBar Forge-untagged
+title: 拖放导入
+
+<$dropzone>
+<div style="width:100%;height:20em;border: 1px solid red;line-height:20em;text-align:center;font-size:200%;">
+Drag and drop to import
+</div>
+</$dropzone>

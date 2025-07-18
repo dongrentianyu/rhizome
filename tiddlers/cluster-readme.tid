@@ -1,0 +1,17 @@
+created: 20250418182529085
+creator: 马不前
+modified: 20250603221652815
+modifier: 马不前
+tags: cluster
+title: cluster-readme
+
+* 创建一个类似[[aggregation]]聚合视图的[[级联]]展示
+** [[cluster-filter]]对拥有特定字段`cluster`且值为`aggregation`的
+** 设置模板为[[cluster-aggregation]]
+* 创建一个章节视图，模板为[[cluster-chapter]]
+* 与上面[[cluster-chapter]]类似，创建一个[[cluster-section]]展示模板
+** 增加一个toc目录模板，用来处理章节视图，这样就不需要跳转到不同地方去查看了。
+** 增加一个book-info的选项，用来快速添加字段内容
+** 给`note`，`card`，`summary`，`copy`增加一些按钮，方便快速增加条目
+* 创建了一个[[cluster-Edit-Template-Cascades]]，可以方便在编辑中调整cluster的值。
+** 但或许这个调整应该放到其他地方去实现。

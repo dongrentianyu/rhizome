@@ -1,0 +1,9 @@
+created: 20250714151404459
+creator: 马不前
+modified: 20250714160643803
+modifier: 马不前
+tags: $:/tags/Stylesheet more-buttons-enhance
+title: more-buttons-enhance-css
+
+.more-buttons-enhance-drop-down { white-space:normal; min-width:180px;}
+.more-buttons-enhance-drop-down a { display:inline; padding:0; }

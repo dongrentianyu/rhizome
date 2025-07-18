@@ -1,0 +1,13 @@
+[
+    {
+        "created": "20230805082358773",
+        "creator": "马不前",
+        "text": "",
+        "tags": "games字段管理 $:/SuperTag/TraitTag",
+        "title": "$:/TraitTag/Game-situation",
+        "modified": "20230808103313630",
+        "modifier": "马不前",
+        "wl-field-name-text": "schema",
+        "schema": "{\n  \"type\": \"object\",\n  \"title\": \"title\",\n  \"properties\": {\n    \"游戏来源\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"steam\",\n        \"epic\",\n        \"盗版游戏\",\n        \"手机游戏\",\n        \"其他\"\n      ]\n    },\n    \"游戏外部分类\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"单机游戏\",\n        \"联机游戏\",\n        \"网页游戏\",\n        \"手机游戏\"\n      ]\n    },\n    \"游戏内部分类\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"枪战游戏\",\n        \"解谜游戏\",\n        \"剧情游戏\",\n        \"格斗游戏\",\n        \"玩法特殊\",\n        \"galgame\",\n\t\t\t\t\"肉鸽游戏\",\n        \"开放世界\",\n        \"沙盒游戏\",\n        \"视觉小说\"\n      ]\n    },\n    \"金额\": {\n      \"type\": \"number\",\n      \"default\": \"0\"\n    },\n    \"游戏时长\": {\n      \"type\": \"string\"\n    },\n    \"游玩状态\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"玩得还行\",\n        \"一直在玩\",\n        \"不玩了\",\n        \"没玩下去\",\n        \"偶尔玩玩\",\n        \"没修改器不玩\"\n      ]\n    },\n    \"游戏简单评价\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"经典之作\",\n        \"有好有坏\",\n        \"time killer\",\n        \"3A大作\",\n        \"MOD多\",\n        \"一般\",\n        \"操作太难\",\n        \"过于简单\",\n        \"体验不好\"\n      ]\n    },\n    \"有无修改器\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"有但不常用\",\n        \"有且经常用\",\n        \"无但很想要\",\n        \"无但无所谓\"\n      ]\n    },\n    \"购买时间\": {\n      \"type\": \"string\",\n      \"format\": \"date\"\n    }\n  },\n  \"required\": [\n    \"游戏来源\",\n    \"游戏外部分类\",\n    \"游戏内部分类\",\n    \"金额\",\n    \"游戏时长\",\n    \"游玩状态\",\n    \"游戏简单评价\",\n    \"有无修改器\",\n    \"购买时间\"\n  ]\n}"
+    }
+]

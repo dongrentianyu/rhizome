@@ -1,0 +1,12 @@
+code-body: yes
+created: 20230725114707072
+creator: 马不前
+list-after: $:/plugins/linonetwo/slate-write/ui/ViewTemplate/body/edit-slate-write-cascade-filter
+modified: 20250226125355367
+modifier: 马不前
+tags: Unused-Configuration
+title: view-template-body-bmf
+wiki-source: BMF
+
+[has[super-tag]then[book-view-fields]]
+$:/tags/ViewTemplateBodyFilter

@@ -1,0 +1,41 @@
+created: 20250715065157866
+creator: 马不前
+modified: 20250715065449729
+modifier: 马不前
+tags: $:/tags/PageTemplate
+title: $:/plugins/mabuqian/xnote/ui/Rightbar
+type: text/vnd.tiddlywiki
+
+<%if [{$:/config/xnote/rightbar}match[true]] %>
+<$reveal state="$:/state/notebook-rightbar" type="match" text="yes" default="yes" retain="yes" animate="yes">
+<style>
+@media (min-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}} ) {
+.xnote-rightmenu {
+    display: block;
+    padding: 0px 10px 0px 10px;
+    position: fixed;
+    right: 0px;
+    top: 20px;
+    width: 50px;
+    z-index: 98;
+    color: #000000;
+    font-size: 20px;
+    opacity: 1; /* 修改了透明度，之后考虑更新修改过去 */
+    box-sizing: border-box;
+}
+.xnote-rightmenu .tc-page-controls{
+  gap:12px;
+}
+}
+
+@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+    .xnote-rightmenu {
+        display: none; /* 例如，设置为不显示 */
+    }
+}
+</style>
+<div class="xnote-rightmenu tc-page-controls">
+{{$:/core/ui/SideBarSegments/page-controls}}
+</div>
+</$reveal>
+<%endif%>

@@ -1,0 +1,31 @@
+caption: 太微模块
+created: 20250411103812352
+creator: 马不前
+modified: 20250411114439758
+modifier: 马不前
+tags: quick-snippet-content
+title: TW-snippet
+
+<$keyboard key="escape" actions='<$action-setfield $tiddler="$:/state/quick-snippet/filter-snippet" $field="text" $value=""/>'>
+<$edit-text tiddler="$:/state/quick-snippet/filter-snippet" filed=text tag=input default="" placeholder="Search" class="alert alert-info w-100"/>
+</$keyboard>
+
+<$list filter="[all[shadows+tiddlers]tag[TW-snippet]search:caption,title{$:/state/quick-snippet/filter-snippet}]">
+<details >
+<summary class="alert alert-secondary py-1 my-2">
+<%if [<currentTiddler>has[caption]] %>
+  <$wikify name="caption-name" text={{{ [<currentTiddler>get[caption]] }}}>
+  <<caption-name>>
+  </$wikify>
+<%else%>
+  <<currentTiddler>>
+<%endif%>
+<$button message="tm-copy-to-clipboard" param={{{ [<currentTiddler>get[text]] }}} class="tc-btn-invisible tc-tiddlylink" style="float: right;">
+{{$:/core/images/copy-clipboard}}
+</$button>
+</summary>
+
+<$codeblock code={{{ [<currentTiddler>get[text]] }}} language="python" />
+
+</details>
+</$list>

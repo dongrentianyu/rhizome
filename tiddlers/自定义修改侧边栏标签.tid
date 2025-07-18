@@ -1,0 +1,14 @@
+created: 20230318131244636
+creator: 马不前
+modified: 20250417185655917
+modifier: 马不前
+tags: Configuration
+title: 自定义修改侧边栏标签
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+一些`$:/tags/SideBar`标签的内容，我不想放在侧边栏，但有时又会有用。不经常用。所以我就改成`$:/tags/Bar`标签。
+
+<<list-links "[all[shadows+tiddlers]tag[$:/tags/Bar]sort[title]]">>
+
+竟然没有发现一条相关的设置，那可能是之前的设置了，但目前侧边栏已经变成弹窗式的了，很少再用到了，未来可能会删除。

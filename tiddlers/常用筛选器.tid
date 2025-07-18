@@ -1,0 +1,10 @@
+created: 20250421080008506
+creator: 马不前
+modified: 20250422204558152
+modifier: 马不前
+tags: content-snippet
+title: 常用筛选器
+
+<$macrocall $name="code" src="[all[missing]sort[title]]" />
+
+<$macrocall $name="code" src="[all[shadows+tiddlers]!prefix[$:/]in-tagtree-of:inclusive[$name$]]" />

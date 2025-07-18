@@ -1,0 +1,31 @@
+created: 20250429164002264
+creator: 马不前
+modified: 20250521044023484
+modifier: 马不前
+tags: quick-edit-fields-type-template
+title: QEF-chapter
+
+<div class="sh-multicol2 " >
+<h2>选择编辑的字段</h2>
+<div style="height: 150px; overflow-y: scroll;">
+<div style="font-size: 32px;" >
+<$list filter="[[chapter]] [[section]] [[node]]">
+
+{{{ [<currentTiddler>] || quick-edit-fields-quote }}}
+
+</$list>
+</div>
+</div>
+<h2>选择己有的值</h2>
+<div style="height: 150px; overflow-y: scroll;">
+<div style="font-size: 32px;" >
+<$let treeTag={{{ [<showTiddler>tags[]tags[]has[cluster]] }}}>
+<$list filter="[in-tagtree-of:inclusive<treeTag>has{$:/state/quick-edit-fields/fields}get{$:/state/quick-edit-fields/fields}unique[]]">
+
+ {{{ [<currentTiddler>] || quick-edit-fields-select}}}
+
+</$list>
+</$let>
+</div>
+</div>
+</div>

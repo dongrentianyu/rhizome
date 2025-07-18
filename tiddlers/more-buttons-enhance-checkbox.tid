@@ -1,0 +1,26 @@
+created: 20250714132323804
+creator: 马不前
+modified: 20250714134429552
+modifier: 马不前
+tags: more-buttons-enhance
+title: more-buttons-enhance-checkbox
+
+\define lingo-base() $:/language/TiddlerInfo/
+
+\define config-base() $:/config/forge/more-buttons-enhance/Visibility
+
+<$set name="tv-config-toolbar-icons" value="yes">
+<$set name="tv-config-toolbar-text" value="yes">
+<span class="tc-links-draggable-list">
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/ViewToolbar]]" variable="listItem" >
+<$reveal type="match" state=`$:/config/ViewToolbarButtons/Visibility/$(listItem)$` text="hide">
+
+<$tiddler tiddler=<<listItem>>>
+	<$transclude $tiddler="homepage-Toolbars-ItemTemplate"/>
+</$tiddler>
+
+</$reveal>
+</$list>
+</span>
+</$set>
+</$set>

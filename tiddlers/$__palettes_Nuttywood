@@ -1,0 +1,108 @@
+primary: #806D5C
+alert-background: <<colour notification-background>>
+alert-border: #2FB5F2
+alert-highlight: #FE8B0E
+alert-muted-foreground: <<colour primary>>
+background: #E8CAA3
+blockquote-bar: <<colour background>>
+button-foreground: #54483D
+code-background: <<colour background>>
+code-border: <<colour page-background>>
+code-foreground: <<colour sidebar-tab-foreground>>
+dirty-indicator: #FFC0BA
+download-background: #FE8B0E
+download-foreground: <<colour foreground>>
+dragger-background: <<colour foreground>>
+dragger-foreground: <<colour background>>
+dropdown-background: #A6937F
+dropdown-border: <<colour dropdown-background>>
+dropdown-tab-background-selected: <<colour dropdown-background>>
+dropdown-tab-background: <<colour background>>
+dropzone-background: #2FB5F2
+external-link-background-hover: inherit
+external-link-background-visited: inherit
+external-link-background: inherit
+external-link-foreground-hover: #22B0F1
+external-link-foreground-visited: #464682
+external-link-foreground: #0A73A3
+foreground: #54483D
+highlight-background: #FF8885
+highlight-foreground: <<colour foreground>>
+message-background: <<colour background>>
+message-border: <<colour primary>>
+message-foreground: <<colour foreground>>
+modal-backdrop: <<colour foreground>>
+modal-background: <<colour tiddler-background>>
+modal-border: <<colour modal-background>>
+modal-footer-background: <<colour table-header-background>>
+modal-footer-border: <<colour table-border>>
+modal-header-border: <<colour modal-footer-border>>
+muted-foreground: #75695F
+network-activity-foreground: 
+notification-background: #91DDFF
+notification-border: <<colour notification-background>>
+page-background: #A48D76
+pre-background: <<colour background>>
+pre-border: <<colour pre-background>>
+selection-background: 
+selection-foreground: 
+select-tag-background: 
+select-tag-foreground: <<colour foreground>>
+sidebar-button-foreground: <<colour button-foreground>>
+sidebar-controls-foreground-hover: #FFD9AD
+sidebar-controls-foreground: <<colour tiddler-controls-foreground-selected>>
+sidebar-foreground-shadow: transparent
+sidebar-foreground: #FFE7C8
+sidebar-muted-foreground-hover: #B99A74
+sidebar-muted-foreground: #CAB396
+sidebar-tab-background-selected: transparent
+sidebar-tab-background: <<colour background>>
+sidebar-tab-border-selected: transparent
+sidebar-tab-border: inherit
+sidebar-tab-divider: <<colour sidebar-tab-border>>
+sidebar-tab-foreground-selected: inherit
+sidebar-tab-foreground: #774818
+sidebar-tiddler-link-foreground-hover: #8E7A67
+sidebar-tiddler-link-foreground: #54483D
+site-title-foreground: #FFE7C8
+static-alert-foreground: 
+tab-background-selected: <<colour background>>
+tab-background: <<colour table-header-background>>
+tab-border-selected: <<colour tab-background>>
+tab-border: transparent
+tab-divider: <<colour tab-border-selected>>
+tab-foreground-selected: <<colour tab-foreground>>
+tab-foreground: <<colour foreground>>
+table-border: #73604A
+table-footer-background: #98836C
+table-header-background: #BEA890
+tag-background: #CD9F37
+tag-foreground: <<colour foreground>>
+tiddler-background: #FFE7C8
+tiddler-border: <<colour background>>
+tiddler-controls-foreground-hover: #BAB2AB
+tiddler-controls-foreground-selected: #FFF0DF
+tiddler-controls-foreground: <<colour tag-background>>
+tiddler-editor-background: transparent
+tiddler-editor-border-image: 
+tiddler-editor-border: <<colour page-background>>
+tiddler-editor-fields-even: 
+tiddler-editor-fields-odd: <<colour background>>
+tiddler-info-background: transparent
+tiddler-info-border: transparent
+tiddler-info-tab-background: <<colour tab-background-selected>>
+tiddler-link-background: transparent
+tiddler-link-foreground: <<colour primary>>
+tiddler-subtitle-foreground: <<colour very-muted-foreground>>
+tiddler-title-foreground: <<colour foreground>>
+toolbar-new-button: 
+toolbar-options-button: 
+toolbar-save-button: 
+toolbar-info-button: 
+toolbar-edit-button: 
+toolbar-close-button: 
+toolbar-delete-button: 
+toolbar-cancel-button: 
+toolbar-done-button: 
+untagged-background: <<colour background>>
+very-muted-foreground: #988C82

@@ -1,0 +1,12 @@
+caption: 快速笔记
+created: 20250410043126517
+creator: 马不前
+modified: 20250422141202763
+modifier: 马不前
+tags: $:/tags/SideBar quick-note
+title: quick-note-content
+
+<$edit-text tiddler="$:/state/self/quick-note" tag=textarea placeholder="请输入笔记，可拖放图片" class="w-100" minHeight="250px" fileDrop="yes"/>
+<$transclude tiddler="quick-note-button" mode="block"/>
+
+<$transclude $variable="details" label="查看己保存的笔记" src="quick-note-file"  labelClass="bg-secondary text-white" srcClass="alert  py-0" />

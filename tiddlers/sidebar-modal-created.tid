@@ -1,0 +1,13 @@
+caption: 创建
+class: multicol3
+created: 20250412152950404
+creator: 马不前
+modified: 20250412153445420
+modifier: 马不前
+tags: sidebar-modal
+title: sidebar-modal-created
+
+<div class="sh-multicol3 ">
+<$transclude $variable="timeline" dateField="created" format={{$:/language/RecentChanges/DateFormat}} limit={{$:/config/RecentLimit}}/>
+
+</div>

@@ -1,0 +1,30 @@
+class: tc-modal-centered fold-text-modal
+code-body: yes
+created: 20250410025614518
+creator: 马不前
+mask-closable: yes
+modified: 20250525160449389
+modifier: 马不前
+subtitle: <div style="text-align: right;" >[[弹窗侧边栏|sidebar-modal-readme]]</div>
+tags: sidebar-modal
+title: sidebar-modal-content
+
+<$let a={{{ [[$:/state/tab/sidebar-modal]get[text]] }}} >
+<div class="nice-button-group" >
+<$list filter="[{sidebar-modal-filter}enlist-input[]]" variable="thisTitle">
+ <$button class="nice-button">
+ <$action-setfield $tiddler="$:/state/tab/sidebar-modal" text=<<thisTitle>>/>
+ <%if [<thisTitle>has[caption]] %>
+ <$wikify name="test-tid" text={{{ [<thisTitle>get[caption]] }}}>
+ <<test-tid>>
+ </$wikify>
+  <%else%>
+  <<thisTitle>>
+ <%endif%>
+ </$button>
+ </$list>
+</div>
+<div class="nice-button-content" >
+<$transclude tiddler=<<a>> mode="block"/>
+</div>
+</$let>

@@ -1,0 +1,21 @@
+caption: PageControls-buttons
+created: 20250411133615512
+creator: 马不前
+modified: 20250411133805541
+modifier: 马不前
+tags: TW-snippet
+title: PageControls-buttons
+
+<$button  class=<<tv-config-toolbar-class>>>
+<$action-sendmessage $message="tm-modal" $param="sidebar-modal-content"/>
+<%if [<tv-config-toolbar-icons>match[yes]] %>
+{{$:/core/images/storyview-zoomin}}
+<%endif%>
+<%if [<tv-config-toolbar-text>match[yes]] %>
+<span class="tc-btn-text">
+<$text text="打开侧边栏"/>
+</span>
+<%endif%>
+</$button>
+
+$:/tags/PageControls

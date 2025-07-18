@@ -1,0 +1,21 @@
+code-body: yes
+created: 20250501223122128
+creator: 马不前
+modified: 20250502024047730
+modifier: 马不前
+tags: cluster
+title: cluster-section
+type: text/vnd.tiddlywiki
+
+<$list filter="[chapter{!!chapter}has[section]get[section]unique[]sort[]]" variable="name">
+<$button class="large-moss-btn" tooltip="查看聚合内容" aria-label="查看聚合内容">
+<$action-sendmessage $message="tm-modal" $param="cluster-section-content" showTiddler=<<currentTiddler>> chapterName={{!!chapter}} sectionName=<<name>> />
+<<name>>
+</$button>
+</$list>
+<%if [chapter{!!chapter}!has[cluster]!has[section]count[]compare:number:gt[0]] %>
+<$button class="large-moss-btn" tooltip="查看聚合内容" aria-label="查看聚合内容">
+<$action-sendmessage $message="tm-modal" $param="cluster-section-adrift" showTiddler=<<currentTiddler>> chapterName={{!!chapter}}/>
+Adrift
+</$button>
+<%endif%>

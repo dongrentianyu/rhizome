@@ -1,0 +1,20 @@
+created: 20250523092101390
+creator: 马不前
+list-after: $:/core/ui/EditTemplate/title
+modified: 20250606070740684
+modifier: 马不前
+tags: $:/tags/EditTemplate Forge-untagged
+title: Forge-Banner
+
+\define base-github()
+https://github.com/tiddly-gittly/TW-Translation-Chinese/tree/master/tiddlers/
+\end
+
+<$set name="draft-of" value={{{ [<currentTiddler>get[draft.of]] }}}>
+<$list filter="[is[current]!prefix[$:/]in-tagtree-of:inclusive[Forge]]" variable="target" >
+<div class="tc-subtitle" style="background: blue;">
+您能帮我们改进这个文档吗？[[了解如何|Forge-Banner]]
+<a href={{{ [<target>addprefix<base-github>] }}} class="tc-tiddlylink-external" target="_blank" rel="noopener noreferrer">编辑在 ~GitHub 上的此条目</a>
+</div>
+</$list>
+</$set>

@@ -1,0 +1,33 @@
+created: 20250308153122725
+creator: 马不前
+modified: 20250308164009435
+modifier: 马不前
+tags: homepage-Control-Panel-250309
+title: EmptyStoryMessage-OLD
+
+同样不具备实际意义了。
+
+```shell
+\whitespace trim
+\function config-title() [[$:/config/homepage/Visibility/$(listItem)$]substitute[]]
+
+<div style="column-count: 3; column-gap: 20px;  padding: 20px;" >
+
+<$set name="tv-config-toolbar-icons" value="yes">
+
+<$set name="tv-config-toolbar-text" value="yes">
+
+	<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]" variable="listItem">
+		<$list filter="[<config-title>!text[hide]]" storyview="pop" variable="ignore">
+			<$let >
+				<$transclude $tiddler=<<listItem>> $mode="block"/>
+			</$let>
+		</$list>
+	</$list>
+
+</$set>
+
+</$set>
+
+</div>
+```

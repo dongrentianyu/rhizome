@@ -1,0 +1,167 @@
+created: 20240314054225632
+creator: 马不前
+modified: 20241109205201847
+modifier: 马不前
+node-pill: no
+tags: 太微自用模块
+title: BOOK-WEB
+wiki-source: BMF
+
+<<list-searchx filter:"[!is[system]super-tag[Book]]" class:"alert  alert-secondary  w-100" placeholder:"查询图书条目" >>
+
+<$transclude 
+$variable="edit-text-search"
+field="author"
+tid="$:/state/book/web-search"
+name="author"
+/>
+
+<$setvars
+_a={{$:/state/book/web-search!!时代}}
+_a0={{{ [[$:/state/book/web-search]get[时代]!is[blank]then[时代]] }}}
+_a1={{{ [[$:/state/book/web-search]get[时代]!is[blank]] }}}
+
+_b={{$:/state/book/web-search!!阅读状态}}
+_b0={{{ [[$:/state/book/web-search]get[阅读状态]!is[blank]then[阅读状态]] }}}
+_b1={{{ [[$:/state/book/web-search]get[阅读状态]!is[blank]] }}}
+
+_c={{$:/state/book/web-search!!limit}}
+_c0={{{ [[$:/state/book/web-search]get[limit]!is[blank]then[limit]] }}}
+_c1={{{ [[$:/state/book/web-search]get[limit]!is[blank]] }}}
+
+_d={{$:/state/book/web-search!!题材}}
+_d0={{{ [[$:/state/book/web-search]get[题材]!is[blank]then[题材]] }}}
+_d1={{{ [[$:/state/book/web-search]get[题材]!is[blank]] }}}
+
+_e={{$:/state/book/web-search!!tags}}
+_e0={{{ [[$:/state/book/web-search]get[tags]!is[blank]then[tag]] }}}
+_e1={{{ [[$:/state/book/web-search]get[tags]!is[blank]] }}}
+
+_f={{$:/state/book/web-search!!出品方}}
+_f0={{{ [[$:/state/book/web-search]get[出品方]!is[blank]then[出品方]] }}}
+_f1={{{ [[$:/state/book/web-search]get[出品方]!is[blank]] }}}
+
+_g={{$:/state/book/web-search!!出版社}}
+_g0={{{ [[$:/state/book/web-search]get[出版社]!is[blank]then[出版社]] }}}
+_g1={{{ [[$:/state/book/web-search]get[出版社]!is[blank]] }}}
+
+_h={{$:/state/book/web-search!!author}}
+_h0={{{ [[$:/state/book/web-search]get[author]!is[blank]then[author]] }}}
+_h1={{{ [[$:/state/book/web-search]get[author]!is[blank]] }}}
+
+_int="""super-tag[Book]"""
+_1="["
+_2="]"
+_3="+"
+_4="search:"
+
+a="a"
+a0="a0"
+a1="a1"
+a2="3\\1\\a0\\1\\a\\2\\2"
+a3="if(a1 ? a2)"
+
+b="b"
+b0="b0"
+b1="b1"
+b2="3\\1\\b0\\1\\b\\2\\2"
+b3="if(b1 ? b2)"
+
+c="c"
+c0="c0"
+c1="c1"
+c2="3\\1\\c0\\1\\c\\2\\2"
+c3="if(c1 ? c2)"
+
+d="d"
+d0="d0"
+d1="d1"
+d2="3\\1\\d0\\1\\d\\2\\2"
+d3="if(d1 ? d2)"
+
+e="e"
+e0="e0"
+e1="e1"
+e2="3\\1\\e0\\1\\e\\2\\2"
+e3="if(e1 ? e2)"
+
+f="f"
+f0="f0"
+f1="f1"
+f2="3\\1\\f0\\1\\f\\2\\2"
+f3="if(f1 ? f2)"
+
+g="g"
+g0="g0"
+g1="g1"
+g2="3\\1\\g0\\1\\g\\2\\2"
+g3="if(g1 ? g2)"
+
+h="h"
+h0="h0"
+h1="h1"
+h2="3\\1\\4\\h0\\1\\h\\2\\2"
+h3="if(h1 ? h2)"
+
+int="int"
+fff="1\\int\\2\\a3\\b3\\d3\\e3\\f3\\g3\\h3\\c3"
+
+<!-- [super-tag[Book]] +[aaa[a]] -->
+
+{{BOOK-WEB-filter}}
+
+<div class="flex-col-4 borderless">
+<tr>清空:<<hspace width:"10px">> <<hspace width:"10px">><$list filter="tags 时代  阅读状态 题材 limit 出品方 出版社" variable="type3">
+<$button >
+<$action-deletefield $tiddler="$:/state/book/web-search" $field=<<type3>>  />
+<<type3>><<hspace width:"10px">>
+</$button>
+</$list>
+</tr>
+</div>
+
+<div class="flex-col-4 borderless">
+<tr>展示方式:<<hspace width:"10px">><$list filter="不展示 表格 列表" variable="type1">
+<$radio tiddler="$:/state/book/web-search" field="text" value={{{[<type1>match[ALL]then[]else<type1>]}}} > <<type1>><<hspace width:"10px">></$radio>
+</$list>
+</tr>
+</div>
+
+<div class="flex-col-4 borderless">
+<tr>限制:<<hspace width:"10px">><$list filter="5 10 50 100" variable="type2">
+<$radio tiddler="$:/state/book/web-search" field="limit" value={{{[<type2>match[ALL]then[]else<type2>]}}} > <<type2>><<hspace width:"10px">></$radio>
+</$list>
+</tr>
+</div>
+
+
+
+<$macrocall $name="code" src=<<fff>> title="筛选器表达式" />
+
+<$reveal type="match"
+state="$:/state/book/web-search"
+text="列表">
+<div style="column-count:3;">
+<$list filter=<<fff>> >
+
+<$link><<currentTiddler>></$link>
+
+</$list>
+</div>
+</$reveal>
+
+<$reveal type="match"
+ state="$:/state/book/web-search"
+ text="表格">
+
+<$macrocall $name=table-dynamic
+ filter=<<fff>>
+ class="w-100 thead-secondary table-hover-cyan"
+ fields="tbl-expand title tags author 阅读状态"
+ caption="查询结果"
+ stateTiddler="$:/state/book/web-search/table-dynamic"
+    />
+
+</$reveal>
+
+</$setvars>

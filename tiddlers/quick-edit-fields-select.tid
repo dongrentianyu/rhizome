@@ -1,0 +1,17 @@
+code-body: yes
+created: 20250414092706273
+creator: 马不前
+modified: 20250414095207033
+modifier: 马不前
+tags: quick-edit-fields
+title: quick-edit-fields-select
+
+<span >
+<$button  tooltip="选择己有的值" aria-label="选择己有的值"  class="tc-tiddlylink tc-btn-invisible tc-btn-mini" >
+<$action-setfield $tiddler=<<showTiddler>> $field={{$:/state/quick-edit-fields/fields}} $value=<<currentTiddler>> />
+<$action-setfield $tiddler="$:/state/quick-edit-fields/fields" text=""/>
+
+<$transclude $variable="badge" type="success" src=<<currentTiddler>> />
+
+</$button>
+</span>

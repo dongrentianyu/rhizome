@@ -1,0 +1,14 @@
+created: 20250320075941877
+creator: 马不前
+modified: 20250630141011073
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: wiki字体
+
+html body, .tc-sidebar-scrollable-backdrop {
+	font-family: "朱雀仿宋（预览测试版）","Arvo", "Times";
+}
+
+.tc-page-controls svg {
+	<<filter "drop-shadow(1px 1px 2px rgba(255,255,255,0.9))">>
+}

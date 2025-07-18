@@ -1,0 +1,31 @@
+caption: 插件
+created: 20250411095549748
+creator: 马不前
+modified: 20250411113437671
+modifier: 马不前
+tags: quick-snippet-content
+title: plugins-snippet
+
+<$keyboard key="escape" actions='<$action-setfield $tiddler="$:/state/quick-snippet/plugins-snippet" $field="text" $value=""/>'>
+<$edit-text tiddler="$:/state/quick-snippet/plugins-snippet" filed=text tag=input default="" placeholder="Search" class="alert alert-info w-100"/>
+</$keyboard>
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/TextEditor/Snippet]search:caption,title{$:/state/quick-snippet/plugins-snippet}]">
+<details >
+<summary class="alert alert-secondary py-1 my-2">
+<%if [<currentTiddler>has[caption]] %>
+  <$wikify name="caption-name" text={{{ [<currentTiddler>get[caption]] }}}>
+  <<caption-name>>
+  </$wikify>
+<%else%>
+  <<currentTiddler>>
+<%endif%>
+<$button message="tm-copy-to-clipboard" param={{{ [<currentTiddler>get[text]] }}} class="tc-btn-invisible tc-tiddlylink" style="float: right;">
+{{$:/core/images/copy-clipboard}}
+</$button>
+</summary>
+
+<$codeblock code={{{ [<currentTiddler>get[text]] }}} language="python" />
+
+</details>
+</$list>

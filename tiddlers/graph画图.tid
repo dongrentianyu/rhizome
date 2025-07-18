@@ -1,0 +1,21 @@
+caption: graph画图
+created: 20220919100622660
+creator: 马不前
+modified: 20250411113757451
+modifier: 马不前
+tags: modal-snippet
+title: graph画图
+type: text/vnd.tiddlywiki
+
+<$viz text='  digraph G {
+      Consola->nginx [label="Pide encriptar url para cliente", color=green]
+      nginx [shape=box];
+      nginx->Consola [color=red]
+      client-> HAPROXY  [color=red]
+      STUPID [shape=box];
+      HAPROXY -> STUPID  [color=red]
+      STUPID -> Prelanderred
+      STUPID -> STUPID [color=green, label="Pasa del nginx al hhvm desdencriptado"]
+      vsh [shape=box];
+      STUPID->vsh  [color=red]
+     }' class="myexample"/>

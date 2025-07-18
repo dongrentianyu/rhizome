@@ -1,0 +1,138 @@
+caption: Icon Menu Settings
+created: 20150123193933540
+creator: inmysocks
+modified: 20250416094727780
+modifier: 马不前
+tags: [[Icon Menus]] $:/tags/ControlPanel/SettingsTab
+title: $:/plugins/inmysocks/iconmenus/Icon Menu Settings
+topbar_height: 2
+
+\define thisMakeTiddlerReference()
+"""{{$(TiddlerName)$}}"""
+\end
+
+\define thisMakeOption()
+<option value=<<thisMakeTiddlerReference <<TiddlerName>>>>><<currentTiddler>></option>
+\end
+
+\define thisTopBarStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='top_bar_style'>
+<$list filter='[tag[Top Bar Style]][plugintiddlers[]tag[Top Bar Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisTopLeftMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='top_left_menu_style'>
+<$list filter='[tag[Top Left Menu Style]][plugintiddlers[]tag[Top Left Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisTopRightMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='top_right_menu_style'>
+<$list filter='[tag[Top Right Menu Style]][plugintiddlers[]tag[Top Right Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisTopMiddleMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='top_middle_menu_style'>
+<$list filter='[tag[Top Middle Menu Style]][plugintiddlers[]tag[Top Middle Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisLeftMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='left_menu_style'>
+<$list filter='[tag[Left Menu Style]][plugintiddlers[]tag[Left Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisRightMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='right_menu_style'>
+<$list filter='[tag[Right Menu Style]][plugintiddlers[]tag[Right Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisBottomBarStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='bottom_bar_style'>
+<$list filter='[tag[Bottom Bar Style]][plugintiddlers[]tag[Bottom Bar Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisBottomLeftMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='bottom_left_menu_style'>
+<$list filter='[tag[Bottom Left Menu Style]][plugintiddlers[]tag[Bottom Left Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisBottomRightMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='bottom_right_menu_style'>
+<$list filter='[tag[Bottom Right Menu Style]][plugintiddlers[]tag[Bottom Right Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+\define thisBottomMiddleMenuStyleSelector()
+<$select tiddler='$:/plugins/inmysocks/iconmenus/icon_menu_settings' field='bottom_middle_menu_style'>
+<$list filter='[tag[Bottom Middle Menu Style]][plugintiddlers[]tag[Bottom Middle Menu Style]]'>
+<$set name=TiddlerName value=<<currentTiddler>>>
+<option value=<<thisMakeTiddlerReference>>><$view field=caption/></option>
+</$set>
+</$list>
+</$select>
+\end
+
+<$button>Set tiddler top position<$action-setfield $tiddler='$:/themes/tiddlywiki/vanilla/metrics/storytop' $field=text $value="""{{$:/plugins/inmysocks/iconmenus/icon_menu_settings!!top_bar_height}}"""/></$button> - This sets the position of the top of the story river to the bottom of the top bar. It isn't perfect, but it mostly works.
+
+Toggle menus and set css styles, further custimization is available in the tabs below. 
+
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/TopBar/menu' tag='$:/tags/TopRightBar'>Show Top Bar</$checkbox>|<<thisTopBarStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/leftmenu-icons' tag='$:/tags/PageTemplate'>Show Left Menu</$checkbox>|<<thisLeftMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/rightmenu-icons' tag='$:/tags/PageTemplate'>Show Right Menu</$checkbox>|<<thisRightMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/TopBar/menu' field='show_middle' checked='show' unchecked='hide'> Show Top Middle Menu</$checkbox>|<<thisTopMiddleMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenu/TopBar/menu' field='show_left' checked='show' unchecked='hide'> Show Top Left Menu</$checkbox>|<<thisTopLeftMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenu/TopBar/menu' field='show_right' checked='show' unchecked='hide'> Show Top Right Menu</$checkbox>|<<thisTopRightMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/BottomBar/menu' tag='$:/tags/PageTemplate'>Show Bottom Bar</$checkbox>|<<thisBottomBarStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/BottomBar/menu' field='show_left' checked='show' unchecked='hide'>Show Bottom Left Menu</$checkbox>|<<thisBottomLeftMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/BottomBar/menu' field='show_right' checked='show' unchecked='hide'>Show Bottom Right Menu</$checkbox>|<<thisBottomRightMenuStyleSelector>>|
+|<$checkbox tiddler='$:/plugins/inmysocks/iconmenus/BottomBar/menu' field='show_middle' checked='show' unchecked='hide'>Show Bottom Middle</$checkbox>|<<thisBottomMiddleMenuStyleSelector>>|
+
+
+Tiddlers labeled `<menu name> Style` appear as options here. (So `Top Bar Style`, `Right Menu Style`, etc.)
+
+Menus on the top bar will inherit attributes from the top bar settings if an attribute is set to `inherit` or left blank.
+
+<<tabs "[[$:/plugins/inmysocks/iconmenus/Top Bar Settings]] [[$:/plugins/inmysocks/iconmenus/Left Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Right Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Top Left Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Top Middle Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Top Right Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Bar Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Left Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Middle Menu Settings]] [[$:/plugins/inmysocks/iconmenus/Bottom Right Menu Settings]]" [[$:/plugins/inmysocks/iconmenus/Top Bar Settings]]>>

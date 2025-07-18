@@ -1,0 +1,31 @@
+created: 20241103141658718
+creator: 马不前
+modified: 20241104010605420
+modifier: 马不前
+tags: $:/tags/Stylesheet BMF-info
+title: BMF-info-style
+
+        .list-form-details {
+            background: white; /* 背景色 */
+            border: 1px solid #ccc; /* 边框 */
+            border-radius: 5px; /* 圆角 */
+            padding: 10px; /* 内边距 */
+            margin-bottom: 10px; /* 底部间距 */
+            transition: background 0.3s ease; /* 背景色变化动画 */
+        }
+        .list-form-details summary {
+            font-weight: bold; /* 粗体字 */
+            cursor: pointer; /* 鼠标指针样式 */
+            display: flex; /* 使用flex布局 */
+            justify-content: space-between; /* 设置为两端对齐 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+        .list-form-details summary::-webkit-details-marker {
+            display: none; /* 隐藏默认的箭头标记 */
+        }
+        .list-form-details summary:hover {
+            background-color: #eaeaea; /* 鼠标悬停背景色 */
+        }
+        .list-form-details p {
+            margin-top: 10px; /* 段落顶部间距 */
+        }

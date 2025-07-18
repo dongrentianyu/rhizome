@@ -1,0 +1,23 @@
+caption: {{$:/core/images/storyview-zoomin}} 打开侧边栏
+created: 20250410025446717
+creator: 马不前
+description: 快速侧边栏
+modified: 20250415071739865
+modifier: 马不前
+tags: $:/tags/PageControls sidebar-modal
+title: sidebar-modal-button
+
+<$button  class=<<tv-config-toolbar-class>>>
+<$action-sendmessage $message="tm-modal" $param="sidebar-modal-content"/>
+<%if [{$:/state/tab/sidebar-modal}length[]compare:number:lteq[1]] %>
+  <$action-setfield $tiddler="$:/state/tab/sidebar-modal" text="sidebar-modal-recent"/>
+<%endif%>
+<%if [<tv-config-toolbar-icons>match[yes]] %>
+{{$:/core/images/storyview-zoomin}}
+<%endif%>
+<%if [<tv-config-toolbar-text>match[yes]] %>
+<span class="tc-btn-text">
+<$text text="打开侧边栏"/>
+</span>
+<%endif%>
+</$button>

@@ -1,0 +1,13 @@
+created: 20250521113557012
+creator: 马不前
+modified: 20250521125518224
+modifier: 马不前
+tags: cluster-book
+title: cluster-book-copy
+
+\function next-title() [range[1],[99]] +[pad[2]addprefix[-]addprefix<currentTiddler>!has[title]] +[first[]]
+
+<$button>
+<$action-sendmessage $message="tm-new-tiddler" title=<<next-title>>   tags=<<currentTiddler>> chapter=""/>
+创建新条目
+</$button>

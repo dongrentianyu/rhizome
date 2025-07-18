@@ -1,0 +1,29 @@
+caption: View Toolbar Button
+code-body: yes
+created: 20250411114816442
+creator: 马不前
+modified: 20250414071614619
+modifier: 马不前
+tags: TW-snippet
+title: View-Toolbar-Button
+
+\whitespace trim
+<$button message="tm-edit-tiddler"
+	tooltip={{$:/language/Buttons/Edit/Hint}}
+	aria-label={{$:/language/Buttons/Edit/Hint}}
+	class=<<tv-config-toolbar-class>>
+>
+	<%if [<tv-config-toolbar-icons>match[yes]] %>
+		{{$:/core/images/edit-button}}
+	<%endif%>
+	<%if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text">
+		<$text text={{$:/language/Buttons/Edit/Caption}}/>
+	</span>
+	<%endif%>
+</$button>
+
+$:/tags/ViewToolbar
+
+caption	{{$:/core/images/edit-button}} {{$:/language/Buttons/Edit/Caption}}
+description	{{$:/language/Buttons/Edit/Hint}}

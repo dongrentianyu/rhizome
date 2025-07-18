@@ -1,0 +1,30 @@
+code-body: yes
+created: 20250501040248599
+creator: 马不前
+modified: 20250503080650239
+modifier: 马不前
+tags: $:/tags/Global cluster-chapter
+title: cluster-chapter-procedure
+
+\procedure cluster-chapter-procedure(realSuffix,littleFilter,stateFilterName,rootTag,captionText)
+<$let
+stateFilterName=<<stateFilterName>>
+stateFilter={{{ [<stateFilterName>get[text]] }}}
+rootTag=<<rootTag>>
+copyTag={{{ [<rootTag>addsuffix<realSuffix>] }}}
+filter="[tag<copyTag>filter<littleFilter>] +[search:title<stateFilter>]"
+filterCount={{{ [tag<copyTag>filter<littleFilter>] +[search:title<stateFilter>] +[count[]] }}} >
+<%if [<filterCount>match[0]] %>
+<%if [<stateFilter>is[blank]] %>
+<h2>筛选器 <$text text=`[tag[$(copyTag)$]] +${[<littleFilter>]}$`/>  无内容</h2>
+<%else%>
+<$button class="grey-dark">
+<$action-setfield $tiddler=<<stateFilterName>> text="" />
+输入文本错误，请重置搜索框
+</$button>
+<%endif%>
+<%else%>
+<$transclude $tiddler="cluster-chapter-display-template" realFilter=<<filter>> captionText=<<captionText>>/>
+<%endif%>
+</$let>
+\end

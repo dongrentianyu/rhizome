@@ -1,0 +1,16 @@
+created: 20240726144916585
+creator: 马不前
+modified: 20250420165154316
+modifier: 马不前
+tags: tw-Echarts
+title: $:/sections/sevenday
+
+<div class="my-8">
+<div class="dark:hidden">
+<$echarts $tiddler="addon/sevenday.js" $theme='light' days=31 />
+</div>
+
+<!-- <div class="hidden dark:inline">
+<$echarts $tiddler="addon/sevenday.js" $theme='dark' days=31/>
+</div> -->
+</div>

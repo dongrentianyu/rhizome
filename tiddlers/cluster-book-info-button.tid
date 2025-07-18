@@ -1,0 +1,41 @@
+created: 20250513065518013
+creator: 马不前
+modified: 20250513073222132
+modifier: 马不前
+tags: cluster-book-info
+title: cluster-book-info-button
+
+<span style="float: right;" >
+<$button
+	tooltip="编辑书籍基本信息"
+	aria-label="编辑基本信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="basic"/>
+基本
+</$button>
+<$button
+	tooltip="编辑书籍购买信息"
+	aria-label="编辑购买信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="purchase"/>
+购买
+</$button>
+<$button
+	tooltip="编辑书籍分类信息"
+	aria-label="编辑分类信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="category"/>
+分类
+</$button>
+<$button
+	tooltip="编辑书籍阅读信息"
+	aria-label="编辑阅读信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="readingStatus"/>
+阅读
+</$button>
+</span>

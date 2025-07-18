@@ -1,0 +1,18 @@
+code-body: yes
+created: 20230107132148645
+creator: 马不前
+modified: 20241103072033118
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: 表单创建改进后的宏定义
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+\define quickforms(statetiddler fieldname filter:"")
+<$select field="""$fieldname$""" tiddler="""$statetiddler$""">
+<$list filter='$filter$'>
+<option value=<<currentTiddler>>><$view field='title'/></option>
+</$list>
+</$select>
+<$edit-text field="""$fieldname$""" tiddler="""$statetiddler$""" tag=input placeholder="enter $fieldname$ value"/>
+\end

@@ -1,0 +1,27 @@
+created: 20250430220542665
+creator: 马不前
+modified: 20250501004857289
+modifier: 马不前
+tags: cluster-chapter
+title: cluster-chapter-display-button
+
+<$let display="$:/state/cluster/chapter/display">
+<div style="min-width: 320px; max-height: 280px;overflow-y:auto; position: relative;" >
+<$button class="ash-button badge" >
+<$action-setfield $tiddler=<<display>> text="slider-reveal"/>
+sliderReveal
+</$button>
+<$button class="ash-button badge" >
+<$action-setfield $tiddler=<<display>> text="one-reveal"/>
+oneReveal
+</$button>
+<$button class="ash-button badge" >
+<$action-setfield $tiddler=<<display>> text="link"/>
+Link
+</$button>
+<$button class="ash-button badge" >
+<$action-setfield $tiddler=<<display>> text="table"/>
+Table
+</$button>
+</div>
+</$let>

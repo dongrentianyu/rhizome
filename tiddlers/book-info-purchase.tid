@@ -1,0 +1,23 @@
+created: 20250513073920229
+creator: 马不前
+modified: 20250513074034849
+modifier: 马不前
+tags: cluster-book-info
+title: book-info-purchase
+
+\import [[BMF-info-marco]]
+
+<details class="list-form-details">
+<summary>装帧 书店</summary>
+<div style="list-style-type: none; padding: 0; columns: 2;">
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="装帧" />
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="书店"/>
+</div>
+</details>
+<details class="list-form-details">
+<summary>金额 购买时间</summary>
+<div style="list-style-type: none; padding: 0; columns: 2;">
+<$transclude $variable="form-list-text" tid-2=<<currentTiddler>> fieldname-2="金额" />
+<$transclude $variable="form-list-date" tid-2=<<currentTiddler>> fieldname-2="购买时间"/>
+</div>
+</details>

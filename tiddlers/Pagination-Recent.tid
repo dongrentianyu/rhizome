@@ -1,0 +1,80 @@
+caption: Pagination
+created: 20220415131227588
+creator: Jenn S
+modified: 20250514102639674
+modifier: 马不前
+tags: Pagination
+title: Pagination-Recent
+
+\define additional-select-actions()
+<$set name="rest" filter="[{$:/state/pagination/recent}subtract[12]]">
+<$action-setfield $tiddler="$:/state/pagination/recent" restless=<<rest>> />
+</$set>
+\end
+
+\define build-page(number less)
+<div style="columns: 2;">
+<$list filter="[!is[system]has[text]!sort[created]limit[$number$]rest[$less$]]" >
+• <$link to={{!!title}}>{{!!title}}</$link> <span class='tc-subtitle'><$view format="date" template="YYYY-0MM-0DD" field="created"/>&nbsp;<%if [<currentTiddler>untagged[]] %>🎈<%endif%></span><br />
+</$list>
+</div>
+\end
+
+\define previous-button(interval)
+<$set name='computedText' filter='[{$:/state/pagination/recent}subtract[$interval$]]'>
+<$set name='computedRest' filter='[{$:/state/pagination/recent!!restless}subtract[$interval$]]'>
+<$action-setfield $tiddler='$:/state/pagination/recent' text=<<computedText>> restless=<<computedRest>> />
+</$set>
+</$set>
+Previous
+\end
+
+\define next-button(interval)
+<$set name='computedText' filter='[{$:/state/pagination/recent}add[$interval$]]'>
+<$set name='computedRest' filter='[{$:/state/pagination/recent!!restless}add[$interval$]]'>
+<$action-setfield $tiddler='$:/state/pagination/recent' text=<<computedText>> restless=<<computedRest>> />
+</$set>
+</$set>
+Next
+\end
+
+<div class="tc-subtitle">Recent [[Pagination-Recent]]</div>
+
+<$macrocall $name="build-page" number={{$:/state/pagination/recent}} less={{$:/state/pagination/recent!!restless}} />
+
+<div class='spacerhalf'></div>
+
+<$set name='totaltidds' filter='[!is[system]has[text]count[]]'>
+<$set name='tiddspan' filter='[{$:/state/pagination/recent}subtract[11]]'>
+<$list filter="[field:title[$:/state/pagination/recent]!text[12]]">
+<$button>
+<<previous-button 12>>
+</$button>
+</$list>
+
+<$set name='pages' filter='[!is[system]has[text]count[]divide[12]round[]]'>
+<$set name=start value="1">
+<$set name=end value=<<pages>>>
+<$select tiddler='$:/state/pagination/recent' actions=<<additional-select-actions>>>
+<$list filter="[range<start>,<end>]" variable=index>
+<$set name=multipliedvalue filter="[<index>multiply[12]]">
+<$set name=multipliedrest filter="[<index>multiply[12]subtract[12]]">
+<option value=<<multipliedvalue>>><<index>></option>
+</$set>
+</$set>
+</$list>
+</$select>
+</$set>
+</$set>
+
+<$list filter="[field:title[$:/state/pagination/recent]get[text]compare:number:lt<totaltidds>]">
+<$button>
+<<next-button 12>>
+</$button>
+</$list>
+
+<div class='spacerhalf'></div>
+
+<div>Viewing: <<tiddspan>>-{{$:/state/pagination/recent}} of <<totaltidds>></div>
+</$set>
+</$set>

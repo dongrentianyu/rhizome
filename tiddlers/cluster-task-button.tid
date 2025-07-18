@@ -1,0 +1,33 @@
+created: 20250604115126987
+creator: 马不前
+modified: 20250606052052330
+modifier: 马不前
+tags: cluster-task
+title: cluster-task-button
+
+<div style="float: right;" >
+<$button
+	tooltip="编辑书籍基本信息"
+	aria-label="编辑基本信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="info"/>
+info
+</$button>
+<$button
+	tooltip="编辑书籍基本信息"
+	aria-label="编辑基本信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="text"/>
+text
+</$button>
+<$button
+	tooltip="编辑书籍基本信息"
+	aria-label="编辑基本信息"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="checklist"/>
+checklist
+</$button>
+</div>

@@ -1,0 +1,17 @@
+class: tc-modal-centered fold-text-modal
+code-body: yes
+created: 20250413142139528
+creator: 马不前
+mask-closable: yes
+modified: 20250414023115400
+modifier: 马不前
+subtitle: <div style="text-align: right;" ><$link to=<<toShowTiddler>> ><<toShowTiddler>></$link></div>
+tags: note
+title: note-content
+type: 
+
+<div class="alert py-0" style="background-color:#FFFFE0;">
+
+<$transclude tiddler=<<toShowTiddler>> mode="block"/>
+
+</div>

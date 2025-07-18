@@ -1,0 +1,13 @@
+created: 20230910025734772
+creator: 马不前
+modified: 20241112064742687
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: 页码宏
+wiki-source: readingwiki
+
+\define pnote(page)
+<c style="color:#74787a;">$page$</c>
+\end
+
+<<pnote "P17">>

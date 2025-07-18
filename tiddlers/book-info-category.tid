@@ -1,0 +1,17 @@
+created: 20250513074610143
+creator: 马不前
+modified: 20250513104850294
+modifier: 马不前
+tags: cluster-book-info
+title: book-info-category
+
+\import [[BMF-info-marco]]
+
+<$transclude $variable="details-3-list-form" field1="语言" field2="洲域" field3="通俗文学"/>
+<$transclude $variable="details-3-list-form" field1="国家" field2="时代" field3="题材"/>
+<details class="list-form-details">
+<summary>学术分类</summary>
+<div style="list-style-type: none; padding: 0; columns: 1;">
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="学术分类" />
+</div>
+</details>

@@ -1,0 +1,13 @@
+created: 20240912044618578
+creator: 马不前
+modified: 20240912044618578
+modifier: 马不前
+tags: $:/tags/ViewTemplate
+title: $:/plugins/kookma/favorites/ui/ViewTemplate/Folder
+type: text/vnd.tiddlywiki
+
+<$reveal type="nomatch" stateTitle=<<folded-state>> text="hide" tag="div" retain="yes" animate="yes">
+<$list filter="[all[current]tag[$:/tags/Favorites/Folder]]">
+<$transclude tiddler="$:/plugins/kookma/favorites/viewtemplates/ui-folder-tiddler" mode=block/>
+</$list>
+</$reveal>

@@ -1,0 +1,34 @@
+created: 20250417053426249
+creator: 马不前
+modified: 20250417130536379
+modifier: 马不前
+tags: External-Links-Icon
+title: External-Links-Icon-readme
+
+起因是整理linkcode宏，见[[链接样式]]，后来又使用了插件`$:/plugins/TheDiveO/FontAwesome`，改起来不知道为什么实现不了想要的效果。去论坛查发现了可以用svg作为css中mask的伪类。但论坛己有解决方案还是5.2.X版本的，在5.3.X版本中，svg图像已经发生变化了。所以我不得不转换一下。同时也发现kookma的另一个思路，即通过字典条目来控制，并生成相应的css文件，这样就不需要动态生成了。（需要问一下，是更有效了，还是更慢？）
+
+转换的解决思路来自于`$:/plugins/xp/splashscreen`插件
+
+```
+<$wikify name="icon" text={{{ [[$:/core/images/github]addprefix[{{]addsuffix[}}]] }}} output="html" mode="inline">
+<$text text=<<icon>>/>
+</$wikify>
+```
+
+
+
+* 外部链接的图标放在[[External-Links-Icon-image]]标签下，以`image`开头
+* 可在[[External-Links-Icon-example]]中查看示例
+* 在[[External-Links-Icon-select]]中选择外部链接的domain
+* 在[[External-Links-Icon-css]]中查看css代码
+** 总的来说，是通过筛选器文本拼接的方式构建css需要的svg代码。
+
+最终失败了，失败的原因不知道。第一个会受到影响的是modal模态窗口。会使设置好的样式直接崩溃。第二个是长链接显示不好。第三个是不知道为什么，有些图标能够对应上，而有些图标对应不上。具体来说，系统图标可能对应上，我自己复制的图标则对应不上。比如GitHub的图标就可以对应得上，但discord的图标就对应不上。
+
+我已经在这个功能上浪费了一两天的时间，已经远远超过我的上限了。
+
+---
+
+我不知道代码如何解决的，但除了长文本链接显示不好外，其他的竟然变得正常起来了，也没有影响到模态窗口。
+
+我尝试编写了一个宏[[External-Links-Icon-macro]]，但没有成功，原因不知。

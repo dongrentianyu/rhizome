@@ -1,0 +1,45 @@
+created: 20250410025417028
+creator: 马不前
+modified: 20250701204441449
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: fold-text-modal-css
+
+<!-- 下面是自定义的弹窗样式 -->
+
+.fold-text-modal .tc-modal,
+.fold-text-modal .tc-modal-header,
+.fold-text-modal .tc-modal-body,
+.fold-text-modal .tc-modal-footer {
+  border: none;
+  background-color: <<colour background>>;
+}.fold-text-modal .tc-modal-header {
+	border-radius: 10px 10px 0 0;
+}.fold-text-modal .tc-modal {
+	border-radius: 10px;
+}.fold-text-modal .tc-modal-footer {
+	border-radius: 0 0 10px 10px;
+}@media (max-width: 500px) {
+.fold-text-modal .tc-modal {
+	width: 95% !important;
+}
+}.fold-text-modal .tc-modal-backdrop {
+  cursor: pointer;
+}
+.fold-text-modal .tc-modal {
+  width: 85vw;
+	height: 75vh;
+	top: 45%;
+	bottom: 20%;
+	max-height: 80vh;
+  border-radius: 10px;
+}.fold-text-modal .tc-modal-footer {
+  display: none;
+}
+
+@media (min-width: 55em) {
+.fold-text-modal .tc-modal-body {
+        overflow-y: auto;
+        max-height: 75vh;
+    }
+}

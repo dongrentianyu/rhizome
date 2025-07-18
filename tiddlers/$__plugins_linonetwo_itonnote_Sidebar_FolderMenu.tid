@@ -1,32 +1,23 @@
-caption: 文件目录
-created: 20240323134335002
-creator: LinOnetwo
-description: 文件夹系统目录结构
+caption: <<lingo Config/FolderMenu/Caption $:/plugins/linonetwo/itonnote/language/>>
+created: 20240912070759528
+creator: 马不前
+description: <<lingo Config/FolderMenu/Description $:/plugins/linonetwo/itonnote/language/>>
 is-dropdown: yes
-modified: 20240323134337659
+modified: 20240912070803641
 modifier: 马不前
 tags: 
 title: $:/plugins/linonetwo/itonnote/Sidebar/FolderMenu
 type: text/vnd.tiddlywiki
 
+\import [all[tiddlers+shadows]tag[$:/tags/Macro/Toc]]
+\procedure lingo-base() $:/plugins/linonetwo/itonnote/language/
+
 <$scrollable fallthrough="none" class="tc-popup-keep tc-menubar-dropdown-sidebar">
 
 	<$let toc-open-icon="$:/core/images/fold-button" toc-closed-icon="$:/core/images/folder">
-		<div class="tc-table-of-contents">
-			<$transclude $variable="toc-selective-expandable" tag={{$:/plugins/linonetwo/itonnote/Configs/SideBarFolderMenuBaseTitle}} />
-		</div>
+		<$transclude $variable="toc-ui" tag={{$:/plugins/linonetwo/itonnote/Configs/SideBarFolderMenuBaseTitle}} />
 	</$let>
 
-  <$list filter="[[$:/language]get[text]removeprefix[$:/languages/]else[en-GB]]" variable="lang">
-
-    <$list filter="[<lang>search[zh]]">
-      [[使用帮助|$:/plugins/linonetwo/itonnote/Help/Index]]
-    </$list>
-
-    <$list filter="[<lang>!search[zh]]">
-      [[Help|$:/plugins/linonetwo/itonnote/Help/Index]]
-    </$list>
-
-  </$list>
+  <<lingo FolderMenu/Help>>
 
 </$scrollable>

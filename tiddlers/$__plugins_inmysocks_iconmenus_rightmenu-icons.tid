@@ -1,0 +1,15 @@
+<div class="tc-rightmenu-wrapper">
+<div class="tc-page-controls tc-rightmenu">
+
+@@.tc-site-title
+
+@@
+
+<$list filter='[tag[$:/tags/RightMenu]][plugintiddlers[]tag[$:/tags/RightMenu]]+[nsort[right_menu_order]]'>
+
+<$transclude/>
+
+</$list>
+
+</div>
+</div>

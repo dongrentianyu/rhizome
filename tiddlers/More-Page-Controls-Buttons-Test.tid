@@ -1,0 +1,25 @@
+created: 20250715015753747
+creator: 马不前
+modified: 20250715062823513
+modifier: 马不前
+tags: More-Page-Controls-Buttons
+title: More-Page-Controls-Buttons-Test
+
+\whitespace trim
+<$let popid=<<qualify $:/state/popup/demo2>>>
+<span style="position:relative;">
+<$button  popup=<<popid>> tooltip={{$:/language/Buttons/Home/Hint}} aria-label={{$:/language/Buttons/Home/Caption}} class=<<tv-config-toolbar-class>>>
+<%if [<tv-config-toolbar-icons>match[yes]] %>
+{{$:/core/images/home-button}}
+<%endif%>
+<%if [<tv-config-toolbar-text>match[yes]] %>
+<span class="tc-btn-text">
+<$text text={{$:/language/Buttons/Home/Caption}}/>
+</span>
+<%endif%>
+</$button>
+<$reveal type=popup state=<<popid>> position=left class="tc-popup-keep">
+<div class="popup-box">popup content here</div>
+</$reveal>
+</span>
+</$let>

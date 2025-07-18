@@ -1,0 +1,47 @@
+code-body: yes
+created: 20241103111057084
+creator: 马不前
+modified: 20250414150238367
+modifier: 马不前
+tags: 自定义宏 $:/tags/Macro
+title: form-select-list
+
+\define form-select(tid:"currentiddler" fieldname filter)
+<$select field="""$fieldname$""" tiddler="""$tid$""" class="w-100" >
+<$list filter="[each[$fieldname$]get[$fieldname$]regexp{$tid$!!$fieldname$}] $filter$" >
+<option value=<<currentTiddler>>><$view field='title'/></option>
+</$list>
+</$select>
+\end
+
+\define form-list(tid-2 fieldname-2 filter-2)
+<li>$fieldname-2$: <$transclude tiddler="""$tid-2$""" field="""$fieldname-2$"""/>
+    <ul>
+      <li><$transclude $variable="form-select" tid="""$tid-2$""" fieldname="""$fieldname-2$""" filter="""$filter-2$"""/></li>
+      <li><$edit-text field="""$fieldname-2$""" tiddler="""$tid-2$"""  class="tc-edit-texteditor" placeholder="enter $fieldname-2$ value" /></li>
+        </ul>
+</li>
+\end
+
+\define form-list-date(tid-2 fieldname-2 filter-2:"")
+<li>$fieldname-2$: <$transclude tiddler="""$tid-2$""" field="""$fieldname-2$"""/>
+    <ul>
+      <li><$edit-text field="""$fieldname-2$""" type="date" tiddler="""$tid-2$"""  class="tc-edit-texteditor" placeholder="enter $fieldname-2$ value"/></li>
+        </ul>
+</li>
+\end
+
+\define form-list-text(tid-2 fieldname-2 filter-2:"")
+<li>$fieldname-2$: <$transclude tiddler="""$tid-2$""" field="""$fieldname-2$"""/>
+    <ul>
+      <li><$edit-text field="""$fieldname-2$""" tiddler="""$tid-2$"""  class="tc-edit-texteditor" placeholder="enter $fieldname-2$ value"/></li>
+        </ul>
+</li>
+\end
+
+<ul style="list-style-type: none; padding: 0; columns: 3; column-gap: 20px;">
+<$transclude $variable="form-list" tid-2="$:/state/form-table" fieldname-2="author" filter-2="[each[author]get[author]regexp{$:/state/form-table!!author}]"/>
+<$transclude $variable="form-list-date" tid-2="$:/state/form-table" fieldname-2="author"/>
+<$transclude $variable="form-list-text" tid-2="$:/state/form-table" fieldname-2="author"/>
+</ul>
+

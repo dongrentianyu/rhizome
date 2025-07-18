@@ -1,0 +1,49 @@
+created: 20230526180228867
+creator: 马不前
+modified: 20241109203602596
+modifier: 马不前
+tags: 太微自用模块
+title: 数值字段编辑滑杆
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+做这个起因是，我重新搞时间管理了。我之前是用quicker来做时间记录。因为quicker不用我算，我设置好了时间间隔就可以计算了。但后来我发现越来越难坚持下去，因为这是一个重复性的工作。后面我想了想还是直接在太微里实行吧，反正之前的数据也是保存在太微里的。现在就是数值的添加还需要处理。于是就有了数值字段编辑滑杆。下面的代码是两版，前者简单，完全是用太微自身的语法，其实也就是html的标签。后者加了css，但需要自己手动调整。中间有一个库，但需要用到js，后面我就没搞。
+
+```
+<$range tiddler=<<currentTiddler>> field=<<currentField>> min="0" max="180" default="1" increment="5" />
+<$edit-text tiddler=<<currentTiddler>> field=<<currentField>> default="" class="tc-edit-texteditor" placeholder="请滑动来选择数值" tabindex={{$:/config/EditTabIndex}} cancelPopups="yes"/>
+```
+
+
+https://github.com/IonDen/ion.rangeSlider#settings
+
+
+```
+<style>
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 500px;
+}
+option {
+  padding: 0;
+}
+input[type="range"] {
+  width: 500px;
+  margin: 0;
+}
+</style>
+<$range tiddler=<<currentTiddler>> field=<<currentField>> min="0" max="180" default="1" increment="5" list="tickmarks"/>
+<datalist id="tickmarks">
+  <option value="0" label="0"></option>
+  <option value="25" label="25"></option>
+  <option value="50" label="50"></option>
+  <option value="75" label="75"></option>
+  <option value="100" label="100"></option>
+</datalist>
+<$edit-text tiddler=<<currentTiddler>> field=<<currentField>> default="" class="tc-edit-texteditor" placeholder="请滑动来选择数值" tabindex={{$:/config/EditTabIndex}} cancelPopups="yes"/>
+```
+
+以上代码主要css和datalist部分来自[[MDN网站|https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/range]]。

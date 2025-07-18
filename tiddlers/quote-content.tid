@@ -1,0 +1,14 @@
+class: tc-modal-centered fold-text-modal
+code-body: yes
+created: 20250412060107121
+creator: 马不前
+mask-closable: yes
+modified: 20250412063148201
+modifier: 马不前
+subtitle: <div  style="text-align: right;" ><$link to=<<showTiddler>> ><<showTiddler>></$link></div>
+tags: quote
+title: quote-content
+
+<blockquote>
+<$transclude tiddler=<<showTiddler>> mode="block"/>
+</blockquote>

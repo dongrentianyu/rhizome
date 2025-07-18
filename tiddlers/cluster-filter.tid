@@ -1,0 +1,20 @@
+code-body: yes
+created: 20250418182313351
+creator: 马不前
+list-before: $:/config/ViewTemplateBodyFilters/default
+modified: 20250715150719375
+modifier: 马不前
+tags: cluster $:/tags/ViewTemplateBodyFilter
+title: cluster-filter
+
+[cluster[aggregation]then[cluster-aggregation]]
+[cluster[chapter]then[cluster-chapter]]
+[cluster[chapter-adrift]then[cluster-chapter-adrift]]
+[cluster[section]then[cluster-section]]
+[cluster[node]then[cluster-node]]
+[cluster[toc]then[cluster-toc]]
+[cluster[book-info]then[cluster-book-info]]
+[cluster[book-button]then[cluster-book-button]]
+[cluster[task]then[cluster-task]]
+[cluster[post]then[cluster-post]]
+[suffix[-copy]then[cluster-book-copy]]

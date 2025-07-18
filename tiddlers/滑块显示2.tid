@@ -1,0 +1,47 @@
+code-body: yes
+created: 20250429210037130
+creator: 马不前
+modified: 20250613043758637
+modifier: 马不前
+tags: 自定义宏 $:/tags/Macro
+title: 滑块显示2
+
+\define slider-reveal(filter,name)
+<$let stateName={{{ [[$:/state/SliderReveal/]addsuffix[$name$]] }}} >
+<$list filter="$filter$-[<stateName>get[text]enlist-input[]]" variable="state">
+<$button class="silver-button" >
+<$action-listops $tiddler=<<stateName>> $field="text" $subfilter="[<state>]"/>
+<<state>></$button>
+</$list>
+<$list filter="[<stateName>get[text]enlist-input[]]" variable="state2">
+<%if [<state2>is[missing]] %>
+
+<$button class="grey-dark">
+<$action-listops $tiddler=<<stateName>> $field="text" $subfilter="-[<state2>]"/>
+<<state2>> 不存在 请清除
+</$button>
+
+<%elseif [<state2>get[text]minlength[1]]%>
+<div class="yellow-dark-text">
+<span style="float: right;" >
+<$button to=<<state2>> class="grey-dark"><<state2>></$button>
+<$button class="grey-dark">
+<$action-listops $tiddler=<<stateName>> $field="text" $subfilter="-[<state2>]"/>
+隐藏</$button>
+</span>
+<$transclude tiddler=<<state2>> mode="block"/>
+</div>
+<%else%>
+
+<$button class="grey-dark">
+<$action-navigate $to=<<state2>> />
+<$action-listops $tiddler=<<stateName>> $field="text" $subfilter="-[<state2>]"/>
+<<state2>> 不存在正文内容 请添加或删除
+</$button>
+
+<%endif%>
+</$list>
+</$let>
+\end
+
+<<slider-reveal "[tag[wikis]]" "test2">>

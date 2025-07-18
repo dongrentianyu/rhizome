@@ -1,0 +1,5 @@
+{
+    "load-plugin": "show",
+    "add-extra-tiddlers": "show",
+    "add-resource-tiddlers": "show"
+}

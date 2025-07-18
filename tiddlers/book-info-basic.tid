@@ -1,0 +1,19 @@
+created: 20250513071138244
+creator: 马不前
+modified: 20250513073651297
+modifier: 马不前
+tags: cluster-book-info
+title: book-info-basic
+
+\import [[BMF-info-marco]]
+
+<$transclude $variable="details-3-list-form" field1="author" field2="译者" field3="丛书"/>
+<$transclude $variable="details-3-list-form-text" field1="字数" field2="ISBN" field3="总页数"/>
+<$transclude $variable="details-3-list-form" field1="出版社" field2="出品方" field3="版本"/>
+<details class="list-form-details">
+<summary>副标题 出版年份</summary>
+<div style="list-style-type: none; padding: 0; columns: 2;">
+<$transclude $variable="form-list-text" tid-2=<<currentTiddler>> fieldname-2="副标题" />
+<$transclude $variable="form-list-date" tid-2=<<currentTiddler>> fieldname-2="出版年份"/>
+</div>
+</details>

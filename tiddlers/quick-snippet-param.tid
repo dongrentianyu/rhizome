@@ -1,0 +1,31 @@
+class: tc-modal-centered fold-text-modal
+code-body: yes
+created: 20250411094107571
+creator: 马不前
+mask-closable: yes
+modified: 20250426204602656
+modifier: 马不前
+subtitle: <div style="text-align: right;" >[[弹窗说明|quick-snippet-readme]]</div>
+tags: quick-snippet
+title: quick-snippet-param
+
+<$let a={{{ [[$:/state/tab/quick-snippet]get[text]] }}} >
+<div class="nice-button-group" >
+<$list filter="[all[shadows+tiddlers]tag[quick-snippet-content]enlist-input[]]" variable="thisTitle">
+<$button class="nice-button">
+<$action-setfield $tiddler="$:/state/tab/quick-snippet" text=<<thisTitle>>/>
+<%if [<thisTitle>has[caption]] %>
+<$wikify name="test-tid" text={{{ [<thisTitle>get[caption]] }}}>
+<<test-tid>>
+</$wikify>
+<%else%>
+  <<thisTitle>>
+<%endif%>
+
+</$button>
+</$list>
+</div>
+<div class="nice-button-content" >
+<$transclude tiddler=<<a>> mode="block"/>
+</div>
+</$let>

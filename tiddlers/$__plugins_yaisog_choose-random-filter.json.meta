@@ -1,0 +1,12 @@
+author: Yaisog Bonegnasher
+created: 20230128094610639
+description: Adds a filter to select random titles from the input.
+list: readme license history
+modified: 20230128103527444
+name: choose-random Filter Operator
+packaged-by: Gatha on 28th January 2023, 11:35:31
+plugin-type: plugin
+tags: 
+title: $:/plugins/yaisog/choose-random-filter
+type: application/json
+version: 0.9.0

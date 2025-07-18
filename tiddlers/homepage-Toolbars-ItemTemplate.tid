@@ -1,0 +1,24 @@
+created: 20250308132933659
+creator: 马不前
+modified: 20250308163832826
+modifier: 马不前
+tags: homepage-Control-Panel
+title: homepage-Toolbars-ItemTemplate
+
+\define config-title()
+$(config-base)$
+\end
+\whitespace trim
+
+<$draggable tiddler=<<currentTiddler>>>
+<$checkbox tiddler=<<config-title>> index=<<currentTiddler>> checked="show" unchecked="hide" default="show"></$checkbox>
+&#32;
+<span class="tc-icon-wrapper">
+&#32;
+<$transclude field="caption"/>
+&#32;
+<i class="tc-muted">
+--&#32;
+<$transclude field="description"/>
+</i></span>
+</$draggable>

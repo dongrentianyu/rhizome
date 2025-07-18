@@ -1,0 +1,20 @@
+code-body: yes
+created: 20230522153025442
+creator: 马不前
+modified: 20241102235218030
+modifier: 马不前
+tags: 自定义宏
+title: TTS宏
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+\define ?tts(content)
+\whitespace trim
+
+<$button class=<<tv-config-toolbar-class>>>
+  {{$:/images/forge-icons/play}}
+  <$speech-synthesis text="$content$" />
+</$button>
+\end
+
+<<?tts "test">>

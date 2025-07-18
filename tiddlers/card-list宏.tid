@@ -1,0 +1,24 @@
+created: 20221212153952263
+creator: 马不前
+description: css控制文件在$:/plugins/kookma/shiraz/styles/bs/card-columnx里
+modified: 20250418052826823
+modifier: 马不前
+tags: $:/tags/Macro 插件模块展示
+title: card-list宏
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+\define card-list(filter)
+<div class="card-columns">
+<$list filter=<<__filter__>>>
+<div class="card">
+<div class="card-body text-left">
+
+!!!<$link><<currentTiddler>></$link>
+
+<div>
+<$list filter="[tag<currentTiddler>]">
+<h4> <$link><<currentTiddler>></$link></h4>
+<div>
+</div>
+\end

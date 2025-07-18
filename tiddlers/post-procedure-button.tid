@@ -1,0 +1,38 @@
+created: 20250715140204110
+creator: 马不前
+modified: 20250715142710414
+modifier: 马不前
+tags: post-procedure
+title: post-procedure-button
+
+\function next-title(parm) [range[1],[99]] +[pad[2]addprefix[-]addprefix<parm>!has[title]] +[first[]]
+
+<$button  class="w-100">
+<%if [{$:/state/post/postState}length[]compare:number:lteq[0]] %>
+  <$action-sendmessage $message="tm-notify" $param="quick-note-notify" no-text="无笔记存在，不保存！！！"/>
+<%else%>
+<$let
+time=<<now "YY0MM0DD">>
+postTopic={{{ [[$:/state/post/postState]get[postTopic]else[NoTopic]] }}}
+parm={{{ [<time>addsuffix[-Post-]addsuffix<postTopic>] }}}
+realTitle={{{ [function[next-title],<parm>] }}}
+>
+  <$action-createtiddler 
+  $basetitle=<<realTitle>> 
+  tags="Post-data"
+  cluster="post"
+  postPoint={{$:/state/post/postState!!postPoint}}
+  postTopic={{$:/state/post/postState!!postTopic}}
+  postRef={{$:/state/post/postState!!postRef}}
+  text={{$:/state/post/postState}}
+  postDate=<<now "YYYY-0MM-0DD" >>
+  >
+  <$action-navigate $to=<<createTiddler-title>>/>
+  </$action-createtiddler>
+</$let>
+    <$action-sendmessage $message="tm-notify" $param="quick-note-notify" yes-text="笔记己保存！！！"/>
+    <$action-timeout delay=3500
+   actions='<$action-deletetiddler $tiddler="$:/state/post/postState"/>'/>
+<%endif%>
+Save
+</$button>

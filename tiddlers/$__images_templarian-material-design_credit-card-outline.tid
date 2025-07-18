@@ -1,0 +1,12 @@
+caption: credit-card-outline
+collection: 
+created: 20250309104803008
+creator: 马不前
+library: Templarian Material Design
+library_version: 5.9.55
+modified: 20250309104808258
+modifier: 马不前
+tags: $:/tags/Image
+title: $:/images/templarian-material-design/credit-card-outline
+
+<svg width="22pt" height="22pt" class="tc-image-tmd-credit-card-outline tc-image-button" viewBox="0 0 24 24"><path d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>

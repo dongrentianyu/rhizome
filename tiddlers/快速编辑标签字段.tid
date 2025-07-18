@@ -1,0 +1,88 @@
+code-body: yes
+created: 20250606044309106
+creator: 马不前
+modified: 20250715102651000
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: 快速编辑标签字段
+
+\whitespace trim
+
+\procedure lingo-base() $:/language/EditTemplate/
+
+\procedure tag-body-inner(colour,fallbackTarget,colourA,colourB,icon,tagField:"tags",tid)
+<$wikify name="foregroundColor"
+	text="""<$transclude $variable="contrastcolour"
+		target=<<colour>>
+		fallbackTarget=<<fallbackTarget>>
+		colourA=<<colourA>>
+		colourB=<<colourB>>/>
+	"""
+>
+	<$let backgroundColor=<<colour>> >
+		<span class="tc-tag-label tc-tag-list-item tc-small-gap-right"
+			data-tag-title=<<currentTiddler>>
+			style.color=<<foregroundColor>>
+			style.fill=<<foregroundColor>>
+			style.background-color=<<backgroundColor>>
+		>
+			<$transclude tiddler=<<icon>>/>
+			<$view field="title" format="text"/>
+			<$button class="tc-btn-invisible tc-remove-tag-button"
+				style.fill=<<foregroundColor>>
+			>
+				<$action-listops $tiddler=<<tid>> $field=<<tagField>> $subfilter="-[{!!title}]"/>
+				{{$:/core/images/close-button}}
+			</$button>
+		</span>
+	</$let>
+</$wikify>
+\end
+
+\procedure tag-body(colour,palette,icon,tagField:"tags",tid)
+<$transclude $variable="tag-body-inner"
+	colour=`$(colour)$`
+	colourA={{{ [<palette>getindex[foreground]] }}}
+	colourB={{{ [<palette>getindex[background]] }}}
+	fallbackTarget={{{ [<palette>getindex[tag-background]] }}}
+	icon=<<icon>>
+	tagField=<<tagField>>
+	tid=<<tid>>
+/>
+\end
+
+\procedure edit-tags-template-x(tagField:"tags",tagListFilter,tid)
+<div class="tc-edit-tags" >
+	<$list filter="[<tid>get<tagField>enlist-input[]sort[title]]" storyview="pop">
+		<$transclude $variable="tag-body"
+			colour={{{ [<tid>] :cascade[all[shadows+tiddlers]tag[$:/tags/TiddlerColourFilter]!is[draft]get[text]] }}}
+			palette={{$:/palette}}
+			icon={{{ [<tid>] :cascade[all[shadows+tiddlers]tag[$:/tags/TiddlerIconFilter]!is[draft]get[text]] }}}
+			tagField=<<tagField>>
+			tagListFilter=<<tagListFilter>>
+			tid=<<tid>>
+		/>
+	</$list>
+	<$let tabIndex={{$:/config/EditTabIndex}} cancelPopups="yes">
+		<$transclude $variable="tag-picker" tagField=<<tagField>> tagListFilter=<<tagListFilter>> tiddler=<<tid>> />
+	</$let>
+</div>
+\end
+
+\procedure edit-tags-template-x-span(tagField:"tags",tagListFilter,tid)
+<span class="tc-edit-tags" >
+	<$list filter="[<tid>get<tagField>enlist-input[]sort[title]]" storyview="pop">
+		<$transclude $variable="tag-body"
+			colour={{{ [<tid>] :cascade[all[shadows+tiddlers]tag[$:/tags/TiddlerColourFilter]!is[draft]get[text]] }}}
+			palette={{$:/palette}}
+			icon={{{ [<tid>] :cascade[all[shadows+tiddlers]tag[$:/tags/TiddlerIconFilter]!is[draft]get[text]] }}}
+			tagField=<<tagField>>
+			tagListFilter=<<tagListFilter>>
+			tid=<<tid>>
+		/>
+	</$list>
+	<$let tabIndex={{$:/config/EditTabIndex}} cancelPopups="yes">
+		<$transclude $variable="tag-picker" tagField=<<tagField>> tagListFilter=<<tagListFilter>> tiddler=<<tid>> />
+	</$let>
+</span>
+\end

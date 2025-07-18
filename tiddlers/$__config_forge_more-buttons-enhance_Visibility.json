@@ -1,0 +1,23 @@
+{
+    "$:/plugins/kookma/utility/ui/Buttons/draggable-link": "hide",
+    "$:/plugins/Gk0Wk/page-toc/PageTOCButton": "hide",
+    "$:/core/ui/Buttons/new-journal-here": "hide",
+    "$:/core/ui/Buttons/clone": "show",
+    "$:/core/ui/Buttons/export-tiddler": "hide",
+    "$:/core/ui/Buttons/delete": "show",
+    "$:/core/ui/Buttons/permalink": "hide",
+    "$:/core/ui/Buttons/permaview": "hide",
+    "$:/plugins/linonetwo/open-in-external-app/ViewToolbarButton/OpenInExternalApp": "hide",
+    "$:/core/ui/Buttons/close-others": "show",
+    "$:/plugins/tiddlywiki/qrcode/ViewToolbarButton": "hide",
+    "$:/plugins/linonetwo/open-in-external-app/ViewToolbarButton/OpenInFolder": "hide",
+    "$:/core/ui/Buttons/fold-others": "hide",
+    "$:/core/ui/Buttons/fold": "hide",
+    "$:/core/ui/Buttons/fold-bar": "hide",
+    "$:/plugins/mabuqian/xnote/ui/Buttons/toolbar": "hide",
+    "$:/xp/ui/Buttons/aggregation-view": "hide",
+    "$:/xp/ui/Buttons/view-subtiddler": "hide",
+    "$:/plugins/mabuqian/gumo-customisation/add-prefix": "hide",
+    "$:/plugins/mabuqian/gumo-customisation/copy-tags-button": "hide",
+    "$:/core/ui/Buttons/open-window": "hide"
+}

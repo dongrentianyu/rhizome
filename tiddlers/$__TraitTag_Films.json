@@ -1,0 +1,13 @@
+[
+    {
+        "created": "20230727083629088",
+        "creator": "马不前",
+        "text": "",
+        "tags": "$:/SuperTag/TraitTag",
+        "title": "$:/TraitTag/Films",
+        "modified": "20230805111748014",
+        "modifier": "马不前",
+        "wl-field-name-text": "schema",
+        "schema": "{\n  \"type\": \"object\",\n  \"title\": \"title\",\n  \"properties\": {\n    \"国家\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"中国\",\n        \"日本\",\n        \"美国\",\n        \"英国\",\n        \"法国\",\n        \"德国\",\n        \"意大利\",\n        \"加拿大\",\n        \"印度\",\n        \"巴西\",\n        \"台湾\",\n        \"香港\",\n\t\t\t\t\"韩国\",\n        \"其他\"\n      ]\n    },\n    \"类别\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"电影\",\n        \"电视剧\",\n        \"番剧\",\n        \"综艺\",\n        \"纪录片\",\n        \"花絮\",\n        \"其他\"\n      ]\n    },\n    \"完毕时间\": {\n      \"type\": \"string\",\n      \"format\": \"date\"\n    },\n\t\t\"开始时间\": {\n      \"type\": \"string\",\n      \"format\": \"date\"\n    },\n    \"状态\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"已看\",\n        \"未看\",\n\t\t\t\t\"在看\",\n        \"想看\",\n        \"不看了\",\n\t\t\t\t\"没看完\",\n        \"重看\"\n      ]\n    },\n    \"是否下载\": {\n      \"type\": \"boolean\"\n    },\n    \"简单评价\": {\n      \"type\": \"string\",\n      \"enum\": [\n        \"一般\",\n        \"还可以\",\n        \"有时间会再看\",\n        \"经典之作\",\n        \"神作\",\n\t\t\t\t\"挺喜欢的\",\n        \"难以评价\",\n        \"有好有坏\",\n        \"不好看\",\n        \"垃圾\"\n      ]\n    }\n  },\n  \"required\": [\n    \"国家\",\n    \"类别\",\n    \"完毕时间\",\n\t\t\"开始时间\",\n    \"状态\",\n    \"是否下载\",\n    \"简单评价\"\n  ]\n}"
+    }
+]

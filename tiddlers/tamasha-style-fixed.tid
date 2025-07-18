@@ -1,0 +1,28 @@
+created: 20250526221629266
+creator: 马不前
+modified: 20250526232145764
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: tamasha-style-fixed
+
+.tamasha-slide-content {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    padding: 5px 30px;
+    margin-top: 0px;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5rem;
+    border: 0px dotted orange;
+    overflow: auto;
+    max-width: 100%;
+}
+.tamasha-slide-content::-webkit-scrollbar {
+  display: none;
+}
+.tamasha-overlay.open .tamasha-slide-content{
+position:absolute;
+inset:0;
+max-height:100cqh;
+font-family: "朱雀仿宋（预览测试版）","Arvo", "Times";
+}

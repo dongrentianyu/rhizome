@@ -1,0 +1,27 @@
+created: 20150218055034581
+creator: inmysocks
+modified: 20250313103927308
+modifier: 马不前
+show_left: hide
+show_middle: hide
+show_right: hide
+tags: [[Icon Menus]]
+title: $:/plugins/inmysocks/iconmenus/BottomBar/menu
+
+<div class="tc-iconmenubottombar tc-page-controls">
+<$reveal type=match state='$:/plugins/inmysocks/iconmenus/BottomBar/menu!!show_left' text=show>
+<div class='tc-bottomleftmenu'>
+<$list filter='[tag[$:/tags/BottomLeftMenu]nsort[bottom_left_menu_order]]'><$transclude/></$list>
+</div>
+</$reveal>
+<$reveal type=match state='$:/plugins/inmysocks/iconmenus/BottomBar/menu!!show_middle' text=show>
+<div class='tc-bottomcentermenu'>
+<$list filter='[tag[$:/tags/BottomMiddleMenu]nsort[bottom_middle_menu_order]]'><$transclude/></$list>
+</div>
+</$reveal>
+<$reveal type=match state='$:/plugins/inmysocks/iconmenus/BottomBar/menu!!show_right' text=show>
+<div class='tc-bottomrightmenu'>
+<$list filter='[tag[$:/tags/BottomRightMenu]nsort[bottom_right_menu_order]]'><$transclude/></$list>
+</div>
+</$reveal>
+</div>

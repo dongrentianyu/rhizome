@@ -1,0 +1,7 @@
+created: 20241204032648840
+creator: 马不前
+modified: 20241204033223804
+modifier: 马不前
+title: $:/config/gatha/PublishFilter
+
+[[$:/DefaultTiddlers]] [[$:/themes/tiddlywiki/vanilla]] [subfilter{$:/DefaultTiddlers}] [[$:/themes/linonetwo/itonnote]] [[$:/plugins/linonetwo/itonnote]]

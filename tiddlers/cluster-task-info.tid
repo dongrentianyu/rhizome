@@ -1,0 +1,19 @@
+code-body: yes
+created: 20250604115922777
+creator: 马不前
+modified: 20250606060154708
+modifier: 马不前
+tags: cluster-task
+title: cluster-task-info
+
+\import [[BMF-info-marco]]
+
+<br/>
+<$transclude $variable="details-3-list-form-date" field1="taskCreationDate" field2="taskSchedulingDate" field3="taskCompletionDate"/>
+<$transclude $variable="details-3-list-form" field1="taskPriority" field2="taskAssignedProject" field3="taskStatus"/>
+<details class="list-form-details">
+<summary>taskEstimatedTime</summary>
+<div style="list-style-type: none; padding: 0; columns: 1;">
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="taskEstimatedTime" />
+</div>
+</details>

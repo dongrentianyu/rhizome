@@ -1,0 +1,13 @@
+created: 20250415093915568
+creator: 马不前
+modified: 20250418050645708
+modifier: 马不前
+tags: quick-note
+title: quick-note-readme
+
+* 主体编辑内容放在[[quick-note-content]]
+** 原本是使用嵌入模板的方式，但在侧边栏展示中显示不太好，后改用edit-text方式
+** 原本按钮放在编辑栏中，后移除，[[quick-note-button]]
+* 按钮保存条目标签为[[quick-note-file]]
+* 保存后会有一个提示，内容在[[quick-note-notify]]
+** 使用了[[TiddlyTools-Time-action-timeout.js]]来控制时间，大概是三四秒左右的时间才会清空。

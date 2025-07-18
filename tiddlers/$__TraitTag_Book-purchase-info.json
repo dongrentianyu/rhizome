@@ -1,0 +1,13 @@
+[
+    {
+        "created": "20230725052258898",
+        "creator": "马不前",
+        "text": "",
+        "tags": "$:/SuperTag/TraitTag cluster-book-info-fields",
+        "title": "$:/TraitTag/Book-purchase-info",
+        "modified": "20250513075901588",
+        "modifier": "马不前",
+        "wl-field-name-text": "schema",
+        "schema": "{\n  \"type\": \"object\",\n  \"title\": \"title\",\n  \"properties\": {\n    \"金额\": {\n      \"type\": \"number\"\n    },\n    \"装帧\": {\n      \"type\": \"string\",\n\t\t\t\"enum\": [\n        \"精装正版\",\n        \"平装正版\",\n        \"精装盗版\",\n        \"平装盗版\",\n        \"疑为盗版\",\n        \"二手旧书\",\n        \"套装典藏\"\n\t\t\t\t]\n    },\n    \"书店\": {\n      \"type\": \"string\",\n\t\t\t\"enum\": [\n        \"瀚海文化书店\",\n        \"中图网\",\n        \"南昌市学生书店\",\n        \"眼镜子书店\",\n        \"旧书摊上\",\n        \"淘宝网店\",\n\t\t\t\t\"朵云书店\",\n        \"其他\"\n\t\t\t\t]\n    },\n    \"购书时间\": {\n      \"type\": \"string\",\n      \"format\": \"date\"\n    }\n  },\n  \"required\": [\n    \"金额\",\n    \"装帧\",\n    \"书店\",\n    \"购书时间\"\n  ]\n}"
+    }
+]

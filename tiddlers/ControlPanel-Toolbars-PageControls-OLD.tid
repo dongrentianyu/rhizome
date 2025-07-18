@@ -1,0 +1,26 @@
+caption: {{$:/language/ControlPanel/Toolbars/PageControls/Caption}}
+created: 20250305105028306
+creator: 马不前
+modified: 20250308164131740
+modifier: 马不前
+tags: homepage-Control-Panel-250309
+title: ControlPanel-Toolbars-PageControls-OLD
+
+代码仅供参考了，不具有实际的意义了。
+
+```shell
+\define lingo-base() $:/language/TiddlerInfo/
+
+\define config-base() $:/config/homepage/Visibility/
+
+<$set name="tv-config-toolbar-icons" value="yes">
+
+<$set name="tv-config-toolbar-text" value="yes">
+
+<$macrocall $name="list-tagged-draggable" tag="$:/tags/PageControls" itemTemplate="$:/core/ui/ControlPanel/Toolbars/ItemTemplate"/>
+
+</$set>
+
+</$set>
+
+```

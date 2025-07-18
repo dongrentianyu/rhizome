@@ -1,0 +1,22 @@
+created: 20250612054904740
+creator: 马不前
+modified: 20250612055445991
+modifier: 马不前
+tags: 快速编辑标签字段
+title: 快速编辑标签字符-示例与说明
+
+
+```
+<$transclude $variable="edit-tags-template-x" tagField="123" tagListFilter="[has[cluster]get[cluster]unique[]enlist-input[]]" tid="0023"/>
+```
+
+
+* 更改来自官方的`$:/core/ui/EditTemplate/tags`
+* 修改了名称，改为`edit-tags-template-x`
+* 更新了里面的宏使用方式，使用更现代的`<$transclude $variable="" />`
+* 增加变量`tid`，允许更具体控制要修改的条目
+* `tagField`表示要修改的字段，默认是tags标签
+* `tagListFilter`则是下方列表内容，可以手动设置
+* 上述是一个常见的示例，比如选择具有cluster字段的值
+* 目前存在的问题有，编辑框内容无法修改
+** 这是由底层的`tag-picker`宏控制的，修改起来很麻烦

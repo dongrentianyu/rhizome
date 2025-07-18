@@ -1,0 +1,25 @@
+caption: 目录章节列出
+created: 20230910050711983
+creator: 马不前
+modified: 20250411113903509
+modifier: 马不前
+tags: modal-snippet
+title: 目录章节列出
+wiki-source: readingwiki
+
+<$list filter='[tag[德勒兹]!book-things[yes]sort[chapter]each[chapter]]'>
+
+! {{!!chapter}}
+
+<div style="column-count:4;">
+
+<$list filter='[tag[德勒兹]chapter{!!chapter}] +[sort[title]]'>
+
+<$link><<currentTiddler>></$link>
+
+</$list>
+
+</div>
+
+---
+</$list>

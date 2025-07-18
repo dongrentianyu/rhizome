@@ -1,0 +1,36 @@
+created: 20250619192416000
+creator: 马不前
+modified: 20250619192651000
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: nice-tabs
+
+.nice-tabs.tc-tab-buttons button {
+  font-weight: bold;
+  font-size: 1.2em;
+  border: 0;
+  padding: .6em .8em .4em .8em;
+  background: transparent;
+  cursor: pointer;
+  color: <<colour tiddler-title-foreground>>;
+}
+
+@media (max-width: {{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}) {
+  .nice-tabs.tc-tab-buttons button {
+    font-size: .8em;
+    padding: 8px;
+  }
+
+  .nice-tabs.tc-tab-buttons button svg {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 auto 6px auto;
+  }
+}
+
+.nice-tabs.tc-tab-buttons button.tc-tab-selected {
+  border: 0;
+  border-bottom: 4px solid <<colour primary>>;
+  color: <<colour tiddler-title-foreground>>;
+}

@@ -1,0 +1,23 @@
+caption: 模板
+created: 20250415164507824
+creator: 马不前
+modified: 20250521044240304
+modifier: 马不前
+tags: quick-edit-fields-type
+title: quick-edit-fields-type-template
+
+<$button>
+<$action-setfield $tiddler="$:/state/quick-edit-fields/fields" text=""/>
+Empty state
+</$button>
+<$button>
+<$action-setfield $tiddler="$:/state/quick-edit-fields/template" text="QEF-chapter"/>
+chapter
+</$button>
+<$button>
+<$action-setfield $tiddler="$:/state/quick-edit-fields/template" text="QEF-book"/>
+Book
+</$button>
+<$transclude tiddler={{{ [[$:/state/quick-edit-fields/template]get[text]else[QEF-default]] }}} mode="block"/>
+
+''<$text text={{{ [{$:/state/quick-edit-fields/fields}is[blank]then[未选择字段]else{$:/state/quick-edit-fields/fields}] }}} /> :'' <$edit-text tiddler=<<showTiddler>> field={{$:/state/quick-edit-fields/fields}} class="w-75 tc-edit-texteditor" placeholder="请填空字段值"/>

@@ -1,0 +1,15 @@
+created: 20221212164315062
+creator: 马不前
+modified: 20240908081347825
+modifier: 马不前
+tags: 目录导航栏宏加强版
+title: 目录导航栏宏加强版本演示
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+<$macrocall
+	$name="navx"
+	tag="TableOfContents"
+  selectedTiddler="$:/temp/toc/selectedTiddler"
+	unselectedText="<p>选择目录中的一个主题，点击箭头可展开主题。</p>"
+	missingText="<p>佚失条目。</p>"/>

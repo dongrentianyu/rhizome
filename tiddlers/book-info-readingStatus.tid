@@ -1,0 +1,21 @@
+created: 20250513074246959
+creator: 马不前
+modified: 20250513075542239
+modifier: 马不前
+tags: cluster-book-info
+title: book-info-readingStatus
+
+<details class="list-form-details">
+<summary>所看书目类型 状态 完毕时间</summary>
+<div style="list-style-type: none; padding: 0; columns: 3;">
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="所看书目类型" />
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="状态" />
+<$transclude $variable="form-list-date" tid-2=<<currentTiddler>> fieldname-2="完毕时间"/>
+</div>
+</details>
+<details class="list-form-details">
+<summary>笔记状态</summary>
+<div style="list-style-type: none; padding: 0; columns: 1;">
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="笔记状态" />
+</div>
+</details>

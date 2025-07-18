@@ -1,0 +1,15 @@
+caption: 条件快捷语法
+created: 20250411114604943
+creator: 马不前
+modified: 20250411114652561
+modifier: 马不前
+tags: TW-snippet
+title: Conditional-Shortcut-Syntax
+
+<%if [{$:/info/url/protocol}match[file:]] %>
+  从文件 URI 加载
+<%elseif [{$:/info/url/protocol}match[https:]] %>
+  从 HTTPS URI 加载
+<%else%>
+  从未知协定加载
+<%endif%>

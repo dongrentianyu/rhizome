@@ -1,0 +1,15 @@
+created: 20250411112939576
+creator: 马不前
+modified: 20250411113228308
+modifier: 马不前
+tags: modal-snippet
+title: FAQ-snippet
+
+<$keyboard key="escape" actions='<$action-setfield $tiddler="$:/state/demo/qa/search-details" $field="text" $value=""/>'>
+<$edit-text tiddler="$:/state/demo/qa/search-details" filed=text tag=input default="" placeholder="Search" class="alert alert-info w-100"/>
+</$keyboard>
+
+<$list filter="[tag[Custom Styles FAQ]search:title{$:/state/demo/qa/search-details}]">
+<$macrocall $name=details label=<<currentTiddler>> src=<<currentTiddler>>
+ labelClass="alert alert-secondary py-1 my-2" srcClass="alert border-secondary py-0"/>
+</$list>

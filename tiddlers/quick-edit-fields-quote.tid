@@ -1,0 +1,16 @@
+code-body: yes
+created: 20250414090755357
+creator: 马不前
+modified: 20250414092124867
+modifier: 马不前
+tags: quick-edit-fields
+title: quick-edit-fields-quote
+
+<span >
+<$button  tooltip="选择编辑字段" aria-label="选择编辑字段"  class="tc-tiddlylink tc-btn-invisible tc-btn-mini" >
+<$action-setfield $tiddler="$:/state/quick-edit-fields/fields" text=<<currentTiddler>>/>
+
+<$transclude $variable="badge" type="info" src=<<currentTiddler>> />
+
+</$button>
+</span>

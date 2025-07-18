@@ -1,0 +1,27 @@
+created: 20150123102312282
+creator: inmysocks
+modified: 20250313103922596
+modifier: 马不前
+show_left: show
+show_middle: hide
+show_right: show
+tags: [[Icon Menus]]
+title: $:/plugins/inmysocks/iconmenus/TopBar/menu
+
+<div class="tc-iconmenutopbar">
+<$reveal type=match state='$:/plugins/inmysocks/iconmenu/TopBar/menu!!show_left' text=show>
+<div class='tc-topleftmenu'>
+<$list filter='[tag[$:/tags/TopLeftMenu]nsort[top_left_menu_order]][plugintiddlers[]tag[$:/tags/TopLeftMenu]nsort[top_left_menu_order]]'><$transclude/></$list>
+</div>
+</$reveal>
+<$reveal type=match state='$:/plugins/inmysocks/iconmenus/TopBar/menu!!show_middle' text=show>
+<div class='tc-topcentermenu'>
+<$list filter='[tag[$:/tags/TopMiddleMenu]nsort[top_middle_menu_order]][plugintiddlers[]tag[$:/tags/TopMiddleMenu]nsort[top_middle_menu_order]]'><$transclude/></$list>
+</div>
+</$reveal>
+<$reveal type=match state='$:/plugins/inmysocks/iconmenu/TopBar/menu!!show_right' text=show>
+<div class='tc-toprightmenu'>
+<$list filter='[tag[$:/tags/TopRightMenu]nsort[top_right_menu_order]][plugintiddlers[]tag[$:/tags/TopRightMenu]nsort[top_right_menu_order]]'><$transclude/></$list>
+</div>
+</$reveal>
+</div>

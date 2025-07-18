@@ -1,0 +1,20 @@
+class: tc-modal-centered fold-text-modal
+code-body: yes
+created: 20250413141938175
+creator: 马不前
+mask-closable: yes
+modified: 20250418053845601
+modifier: 马不前
+tags: 太微自用模块
+title: note
+
+<$parameters name="" >
+	<$button  tooltip="查看笔记内容" aria-label="查看笔记内容"  class="tc-tiddlylink tc-btn-invisible tc-btn-mini" >
+		<$action-sendmessage $message="tm-modal" $param="note-content" toShowTiddler=<<currentTiddler>> />
+<%if [<name>is[blank]] %>
+		<$transclude $variable="badge"  type="secondary" src=<<currentTiddler>> />
+<%else%>
+		<$transclude $variable="badge"  type="secondary" src=<<name>> />
+<%endif%>
+</$button>
+</$parameters>

@@ -1,0 +1,23 @@
+author: 
+created: 20241103121034018
+creator: 马不前
+modified: 20241104010636691
+modifier: 马不前
+tags: BMF-info
+title: book-info
+
+\import [[BMF-info-marco]]
+
+<$transclude $variable="details-3-list-form" field1="author" field2="状态" field3="所看书目类型"/>
+<$transclude $variable="details-3-list-form" field1="译者" field2="国家" field3="时代"/>
+<$transclude $variable="details-3-list-form-text" field1="字数" field2="ISBN" field3="总页数"/>
+<$transclude $variable="details-3-list-form" field1="出版社" field2="出品方" field3="丛书"/>
+<$transclude $variable="details-3-list-form-date" field1="出版年份" field2="购书时间" field3="完毕时间"/>
+<details class="list-form-details">
+<summary>装帧 书店 金额</summary>
+<div style="list-style-type: none; padding: 0; columns: 3;">
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="装帧" />
+<$transclude $variable="form-list" tid-2=<<currentTiddler>> fieldname-2="书店"/>
+<$transclude $variable="form-list-text" tid-2=<<currentTiddler>> fieldname-2="金额"/>
+</div>
+</details>

@@ -1,12 +1,14 @@
 caption: {{$:/language/codemirror6/fontsize/caption}}
 caption-zh: {{$:/language/codemirror6/zh/fontsize/caption}}
-created: 20240828072519862
+created: 20250313111656273
 creator: 马不前
 description: {{$:/language/codemirror6/fontsize/description}}
 description-zh: {{$:/language/codemirror6/zh/fontsize/description}}
-modified: 20240828072521763
+id: 15
+modified: 20250313111656863
 modifier: 马不前
-settings-template: $:/plugins/oeyoews/tiddlywiki-codemirror-6/ui/templates/settings/input
+settings-group: general
+settings-template: input
 title: $:/config/codemirror-6/fontsize
 
 24px

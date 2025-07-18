@@ -1,0 +1,23 @@
+created: 20250428102101446
+creator: 马不前
+modified: 20250428102135900
+modifier: 马不前
+tags: cluster-aggregation
+title: cluster-aggregation-readme
+
+* [[cluster-filter]]对拥有特定字段`cluster`且值为`aggregation`的
+* 设置模板为[[cluster-aggregation]]
+* 有几个常见的展示板块
+** [[cluster-aggregation-context]]，上下文版块，和节点丸一样，都是直接呈现当前条目的上下文内容
+*** 未选择展示内容时，默认展示的是上下文版块
+** [[cluster-aggregation-table-dynamic]]，动态表格模块，显示当前条目为根目录情况下的所有条目。
+*** [[cluster-aggregation-default-fields]]，动态表格的字段默认使用这里的
+*** 可以被当前条目的`TableFields`字段修改
+** 增加一个[[cluster-aggregation-toc]]，是一个横向目录展示，点开可以展示内容
+*** 包装了[[simple-recursion]]来实现的
+* [[cluster-aggregation-button]]，主要用来负责切换上述模块
+** 通过构建加上当前条目标题作为唯一状态条目，使得不同的cluster可以展示不一样
+** 有一个按钮，用来清除当前条目下的所有状态条目
+** 有一个搜索框，会构建一个状态条目，传递给上面的动态表格作为参数传入
+*** 没有做成xp那种细致的，因为感觉用不到，通常情况下只搜索标题就可以了
+*** 以后看使用情况加上还是怎么样，因为一个交互是选择，一个交互是点击，一个交互是输入，实际上是三种不同的交互

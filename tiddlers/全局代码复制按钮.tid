@@ -1,0 +1,12 @@
+created: 20241118151524020
+creator: 马不前
+modified: 20250418052455320
+modifier: 马不前
+tags: 自用按钮
+title: 全局代码复制按钮
+
+根据[[论坛|https://talk.tiddlywiki.org/t/introducing-a-copy-code-button-plugin-for-tiddlywiki-enhancing-code-sharing-and-efficiency/7224/24]]上的内容，找到作者更新后的，并把之前的文件删除了，直接拖入下面两个条目。
+
+* [[$:/wilk/buttons/copy-code]]
+* [[$:/wilk/css/CopyCodeButton]]
+* [[https://wilk-tweaks.tiddlyhost.com/]]

@@ -1,0 +1,31 @@
+caption: {{$:/core/images/down-arrow}} More Page Controls
+created: 20250715020756519
+creator: 马不前
+description: More Page Controls
+list-before: $:/core/ui/Buttons/close-all
+modified: 20250715074520402
+modifier: 马不前
+tags: $:/tags/PageControls 自用按钮
+title: More-Page-Controls-Buttons
+
+\whitespace trim
+\define config-title()
+$:/config/PageControlButtons/Visibility/$(listItem)$
+\end
+<span style="position:relative;">
+<$button popup=<<qualify "$:/state/popup/save-wiki">> tooltip="More Page Controls" aria-label="More Page Controls" class=<<tv-config-toolbar-class>> selectedClass="tc-selected">
+<span class="tc-dirty-indicator">
+<$list filter="[<tv-config-toolbar-icons>match[yes]]">
+{{$:/core/images/down-arrow}}
+</$list>
+<$list filter="[<tv-config-toolbar-text>match[yes]]">
+<span class="tc-btn-text"><$text text="More Page Controls"/></span>
+</$list>
+</span>
+</$button>
+<$reveal state=<<qualify "$:/state/popup/save-wiki">> type="popup" position="left" animate="yes" class="tc-popup-keep">
+<div class="popup-btn">
+{{||More-Page-Controls-Buttons-contents}}
+</div>
+</$reveal>
+</span>

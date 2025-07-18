@@ -1,0 +1,25 @@
+class: tc-modal-centered fold-text-modal
+created: 20250502020333349
+creator: 马不前
+mask-closable: yes
+modified: 20250526091931817
+modifier: 马不前
+subtitle: <div style="text-align: center;">chapter: <<chapterName>></div>
+tags: cluster-section
+title: cluster-section-adrift
+
+<$let
+stateID={{{ [[$:/state/cluster/chapter/]addsuffix{!!title}] }}}
+stateChapterSection={{{ [<showTiddler>addsuffix[/]addsuffix<chapterName>addsuffix[/]addsuffix<sectionName>] }}}
+stateFilterName={{{ [[$:/state/cluster/section/filter/]addsuffix<stateChapterSection>] }}}
+popupstate=<<qualify "$:/state/cluster/section/display">> 
+stateIDText={{{ [<stateID>get[text]else[-copy]] }}} 
+rootTag={{{ [<showTiddler>tags[]tags[]] }}} 
+chapterText={{{ [<showTiddler>get[chapter]] }}} 
+captionText="Adrift">
+<$transclude $tiddler="cluster-section-button" mode="block"/>
+
+<$tiddler tiddler=<<showTiddler>> >
+	<$transclude $variable="cluster-chapter-procedure" realSuffix=<<stateIDText>>  littleFilter=`[chapter[$(chapterText)$]!has[section]]` stateFilterName=<<stateFilterName>>  rootTag=<<rootTag>> captionText=<<captionText>> />
+</$tiddler>
+</$let>

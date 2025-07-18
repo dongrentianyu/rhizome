@@ -1,0 +1,15 @@
+created: 20250501234035564
+creator: 马不前
+modified: 20250501234619315
+modifier: 马不前
+tags: cluster-section
+title: cluster-section-readme
+
+* 和[[cluster-chapter]]类似，但不一样的是，需要点击才能展示
+** 在模板里，通过筛选器筛选出拥有与当前条目chapter一致的，且具有section字段的
+** 额外的可以单独处理，单独给一个按钮
+* 按钮点开后会出现一个弹窗[[cluster-section-content]]
+** 弹窗的右上角，显示的是当前chapter和section，表示是哪一个章的哪一节内容
+*** 未来可能会改掉，因为很多章节的名称比较长，就需要换行处理了。
+*** 换行的效果也不太好，后面再考虑找个比较通用的方式吧
+* 弹窗的主界面依旧是[[cluster-section-button]]，左边一个输入器，右边一排按钮

@@ -1,0 +1,13 @@
+author: chanilino
+created: 20180705100410500
+creator: chan
+dependents: 
+description: Plugin for graphviz
+list: Usage Readme
+modified: 20180705133523508
+modifier: chan
+name: Viz
+plugin-type: plugin
+title: $:/plugins/chanilino/viz
+type: application/json
+version: 1.0.1

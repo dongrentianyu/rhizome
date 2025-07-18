@@ -1,0 +1,11 @@
+caption: 打开
+created: 20250412151214533
+creator: 马不前
+modified: 20250412152819885
+modifier: 马不前
+tags: sidebar-modal
+title: sidebar-modal-open
+
+<div class="sh-multicol3 ">
+<$transclude tiddler="$:/core/ui/SideBar/Open" mode="block"/>
+</div>

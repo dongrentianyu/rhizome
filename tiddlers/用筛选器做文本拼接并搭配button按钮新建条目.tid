@@ -1,0 +1,180 @@
+created: 20230602082324851
+creator: 马不前
+modified: 20241115200705523
+modifier: 马不前
+tags: 原生太微所实现的功能
+title: 用筛选器做文本拼接并搭配button按钮新建条目
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+这个内容可以参考[[太微中文教程|https://tw-cn.netlify.app/#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%86%85%E5%AE%B9]]里的。
+
+筛选器是太微最强大的特性，甚至可以说没有之一。不过太微也有其他很强大的特性，比如自定义页面，各种微件和宏等。但上面的大部分功能还是要在筛选器的基础上进行处理操作。
+
+{{literate programming}}
+
+看完了上面文式编程的概念，我们可以从读代码的内容，然后再理解代码。先看一个简单的代码，用来实现添加新条目，同时添加一些标签和字段内容。
+
+<$button>
+<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY年0MM月DD日0hh:0mm:0ss">> Timeform=<<now "YYYY-0MM-0DD">> tags="学习 太微使用笔记" IsOtherText="time" TimeNumber="30" />	
+	太微使用笔记
+</$button>
+
+
+```
+<$button>
+<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY年0MM月DD日0hh:0mm:0ss">> Timeform=<<now "YYYY-0MM-0DD">> tags="学习 太微相关" IsOtherText="time" TimeNumber="30" />	
+	太微相关
+	</$button>
+```
+
+上面代码中，先是button小工具，后面接一个action动作，发送一个消息，`action-sendmessage`嘛，不就是发送消息的动作，然后这个消息是什么呢？是新建一个条目，也就是`tm-new-tiddler`，前面的tm可能是tiddlywiki messages的简写。后面就是一个新条目的意思。新建一个条目最重要的就是标题，这里的标题我用了now宏，后面接一个now宏的格式参数。后面的timeform也是如此，只是格式换了一下。再后面tags就是标签的意思。这里添加标签就是直接指定了。当然有两个或以上的标签时，需要空格区分开来。如果英文标签里有两个以上的单词时，就需要添加`[[]]`来区分开来。
+
+ok，以上就基本上是新建一个自定义的按钮的基本操作了。当然还可以做一些优化，具体可见[[如何做一个合格的按钮]]。
+
+现在我们要开始讲复杂的内容了。不过也是在上面的基础展开的。
+
+
+```
+tags={{{ [<now "0WW">] +[addprefix[2023-]] }}}
+```
+
+观察上面的代码，我们可以发现tags后面接了三个花括号，那为什么要接这三个花括号呢？因为我们要进行动态创建嵌入内容。之前嵌入的内容基本上都是静态的，只能是写好了的，不够方便。有了三层花括号就方便多了。不过三层花括号看起来也不够美观。这个新版本应该有改进。
+
+ok，了解了什么是三层花括号后，我们具体看里面的内容，上来就是一个`[<now "0WW">]`，这又是什么东西呢？
+
+这个东西我们是见过的，就是上面的now宏啊。后面接的`0WW`表示的是当年的周数，前面加上0是单数时补齐。也就是说这个传入的参数和上面的格式参数是一样的。那为什么要用单尖括号呢？上面的我们不是都用双尖括号吗？
+
+这是因为我们是在筛选器里调用这个宏变量的，外面的方括号就是筛选器的run，当然也还有其他方式，比如单引号或者双引号。这里用单个方括号是为了后面的steps。因为`[<now "0WW">]`只输出一个周期数，但我们还需要给这个值加上前缀“2023-”，那么就有了后面的`+[addprefix[2023-]]`内容了。
+
+`+[addprefix[2023-]]`前面的+表示承接前面的输出值。后面的addprefix，这个从字面上就可以看出是add prefix，添加前缀。后面接一个要添加的参数，也就是“2023-”，当然也是用方括号括起来的。
+
+<$button>
+<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY年0MM月DD日0hh:0mm:0ss">> Timeform=<<now "YYYY-0MM-0DD">> 
+tags={{{ [<now "0WW">] +[addprefix[2023-]] }}}
+IsOtherText="time" 
+TimeNumber="30" />	
+	太微相关，加前缀的
+</$button>
+
+点击上面的代码就可以发现标签的值是“2023-22”了，这就相当于实现了一个文本拼接工作。把两个文本拼接起来了，前面是“2023-”，后面是一个周期数。当然前面的“2023-”，也可以换成某个变量，不过就需要用单尖括号来实现变量的传递了。比如我传递一个now宏的日期值吧。
+
+<$button>
+<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY年0MM月DD日0hh:0mm:0ss">> Timeform=<<now "YYYY-0MM-0DD">> 
+tags={{{ [<now "0WW">] +[addprefix<now "0DD">] }}}
+IsOtherText="time" 
+TimeNumber="30" />	
+	太微相关，加日期值作为前缀的
+</$button>
+
+上面输出的值是0222，02是个位数补齐位数，后面22是当前周期数，直播时应该是0322的值。
+
+ok，基本拼接的操作就是这样的，通过筛选器来拼接复制的内容，或者是动态的变量内容。现在我们可以结合其他筛选器来实现更复杂的内容。
+
+`Timeform={{{ 
+[<now "0DD">] 
++[subtract[1]]
++[addprefix[-]]
++[addprefix<now "0MM">]
++[addprefix[2023-]]
+}}}`
+
+上面代码是我想做一个按钮，新建条目Timeform的值是当前日期减一天。也就是本来会生成的日期值，减去一天，并重新再生成类似的值。当然这个用quicker是可以很方便实现的，但太微里并没有这么方便。当然也可以有方便的方式，就是直接减去一大堆数值，不过我这里是作为演示来说明的。
+
+一步步来看，三个花括号不用再解释，这个是为了动态嵌入值。第一个`[<now "0DD">]`也不用解释了，这个是调用now宏，嵌入其日期的值。第二步`+[subtract[1]]`，这个subtract筛选器会把之前的输出内容当作数值进行减法计算，也就是-1。第三步`+[addprefix[-]]`这个是加上`-`作为前缀。那么假设当天的值是23，那么前面三个步骤得到的结果是什么呢？答案是“-22”。
+
+ok，上面的如果能想明白，后面就很简单了。第四步`+[addprefix<now "0MM">]`增加一个前缀，其值是日期里的月份，不够两位用0补齐。假设是5月，那到这一步是“05-22”。第五步，`+[addprefix[2023-]]`加上一个“2023-”的前缀，最后就会拼接成“2023-05-22”，当天是“2023-05-23”。
+
+<$button>
+<$action-sendmessage $message="tm-new-tiddler" title=<<now "YYYY年0MM月DD日0hh:0mm:0ss">> 
+
+Timeform={{{ 
+[<now "0DD">] 
++[subtract[1]]
++[addprefix[-]]
++[addprefix<now "0MM">]
++[addprefix[2023-]]
+}}}
+
+tags={{{ [<now "0WW">] +[addprefix<now "0DD">] }}}
+IsOtherText="time" 
+TimeNumber="30" />	
+	当天减一天
+</$button>
+
+上面的代码还有一个问题，就是本来是02减1的，结果是1，但这个1在日期里应该要补齐的，但没有补充，除非再写一个判断式，但那就很麻烦了，所以后面还是要把这个补齐给删除，或者换其他方式。
+
+你看上面的代码是不是很烦琐啊，如果我要重复调用这个代码，难道一直复制过去吗？
+
+那肯定不是啊。我们可以用set小部件来把这个值变成某个变量。
+
+`<$set name="day-1" value={{{ [<now "0DD">] +[subtract[1]]+[addprefix[-]]+[addprefix<now "0MM">]+[addprefix[2023-]] }}}>`
+
+比如上面的代码里，我们新建一个day-1的变量，后面的值就可以直接使用这个了。
+
+
+```
+<$button>
+<$set name="day-1" value={{{ 
+[<now "0DD">] +[subtract[1]]+[addprefix[-]]+[addprefix<now "0MM">]+[addprefix[2023-]]
+}}}>
+<$action-sendmessage $message="tm-new-tiddler" 
+
+title=<<day-1>>
+
+tags={{{ [<now "0WW">] +[addprefix[2023-]] }}}
+
+test1={{{ [Timeform<day-1>] +[get[TimeNumber]sum[]] }}}
+
+IsOtherText="timedays" >
+</$action-sendmessage>
+</$set>
+	当天减一天
+	</$button>
+```
+
+上面代码中button小工具写完后，接一个set小工具。当然类似set的小工具还有很多，比如let或者var或者插件里用的，这个下次弄明白了再说。从`title=<<day-1>>`就可以看出，直接用双尖括号调用我们自定义的变量。
+
+`test1={{{ [Timeform<day-1>] +[get[TimeNumber]sum[]] }}}`
+
+而上面的代码则是把`day-1`作为和`now`一样的宏变量放进筛选器里，后面通过get来获取到`[Timeform<day-1>]`筛选出来的条目里`TimeNumber`的值，并用sum相加成总和。最终嵌入到test1这个字段里。
+
+<$button>
+<$set name="day-1" value={{{ 
+[<now "0DD">] +[subtract[1]]+[addprefix[-]]+[addprefix<now "0MM">]+[addprefix[2023-]]
+}}}>
+<$action-sendmessage $message="tm-new-tiddler" 
+
+title=<<day-1>>
+
+tags={{{ [<now "0WW">] +[addprefix[2023-]] }}}
+
+test1={{{ [Timeform<day-1>] +[get[TimeNumber]sum[]] }}}
+
+IsOtherText="timedays" >
+</$action-sendmessage>
+</$set>
+	当天减一天
+</$button>
+
+下面论坛里有一个提问的，里面也跟今天的用法基本类似。可以用来学习。
+
+[[论坛链接|https://talk.tiddlywiki.org/t/days-operator-having-problems-with-supplying-parameter-from-a-tiddler-field/7152]]
+
+
+```
+<$button>Review
+<$action-setfield $tiddler="$:/StoryList"
+   list={{{ [all[tiddlers]!is[system]!tag[z hidden]has:field[last-reviewed3]]
+      :filter[!days:last-reviewed3{!!interval3}]
+      +[sort[last-reviewed3]format:titlelist[]join[ ]] }}}/>
+</$button>
+```
+
+这个代码还挺复杂的，不过多少也可以了解。首先是设置`$:/StoryList`条目里的lsit的值。然后是一个超长的动态筛选器，先是排除所有系统条目，再排除有标签`z hidden`的，再判断其中得有`last-reviewed3`字段。
+
+然后在这个基础上通过`filter`筛选器，里面有一个days筛选，筛选出`last-reviewed3`超过`interval3`天数的。也就是`last-reviewed3` 至少为`interval3`{未来|过去}天。当然这个因为没有实际的例子，不好直接理解。这好像是钓鱼插件里用来控制间隔天数的字段。
+
+后面对筛选出来的条目进行排序，按`last-reviewed3`字段排序，格式是`titlelist`，也就是以标题清单的形式显示。后面的`join[ ]`是指，如果标题里含有空格，就用`[]`包含起来，不过我感觉这个效果不是很好的样子。
+
+大概是这样，不过我觉得他为什么不直接用钓鱼插件里来控制间隔天数，搞这么复杂。

@@ -1,0 +1,13 @@
+[
+    {
+        "created": "20230725025238184",
+        "creator": "马不前",
+        "text": "",
+        "title": "$:/TraitTag/Book-basic-information",
+        "modified": "20250513075901588",
+        "modifier": "马不前",
+        "tags": "$:/SuperTag/TraitTag cluster-book-info-fields",
+        "wl-field-name-text": "schema",
+        "schema": "{\n  \"type\": \"object\",\n  \"title\": \"title\",\n  \"properties\": {\n    \"ISBN\": {\n      \"type\": \"integer\"\n    },\n    \"出版社\": {\n      \"type\": \"string\"\n    },\n    \"出版年份\": {\n      \"type\": \"string\",\n      \"format\": \"date\"\n    },\n    \"丛书\": {\n      \"type\": \"string\"\n    },\n    \"译者\": {\n      \"type\": \"string\"\n    },\n    \"出品方\": {\n      \"type\": \"string\"\n    },\n    \"副标题\": {\n      \"type\": \"string\"\n    },\n    \"author\": {\n      \"type\": \"string\"\n    },\n    \"版本\": {\n      \"type\": \"string\"\n    },\n    \"字数\": {\n      \"type\": \"integer\"\n    },\n    \"页数\": {\n      \"type\": \"integer\"\n    }\n  },\n  \"required\": [\n    \"ISBN\",\n    \"出版社\",\n    \"出版年份\",\n    \"丛书\",\n    \"译者\",\n    \"出品方\",\n    \"副标题\",\n    \"author\",\n    \"版本\",\n    \"字数\",\n    \"页数\"\n  ]\n}"
+    }
+]

@@ -1,0 +1,25 @@
+created: 20241111151824211
+creator: 马不前
+modified: 20250110142754520
+modifier: 马不前
+tags: 太微自用模块
+title: 随机条目按钮
+
+<$button actions="""<$action-setfield $tiddler="$:/state/persistent-choose-random" $value={{{ [!is[system]choose-random[]] }}} />""">
+随机展示条目
+</$button>
+<$button actions="""<$action-setfield $tiddler="$:/state/persistent-choose-random" $value={{{  }}} />""">
+清空
+</$button>
+<$link to={{$:/state/persistent-choose-random}}/>
+
+
+<%if [[$:/state/persistent-choose-random]has[text]] %>
+
+<$tiddler tiddler={{$:/state/persistent-choose-random}}  mode="block">
+	<$transclude $tiddler="$:/core/ui/ViewTemplate"/>
+</$tiddler>
+
+<%else%>
+  未选择随机条目
+<%endif%>

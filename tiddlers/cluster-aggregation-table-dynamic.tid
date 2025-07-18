@@ -1,0 +1,19 @@
+caption: 动态表
+created: 20250418183759617
+creator: 马不前
+modified: 20250429172806955
+modifier: 马不前
+tags: cluster-aggregation
+title: cluster-aggregation-table-dynamic
+
+<$let stateFilter={{{ [[$:/state/cluster/aggregation/filter/]addsuffix{!!title}get[text]] }}} >
+<$transclude  $variable="table-dynamic" 
+filter="[in-tagtree-of:!inclusive<currentTiddler>] +[search:title<stateFilter>]" 
+fields={{{ [<currentTiddler>get[TableFields]else{cluster-aggregation-default-fields}] }}}
+caption={{{ [<currentTiddler>has[caption]get[caption]else<currentTiddler>] }}}
+class="thead-secondary w-100 table-hover-yellow table-striped-row" 
+editButton="yes" 
+pagination="no" 
+stateTiddler=<<currentTiddler>>
+emptyMessage="filter input is empty"/>
+</$let>

@@ -1,0 +1,24 @@
+code-body: yes
+created: 20230725114825894
+creator: 马不前
+modified: 20250226125435274
+modifier: 马不前
+note: 用来查看字段内容的
+tags: Configuration
+title: book-view-fields
+wiki-source: BMF
+
+<$transclude tiddler=<<currentTiddler>> mode="block"/>
+
+<div style="column-count:3;">
+<$list filter='[<currentTiddler>fields:exclude[text title created modified tags creator modifier type revision bag url douban-url imgurl wysiwyg]]' variable=fld emptyMessage='<tr><td>no fields</td></tr>'>
+
+<$list filter="[subfilter<fld>]" variable=fieldname>
+<$list filter="[all[current]get<fieldname>]" variable=field-value>
+
+<<fieldname>> -> <<field-value>>
+
+</$list>
+</$list>
+</$list>
+</div>

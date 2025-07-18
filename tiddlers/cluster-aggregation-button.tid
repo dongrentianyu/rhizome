@@ -1,0 +1,57 @@
+created: 20250418190027948
+creator: 马不前
+modified: 20250615074208839
+modifier: 马不前
+tags: cluster-aggregation
+title: cluster-aggregation-button
+
+<$let stateID={{{ [[$:/state/cluster/aggregation]addsuffix{!!title}] }}} stateFilter={{{ [[$:/state/cluster/aggregation/filter/]addsuffix{!!title}] }}} >
+<div>
+<span>
+<$edit-text tiddler=<<stateFilter>> field="text" tag=input placeholder="搜索条目" class="w-50"/>
+</span>
+<span style="float: right;" >
+<$button
+	tooltip="展示上下文"
+	aria-label="展示上下文"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="cluster-aggregation-context"/>
+上下文
+</$button>
+<$button
+	tooltip="展示动态表格"
+	aria-label="展示动态表格"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="cluster-aggregation-table-dynamic"/>
+动态表
+</$button>
+<$button
+	tooltip="展示横向TOC"
+	aria-label="展示横向TOC"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="cluster-aggregation-toc"/>
+横向目录
+</$button>
+<$button
+	tooltip="展示新建按钮"
+	aria-label="展示新建按钮"
+	class="badge-secondary badge"
+>
+<$action-setfield $tiddler=<<stateID>> text="cluster-aggregation-newButton"/>
+新建
+</$button>
+<$button
+	tooltip="清空所有状态条目"
+	aria-label="清空所有状态条目"
+	class="badge-secondary badge"
+>
+<$action-deletetiddler $tiddler=<<stateID>> />
+<$action-deletetiddler $tiddler=<<stateFilter>> />
+清空
+</$button>
+</span>
+</div>
+</$let>

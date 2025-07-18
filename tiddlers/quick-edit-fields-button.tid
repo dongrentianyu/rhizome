@@ -1,0 +1,32 @@
+caption: {{images-quick-edit-fields-button}} 编辑字段
+created: 20250414071321320
+creator: 马不前
+description: 编辑当前条目字段
+list-after: $:/core/ui/Buttons/info
+modified: 20250429091500408
+modifier: 马不前
+tags: $:/tags/ViewToolbar quick-edit-fields
+title: quick-edit-fields-button
+
+\whitespace trim
+
+<%if [<currentTiddler>!is[system]] %>
+<$button 
+	tooltip="编辑当前条目字段"
+	aria-label="编辑字段"
+	class=<<tv-config-toolbar-class>>
+>
+<$action-sendmessage $message="tm-modal" $param="quick-edit-fields-content" showTiddler=<<currentTiddler>>/>
+<%if [{$:/state/tab/quick-edit-fields}is[missing]] %>
+  <$action-setfield $tiddler="$:/state/tab/quick-edit-fields" text="quick-edit-fields-type-default"/>
+<%endif%>
+	<%if [<tv-config-toolbar-icons>match[yes]] %>
+		{{images-quick-edit-fields-button}}
+	<%endif%>
+	<%if [<tv-config-toolbar-text>match[yes]] %>
+		<span class="tc-btn-text">
+		<$text text="编辑当前条目字段" />
+	</span>
+	<%endif%>
+</$button>
+<%endif%>

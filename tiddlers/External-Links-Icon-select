@@ -1,0 +1,11 @@
+file: $:/core/images/folder
+http: $:/core/images/open-window
+https: $:/core/images/open-window
+github: $:/core/images/github
+twitter: $:/core/images/twitter
+talk.tiddlywiki.org : $:/core/icon
+tiddlywiki.com: $:/core/icon
+InternalLink: $:/core/icon
+discord.com: image-discord
+youtube: $:/core/images/video
+wikipedia: image-wikipedia

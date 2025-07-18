@@ -1,0 +1,13 @@
+code-body: yes
+created: 20250514034848881
+creator: 马不前
+modified: 20250514075331698
+modifier: 马不前
+tags: Pagination-content
+title: Pagination-content-display
+
+<div style="columns: 2;">
+<$list filter="[!is[system]!sort[created]limit<stateLimit>rest<stateRest>]" >
+• <$link to={{!!title}}>{{!!title}}</$link> <span class='tc-subtitle'><$view format="date" template="YYYY-0MM-0DD" field="created"/>&nbsp;<$list filter="[all[current]tags[]sort[title]]"/></span><br>
+</$list>
+</div>

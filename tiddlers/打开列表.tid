@@ -1,0 +1,12 @@
+created: 20221212144747859
+creator: 马不前
+modified: 20240927154417625
+modifier: 马不前
+tags: 底部开启栏
+title: 打开列表
+type: text/vnd.tiddlywiki
+wiki-source: WENAI
+
+<$list filter="[list[$:/StoryList]]" history="$:/HistoryList" storyview="pop">
+<$button message="tm-close-tiddler" class="tc-btn-invisible tc-btn-mini">&times;</$button> <$link><$view field="title"/> <$reveal type="match" state="$:/HistoryList!!current-tiddler" text=<<currentTiddler>>>&#x2713;</$reveal></$link>
+</$list>

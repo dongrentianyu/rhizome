@@ -1,0 +1,29 @@
+caption: 上下文
+code-body: yes
+created: 20250414161707982
+creator: 马不前
+modified: 20250429081951239
+modifier: 马不前
+tags: quick-edit-fields-type
+title: quick-edit-fields-type-context
+
+<%if [<showTiddler>prefix[$:/]] %>
+<br/>
+<h2>系统条目无上下文内容！！！</h2>
+<%else%>
+
+<$list filter="[tag[wikis]]" variable="root-name">
+
+<$transclude $variable="context-root" tiddler=<<showTiddler>> name=<<root-name>>  tid-name=<<root-name>> use-true="true" limit="15" />
+
+</$list>
+
+<$list filter="[all[current]!is[system]!is[shadow]]">
+<div style="font-size: 1.5em;">
+<$tiddler tiddler=<<showTiddler>> >
+	<$transclude $tiddler="$:/plugins/mabuqian/gumo-customisation/node-explorer-colorful"/>
+</$tiddler>
+</div>
+</$list>
+
+<%endif%>

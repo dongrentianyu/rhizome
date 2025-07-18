@@ -1,0 +1,24 @@
+created: 20250411032414229
+creator: 马不前
+modified: 20250415094329361
+modifier: 马不前
+tags: sidebar-modal
+title: sidebar-modal-readme
+
+* 创建了一个页面按钮，[[sidebar-modal-button]]
+* 功能是点开会出现一个模块弹窗，内容在[[sidebar-modal-content]]
+** 主要是侧边栏的内容
+* 增加[[quick-note-content]]的窗口
+** 用来快速写笔记和保存笔记。快速笔记里还添加了一个编辑区按钮栏，点击即可保存当前笔记。
+* 使用自定义筛选器，值存储在[[sidebar-modal-filter]]
+* 增加了几个条目来替换掉默认的系统条目
+** 方便展示为多列，而不是单列，这样可以把空间利用起来
+** [[sidebar-modal-created]]
+** [[sidebar-modal-open]]
+** [[sidebar-modal-recent]]
+
+```
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/SideBar]enlist-input[]]">
+<$link><<currentTiddler>></$link>
+</$list>
+```

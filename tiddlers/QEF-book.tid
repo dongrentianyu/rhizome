@@ -1,0 +1,40 @@
+created: 20250521044048600
+creator: 马不前
+modified: 20250521094749285
+modifier: 马不前
+tags: quick-edit-fields-type-template
+title: QEF-book
+
+\procedure myactions()
+<%if [<tiddlerName>addsuffix[-toc]is[tiddler]] %>
+<$action-setfield $tiddler={{{ [<tiddlerName>addsuffix[-toc]] }}} cluster="toc"/>
+<$action-createtiddler $basetitle={{{ [<tiddlerName>addsuffix[-toc-adrift]] }}} tags={{{ [<tiddlerName>addsuffix[-toc]] }}} />
+<%endif%>
+<%if [<tiddlerName>addsuffix[-info]is[tiddler]] %>
+<$action-setfield $tiddler={{{ [<tiddlerName>addsuffix[-info]] }}} cluster="book-info"/>
+<%endif%>
+\end
+
+<$let 
+tiddlerName=<<showTiddler>> 
+stateID={{{ [[$:/state/quick-edit-fields/checkbox/]addsuffix<showTiddler>] }}}>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-note" unchecked="" default="-note">是否勾选`-note`</$checkbox><br>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-summary" unchecked="" default="-summary">是否勾选`-summary`</$checkbox><br>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-card" unchecked="" default="-card">是否勾选`-card`</$checkbox><br>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-copy" unchecked="" default="-copy">是否勾选`-copy`</$checkbox><br>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-toc" unchecked="" default="-toc">是否勾选`-toc`</$checkbox><br>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-topic" unchecked="" default="-topic">是否勾选`-topic`</$checkbox><br>
+<$checkbox tiddler=<<stateID>> listField="text" checked="-info" unchecked="" default="-info">是否勾选`-info`</$checkbox><br>
+<$button>
+<$action-setfield $tiddler=<<stateID>> text="-note -summary -card -toc -topic -copy -info"/>
+全选
+</$button>
+<$button actions=<<myactions>> >
+<$action-confirm $message="是否要新建一系列子条目">
+<$list filter="[<stateID>get[text]enlist-input[]]" variable="suffixName">
+<$action-createtiddler $basetitle={{{ [<tiddlerName>addsuffix<suffixName>] }}} tags=<<tiddlerName>>/>
+</$list>
+</$action-confirm>
+创建
+</$button>
+</$let>

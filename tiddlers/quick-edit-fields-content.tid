@@ -1,0 +1,32 @@
+class: tc-modal-centered fold-text-modal
+cluster: aggregation
+code-body: yes
+created: 20250414074219455
+creator: 马不前
+mask-closable: yes
+modified: 20250429082335017
+modifier: 马不前
+subtitle: <div style="text-align: right;" >[[弹窗说明|quick-edit-fields-readme]]</div>
+tags: quick-edit-fields
+title: quick-edit-fields-content
+
+<$let a={{{ [[$:/state/tab/quick-edit-fields]get[text]else[quick-edit-fields-type-default]] }}} >
+<div class="nice-button-group" >
+<$list filter="[{quick-edit-fields-type}enlist-input[]]" variable="thisTitle">
+<$button class="nice-button">
+<$action-setfield $tiddler="$:/state/tab/quick-edit-fields" text=<<thisTitle>>/>
+<%if [<thisTitle>has[caption]] %>
+<$wikify name="test-tid" text={{{ [<thisTitle>get[caption]] }}}>
+<<test-tid>>
+</$wikify>
+<%else%>
+  <<thisTitle>>
+<%endif%>
+
+</$button>
+</$list>
+</div>
+
+<$transclude tiddler=<<a>> mode="block"/>
+
+</$let>

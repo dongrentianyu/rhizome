@@ -1,0 +1,13 @@
+[
+    {
+        "created": "20230725050645965",
+        "creator": "马不前",
+        "text": "",
+        "tags": "$:/SuperTag/TraitTag cluster-book-info-fields",
+        "title": "$:/TraitTag/Book-reading-situation",
+        "modified": "20250513075901588",
+        "modifier": "马不前",
+        "wl-field-name-text": "schema",
+        "schema": "{\n  \"type\": \"object\",\n  \"title\": \"title\",\n  \"properties\": {\n    \"完毕时间\": {\n      \"type\": \"string\",\n      \"format\": \"date\"\n    },\n    \"所看书目类型\": {\n      \"type\": \"string\",\n\t\t\t\"enum\": [\n        \"自购\",\n        \"电子书\",\n        \"自购 电子书\",\n        \"江西省图书馆藏书\",\n        \"南昌县图书馆藏书\",\n        \"东油藏书\",\n        \"他人借书或赠书\"\n\t\t\t\t]\n    },\n\t\t\"笔记状态\": {\n      \"type\": \"string\",\n\t\t\t\"enum\": [\n        \"不需要做笔记\",\n        \"打算做笔记\",\n        \"做了笔记\",\n        \"还需要再做笔记\",\n        \"不打算做笔记\",\n        \"做不了笔记\",\n        \"做完了笔记\"\n\t\t\t\t]\n    },\n    \"阅读状态\": {\n      \"type\": \"string\",\n\t\t\t\"enum\": [\n        \"未读\",\n        \"在读\",\n        \"已读\",\n        \"弃读\",\n        \"想读\",\n        \"重读\"\n\t\t\t\t]\n    }\n  },\n  \"required\": [\n    \"完毕时间\",\n    \"所看书目类型\",\n    \"状态\"\n  ]\n}"
+    }
+]

@@ -1,0 +1,18 @@
+code-body: yes
+created: 20250606051250485
+creator: 马不前
+modified: 20250606054310948
+modifier: 马不前
+tags: cluster-task
+title: cluster-task-text
+
+<br/>
+<$let a={{{ [<currentTiddler>get[text]search-replace:g:regexp[@@.todo]first[]] }}}>
+
+<<a>>
+
+<details class="list-form-details">
+<summary>展开编辑</summary>
+<$edit-text tiddler=<<currentTiddler>> field="text" class="w-100" />
+</details>
+</$let>

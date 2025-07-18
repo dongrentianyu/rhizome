@@ -1,0 +1,10 @@
+created: 20250521113630996
+creator: 马不前
+modified: 20250603220618827
+modifier: 马不前
+tags: cluster-book
+title: cluster-book-readme
+
+把一些主要跟书籍，阅读记录有关的模板放在这个目录下，这样比较方便查找和更新。
+
+* 使用固定的字段，比如[[book-info-purchase]]之类的，前面book-info-都没有变化。且后面的值也都是一样的。即按钮设置的值也是purchase，所以就删除了判断条件，而是直接改成加前缀的嵌入方式。

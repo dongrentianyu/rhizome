@@ -1,0 +1,32 @@
+details.callout summary {
+  cursor: pointer;
+}
+/* Chevron animation */
+details.callout .callout-fold svg {
+  transition: transform ease-in-out 150ms;
+}
+details.callout .callout-fold svg {
+  transform: rotate(-90deg);
+}
+
+details.callout[open] > summary .callout-fold svg{
+  transform: rotate(0deg);
+}
+
+/* Reveal content animation */
+details.callout > summary {
+  transition: margin ease-out 0ms;
+}
+
+details.callout[open] > summary {
+  margin-bottom: 10px;
+}
+/* this compensates the summary extra bottom margin */
+details.callout[open] > .callout-content{
+	margin-top:-10px;
+}
+
+/* To remove the default arrow that comes with the <summary> tag in Safari */
+details[data-callout] summary::-webkit-details-marker {
+  display: none;
+}

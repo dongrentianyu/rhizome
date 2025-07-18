@@ -1,0 +1,63 @@
+created: 20250416150541884
+creator: 马不前
+modified: 20250525162141295
+modifier: 马不前
+tags: External-Links-Icon
+title: External-Links-Icon-css
+
+`$:/tags/Stylesheet`
+
+2025-05-26 因为不知名的原因，而放弃了。不然会影响其他css内容。
+
+```
+
+\rules except dash
+
+\define iconsTiddler() External-Links-Icon-select
+\rules except dash
+/* CSS begins */
+
+a[href]:not([href^="#"],.tc-page-controls a){
+text-decoration:none; 
+display:-webkit-inline-box; 
+display:-ms-inline-flexbox; 
+display:inline-flex;
+flex-wrap: wrap; 
+-webkit-box-align:center; 
+-ms-flex-align:center; 
+align-items:center; 
+word-break: break-all;
+}
+
+a[href]:after{
+content:"";
+width: 1em;
+aspect-ratio:1/1;
+-webkit-mask: center / contain no-repeat var(--mask);
+mask: center / contain no-repeat var(--mask);
+background:center/contain no-repeat var(--url);
+--fill:currentColor;
+background-color:var(--fill);
+word-break: break-all;
+}
+
+/* CSS begins */
+
+<$list filter="[<iconsTiddler>get[text]splitregexp[\n]] :map[split[:]trim[]]" variable="linkType">
+a:is(<$list filter="[<linkType>]">[href*="<$text text={{!!title}}/>"],</$list>):after{
+<$tiddler tiddler={{{ [<iconsTiddler>getindex<linkType>] }}} >
+<$wikify name="image" text={{{ [<currentTiddler>addprefix[{{]addsuffix[}}]] }}} output="html" mode="inline">
+<$let 
+type={{!!type}} uri={{!!_canonical_uri}}
+external={{{ [[--fill:unset;--mask:unset;--url:url(]] [<uri>] [[)]] +[join[]] }}}
+base64={{{ [[--fill:unset;--mask:unset;--url:url(data:]][{!!type}][[;base64,]][<image>][[)]]+[join[]] }}}
+svg={{{ [[--mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22pt" height="22pt">]][<image>get[text]else<image>][[</svg>')]]+[join[]search-replace:g[#],[%23]search-replace:g[
+],[]]}}}
+
+><$text text={{{ [<uri>!is[blank]then<external>]~[<type>!is[blank]!search[svg]then<base64>]~[<svg>] }}}/>
+</$let>
+</$wikify>
+</$tiddler>
+}
+</$list>
+```

@@ -1,0 +1,19 @@
+created: 20250714133036535
+creator: 马不前
+modified: 20250714160355072
+modifier: 马不前
+tags: more-buttons-enhance
+title: more-buttons-enhance-readme
+
+* [[more-buttons-enhance-checkbox]]
+** [[$:/config/forge/more-buttons-enhance/Visibility]]
+* [[核心来自论坛|https://talk.tiddlywiki.org/t/menu-auto-close-on-click-away/7101/2]]
+** [[快显机制|https://bramchen.github.io/tw5-docs/zh-Hans/#PopupMechanism]]
+* [[思路来自论坛|https://talk.tiddlywiki.org/t/implementing-a-contextmenu-with-wikitext/4117/15]]
+* [[CSS方案来自论坛|https://talk.tiddlywiki.org/t/tw5-text-overflowing-inside-tc-drop-down/1708/2]]
+
+理论上还可以扩展三级菜单栏，只不过需要放在下面了。
+
+这个思路可以运用在其它地方，效果也非常好，可以极大地扩展TiddlyWiki的功能。甚至可以用来展示其它内容。
+
+目前不打包成插件，打包成插件要考虑更多的内容，且不利于扩展。比如打包成插件，就需要增加英文说明。

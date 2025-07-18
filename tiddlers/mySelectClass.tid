@@ -1,0 +1,9 @@
+created: 20250606085603768
+creator: 马不前
+modified: 20250606085634712
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: mySelectClass
+
+.mySelectClass { border-radius:0.25em;  font-size:1.5em; width: 50%; }
+.mySelectClass option { font-size:1em; margin: 20px;  }
