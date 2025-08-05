@@ -1,0 +1,68 @@
+created: 20250723065723161
+creator: 马不前
+modified: 20250723070442771
+modifier: 马不前
+tags: $:/tags/Stylesheet 自用样式
+title: fnoteClass
+
+/* 基本的卡片容器样式 */
+.fnoteClass {
+    border: 1px solid #e0e0e0; /* 边框 */
+    border-radius: 4px;        /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 轻微的阴影效果 */
+    padding: 10px;             /* 内边距 */
+    margin: 5px;              /* 外边距，让卡片之间有空隙 */
+    /* 或者使用 max-width 来实现响应式 */
+     max-width: 250px;
+     min-width: 180px;
+     white-space: break-spaces;
+     max-height: 200px;
+     overflow-x: auto;
+     z-index: 999999999;
+    /* 确保内容可以换行，通常是默认行为，但可以明确设置 */
+    overflow-wrap: break-word; /* 现代浏览器推荐使用这个 */
+word-break:break-all;
+}
+
+/* 卡片标题样式 */
+.fnoteClass h2, .fnoteClass h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* 卡片段落样式 */
+.fnoteClass p {
+    color: #555;
+    line-height: 1.6; /* 行高，增加可读性 */
+    margin-bottom: 15px; /* 段落底部间距 */
+    /* 默认情况下，文本元素（如 p, span 等）在块级容器内会自动换行 */
+}
+.fnoteClass div {
+    color: #555;
+    line-height: 1.6; /* 行高，增加可读性 */
+    margin-bottom: 15px; /* 段落底部间距 */
+    /* 默认情况下，文本元素（如 p, span 等）在块级容器内会自动换行 */
+}
+/* 按钮样式 (可选) */
+.fnoteClass button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.fnoteClass button:hover {
+    background-color: #0056b3;
+}
+/* 针对不同屏幕尺寸的响应式调整 (可选) */
+@media (max-width: 600px) {
+    .fnoteClass {
+        width: auto; /* 在小屏幕上取消固定宽度，让它铺满可用空间 */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

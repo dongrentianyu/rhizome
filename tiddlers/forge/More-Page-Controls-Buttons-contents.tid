@@ -1,0 +1,26 @@
+created: 20250715063708847
+creator: 马不前
+modified: 20250803211618880
+modifier: 马不前
+tags: More-Page-Controls-Buttons
+title: More-Page-Controls-Buttons-contents
+
+<div class="tc-drop-down more-buttons-enhance-drop-down">
+<$let tv-config-toolbar-icons="yes" tv-config-toolbar-text="yes" tv-config-toolbar-class="tc-btn-invisible">
+<$set name="tv-config-toolbar-class" filter="[<tv-config-toolbar-class>] [<listItem>encodeuricomponent[]addprefix[tc-btn-]]" >
+<$list filter="[tag[More-Page-Controls-Buttons-submenu]]">
+<$transclude $tiddler=<<currentTiddler>> $mode="inline"/>
+</$list>
+</$set>
+
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]" variable="listItem">
+<$let config-title={{{ [[$:/config/forge/More-Page-Controls-Buttons/Visibility]get[text]jsonget<listItem>] }}} >
+<%if [<config-title>match[show]] %>
+<$set name="tv-config-toolbar-class" filter="[<tv-config-toolbar-class>] [<listItem>encodeuricomponent[]addprefix[tc-btn-]]" >
+<$transclude $tiddler=<<listItem>> $mode="inline"/>
+</$set>
+<%endif%>
+</$let>
+</$list>
+</$let>
+</div>

@@ -1,6 +1,0 @@
-created: 20240913021936900
-creator: 马不前
-list: $:/core/ui/Buttons/more-tiddler-actions $:/plugins/kookma/utility/ui/Buttons/draggable-link $:/core/ui/Buttons/info $:/plugins/Gk0Wk/page-toc/PageTOCButton $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/plugins/linonetwo/slate-write/ui/ViewToolbar/Buttons/edit-wysiwyg $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/plugins/linonetwo/open-in-external-app/ViewToolbarButton/OpenInExternalApp $:/plugins/tiddlywiki/qrcode/ViewToolbarButton $:/core/ui/Buttons/close $:/plugins/mabuqian/gumo-customisation/fours/thebrain $:/plugins/mabuqian/gumo-customisation/fours/search $:/plugins/mabuqian/gumo-customisation/fours/recent $:/plugins/mabuqian/gumo-customisation/fours/open $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold $:/core/ui/Buttons/fold-bar $:/plugins/mabuqian/gumo-customisation/add-prefix $:/plugins/mabuqian/gumo-customisation/copy-tags-button $:/plugins/oeyoews/copy-title/copybutton $:/plugins/tidme/fsrs4tw/core/ui/Buttons/exclude $:/plugins/tidme/fsrs4tw/core/ui/Buttons/unfold 待补充的知识按钮 摘录标签按钮
-modified: 20241114163105527
-modifier: 马不前
-title: $:/tags/ViewToolbar

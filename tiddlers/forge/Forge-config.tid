@@ -1,0 +1,10 @@
+code-body: yes
+created: 20250805045500283
+creator: 马不前
+list: Forge-config-button Forge-config-display Forge-config-fitler Forge-config-gerenation
+modified: 20250805074516733
+modifier: 马不前
+tags: Forge-other
+title: Forge-config
+
+[[$:/config/FileSystemPaths]] homepage-Control-Panel-config Forge-config-fitler light-or-dark-mode-palette [[$:/config/NewTiddler/Tags]] [[$:/GitHub/Repo]] [[$:/palette]] [[$:/SiteSubtitle]] [[$:/SiteTitle]] Forge-config-siteTitle [[$:/config/NewJournal/Tags]]

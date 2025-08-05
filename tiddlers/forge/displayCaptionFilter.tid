@@ -1,0 +1,10 @@
+code-body: yes
+created: 20250801141427061
+creator: 马不前
+list-before: $:/config/ViewTemplateTitleFilters/default
+modified: 20250801141601790
+modifier: 马不前
+tags: $:/tags/ViewTemplateTitleFilter displayCaption
+title: displayCaptionFilter
+
+[has[caption]then[displayCaption]]

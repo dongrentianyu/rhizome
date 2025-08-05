@@ -1,0 +1,19 @@
+code-body: yes
+created: 20250723050859220
+creator: 马不前
+modified: 20250723132642677
+modifier: 马不前
+tags: $:/tags/Macro
+title: $:/plugins/kookma/refnotes/macros/footnote
+
+\procedure fnote(note)
+<$let transclusion=<<note>>>
+<$let popupState={{{ [[$:/state/fnote/popup/]addsuffix<qualify>] }}}>
+<$button class="tc-btn-invisible tc-btn-mini" popup=<<popupState>> >^^注^^</$button>
+<$reveal type="popup" position="belowleft" state=<<popupState>> class="tc-drop-down tc-popup-keep fnoteClass"  >
+
+<<note>>
+</$reveal>
+</$let>
+</$let>
+\end

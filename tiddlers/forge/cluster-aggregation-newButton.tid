@@ -1,0 +1,50 @@
+created: 20250615074126936
+creator: 马不前
+modified: 20250801144722976
+modifier: 马不前
+tags: cluster-aggregation
+title: cluster-aggregation-newButton
+type: 
+
+\whitespace trim
+\function next-title(parm) [range[1],[99]] +[pad[2]addprefix[-]addprefix<parm>!has[title]] +[first[]]
+
+<fieldset>
+	<legend>快速添加</legend>
+<$button>
+	<$button class="tc-btn-invisible tc-btn-mini" tooltip=`Create a new $(currentTiddler)$ tiddler` aria-label=`new $(currentTiddler)$ tiddler` >
+		<$action-createtiddler $basetitle={{{ [function[next-title],<currentTiddler>] }}} tags=<<currentTiddler>> >
+			<$action-navigate $to=<<createTiddler-title>>/>
+			<$action-sendmessage $message="tm-edit-tiddler" $param=<<createTiddler-title>>/>
+		</$action-createtiddler>
+	<<currentTiddler>>
+	</$button>
+	<<hspace width:"10px">>
+	<$button class="tc-btn-invisible tc-btn-mini" tooltip=`Create a new $(currentTiddler)$ markdown` aria-label=`new $(currentTiddler)$ markdown`>
+		<$action-createtiddler $basetitle={{{ [function[next-title],<currentTiddler>] }}} tags=<<currentTiddler>> type="text/markdown" >
+			<$action-navigate $to=<<createTiddler-title>>/>
+			<$action-sendmessage $message="tm-edit-tiddler" $param=<<createTiddler-title>>/>
+		</$action-createtiddler>
+	{{$:/plugins/tiddlywiki/markdown/images/new-markdown-button}}
+	</$button>
+</$button>
+<$list filter="[tag<currentTiddler>]" variable="listItem">
+<$button>
+	<$button class="tc-btn-invisible tc-btn-mini" tooltip=`Create a new $(listItem)$ tiddler` aria-label=`new $(listItem)$ tiddler`>
+		<$action-createtiddler $basetitle={{{ [function[next-title],<listItem>] }}} tags=<<listItem>> >
+			<$action-navigate $to=<<createTiddler-title>>/>
+			<$action-sendmessage $message="tm-edit-tiddler" $param=<<createTiddler-title>>/>
+		</$action-createtiddler>
+	<<listItem>>
+	</$button>
+	<<hspace width:"10px">>
+	<$button class="tc-btn-invisible tc-btn-mini" tooltip=`Create a new $(listItem)$ markdown` aria-label=`new $(listItem)$ markdown`>
+		<$action-createtiddler $basetitle={{{ [function[next-title],<listItem>] }}} tags=<<listItem>>  type="text/markdown" >
+			<$action-navigate $to=<<createTiddler-title>>/>
+			<$action-sendmessage $message="tm-edit-tiddler" $param=<<createTiddler-title>>/>
+		</$action-createtiddler>
+	{{$:/plugins/tiddlywiki/markdown/images/new-markdown-button}}
+	</$button>
+</$button>
+</$list>
+</fieldset>

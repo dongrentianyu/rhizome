@@ -1,0 +1,14 @@
+code-body: yes
+created: 20250805045828186
+creator: 马不前
+modified: 20250805072432021
+modifier: 马不前
+tags: Forge-config
+title: Forge-config-gerenation
+
+<$let
+siteTitle={{Forge-config-siteTitle}}
+parm={{{ [[forge_]addsuffix<siteTitle>addsuffix[\]] }}}
+filterText=`[forge-config[$(siteTitle)$]search-replace:g:regexp[/|\\],[_]addprefix[forge$(siteTitle)$/]]`>
+<$text text={{{ [<filterText>search-replace:g:regexp[\n],[]] }}} />
+</$let>

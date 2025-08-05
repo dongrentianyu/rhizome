@@ -1,0 +1,11 @@
+code-body: yes
+created: 20240913021600394
+creator: 马不前
+modified: 20250718105315750
+modifier: 马不前
+tags: $:/tags/Macro 自定义宏
+title: nsite
+
+\define nsite(name,site)
+[[$name$|$site$]]&emsp;<$button class="tc-btn-invisible tc-btn-mini" message="tm-copy-to-clipboard" param="$site$" tooltip="点击可复制网址">$site$</$button>
+\end

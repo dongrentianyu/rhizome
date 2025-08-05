@@ -1,0 +1,25 @@
+created: 20250805061512529
+creator: 马不前
+modified: 20250805072439445
+modifier: 马不前
+tags: Forge-config
+title: Forge-config-button
+
+<$let siteTitle={{Forge-config-siteTitle}} >
+<$button>
+<$list filter="[[Forge-config]get[text]enlist-input[]]">
+<$action-setfield $tiddler=<<currentTiddler>> $field="forge-config" $value=<<siteTitle>> $timestamp="no" />
+</$list>
+更新
+</$button>
+
+<$wikify name="filterExpressionStorage" text={{Forge-config-gerenation}} >
+<$let filterExpressionStorageValue={{{ [<filterExpressionStorage>search-replace:g:regexp[\n],[ ]search-replace:g:regexp[\s+],[ ]trim[]] }}} >
+<$button>
+<$action-setfield $tiddler="Forge-config-fitler" $field="text" $value=<<filterExpressionStorageValue>> $timestamp="no" />
+更新筛选器表达式
+</$button>
+</$let>
+</$wikify>
+
+</$let>

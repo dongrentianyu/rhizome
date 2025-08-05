@@ -1,0 +1,12 @@
+created: 20250805064014353
+creator: 马不前
+modified: 20250805064100471
+modifier: 马不前
+tags: Forge-config
+title: Forge-config-display
+
+<$list filter="[[Forge-config]get[text]enlist-input[]]">
+
+!!! <$link><<currentTiddler>></$link>
+
+</$list>
