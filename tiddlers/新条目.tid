@@ -1,0 +1,13 @@
+created: 20250819154408477
+creator: 马不前
+modified: 20250819155114065
+modifier: 马不前
+tags: 
+title: 新条目
+
+<$button>
+<$action-sendmessage $message="tm-download-file" $param="https://burningtreec.github.io/resizer/"/>
+下载
+</$button>
+
+<a href="https://dongrentianyu.github.io/rhizome/offline" >点击这里下载文件</a>
