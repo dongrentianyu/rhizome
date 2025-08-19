@@ -1,0 +1,10 @@
+code-body: yes
+created: 20250805060855143
+creator: 马不前
+forge-config: Forge
+modified: 20250805063135702
+modifier: 马不前
+tags: Forge-config
+title: Forge-config-fitler
+
+[forge-config[Forge]search-replace:g:regexp[/|\\],[_]addprefix[forgeForge/]]
