@@ -1,0 +1,30 @@
+created: 20250819150748056
+creator: 马不前
+modified: 20250822123854876
+modifier: 马不前
+tags: VV-layout
+title: vv-layout-main
+
+<div class="VV-main" >
+
+<$button class="tc-btn-invisible VV-button" >
+<$action-setfield $tiddler="$:/layout" text="" />
+退出
+</$button>
+
+<$button class="tc-btn-invisible VV-button" >
+退出
+</$button>
+
+<$button class="tc-btn-invisible VV-button" >
+退出
+</$button>
+
+<$button class="tc-btn-invisible VV-button" >
+退出
+</$button>
+
+<$button class="tc-btn-invisible VV-button" >
+退出
+</$button>
+</div>

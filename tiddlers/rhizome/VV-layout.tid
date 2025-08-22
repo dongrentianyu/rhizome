@@ -1,12 +1,13 @@
 code-body: yes
 created: 20250819150324010
 creator: 马不前
-description: 访客布局
-modified: 20250819151033530
+description: Visitor view
+icon: $:/core/images/excise
+modified: 20250822122542548
 modifier: 马不前
-name: User
-tags: Configuration $:/tags/Layout
-title: user-layout
+name: VV
+tags: $:/tags/Layout Visitor-view
+title: VV-layout
 
 \whitespace trim
 \import [subfilter{$:/core/config/GlobalImportFilter}]
@@ -22,7 +23,7 @@ tc-page-container tc-language-$(languageTitle)$ your-plugin-name-container
 	<$messagecatcher $tm-navigate=<<redirected-navigate-actions>>>
 		{{$:/core/ui/CommandPaletteTemplate}}
 		<div class=<<containerClasses>>>
-			{{user-layout-main}}
+			{{vv-layout-main}}
 		</div>
 	</$messagecatcher>
 </$navigator>
