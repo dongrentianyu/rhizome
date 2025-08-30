@@ -1,6 +1,6 @@
 created: 20250414081200372
 creator: 马不前
-modified: 20250426204422001
+modified: 20250829094533387
 modifier: 马不前
 tags: $:/tags/Stylesheet quick-edit-fields
 title: nice-button-group
@@ -10,24 +10,24 @@ title: nice-button-group
     display: flex; /* 使用flexbox布局 */
     justify-content: space-between; /* 在空间中均匀分布 */
     width: 80vw;
-    top: 7%;
+    top: 10%;
 }
 .nice-button {
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid #ccc;
     border-radius: 5px;
     text-align: center; /* 文本居中 */
     flex: 1; /* 每个选项占据相等的空间 */
-    margin: 0 5px; /* 选项之间的间距 */
+    margin: 0 2px; /* 选项之间的间距 */
     display: inline-block;
-    background: white; /* 默认背景颜色 */
+    background: <<colour tiddler-background>>; /* 默认背景颜色 */
     color: black;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 .nice-button-content {
-    margin-top: 1cm;
+    margin-top: 0.75cm;
     overflow: auto;
     height: 400px;
 }

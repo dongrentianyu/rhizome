@@ -1,9 +1,9 @@
 code-body: yes
 created: 20250412150729699
 creator: 马不前
-modified: 20250526082908535
+modified: 20250829084056175
 modifier: 马不前
 tags: sidebar-modal
 title: sidebar-modal-filter
 
-wikis sidebar-modal-open sidebar-modal-recent sidebar-modal-created sidebar-modal-tools $:/core/ui/SideBar/More $:/xp/ui/SideBar/BatchOperation quick-note-content 拖放导入 Pagination-Recent
+wikis sidebar-modal-open sidebar-modal-recent sidebar-modal-created sidebar-modal-forge sidebar-modal-system sidebar-modal-tools $:/core/ui/SideBar/More quick-note-content 拖放导入 Pagination-Recent

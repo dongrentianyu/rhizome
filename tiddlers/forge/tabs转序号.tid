@@ -1,0 +1,13 @@
+caption: tabs转序号
+condition: [<targetTiddler>!has[type]] [<targetTiddler>get[type]prefix[text/vnd.tiddlywiki]]
+created: 20250806201919674
+creator: 马不前
+description: tabs转序号
+icon: $:/images/google-material-design/action/sharp/24px/text-rotate-vertical
+modified: 20250806204409218
+modifier: 马不前
+tags: $:/tags/EditorToolbar 自用按钮
+title: tabs转序号
+ts: plugins-snippet
+
+<$action-setfield $tiddler=<<targetTiddler>>  text={{{ [<targetTiddler>get[text]search-replace:g:regexp[	],[*]] }}}/>

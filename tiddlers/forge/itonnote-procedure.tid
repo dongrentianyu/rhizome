@@ -1,0 +1,32 @@
+created: 20250829063309944
+creator: 马不前
+modified: 20250829074812354
+modifier: 马不前
+tags: Forge-other
+title: itonnote-procedure
+
+\procedure button-background-hover()
+<$text text={{{ [{$:/palette}getindex[background]addsuffix[0D]] }}} />
+\end
+
+\procedure external-link-background-clip-image()
+linear-gradient(19deg, <<colour code-border>> 0%,<<colour code-background>> 100%)
+\end
+
+\procedure external-link-underline()
+1px solid <<colour page-background>>
+\end
+
+\procedure tag-background-hover()
+<<colour message-background>>
+\end
+
+\procedure tiddler-link-underline()
+1px solid <$transclude tiddler={{$:/palette}} index="tab-background" />29
+\end
+
+\procedure tiddler-title-background()
+<$transclude tiddler={{$:/palette}} index="tiddler-background" />80
+\end
+
+[[$:/themes/linonetwo/itonnote/base]]

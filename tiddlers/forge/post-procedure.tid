@@ -1,6 +1,6 @@
 created: 20250714093107239
 creator: 马不前
-modified: 20250715155010688
+modified: 20250807131217405
 modifier: 马不前
 tags: 太微自用模块
 title: post-procedure
@@ -9,6 +9,7 @@ title: post-procedure
 
 <$edit-text tiddler=<<postState>> tag=textarea placeholder="请输入想法" class="w-100" minHeight="150px" fileDrop="yes"/>
 <$edit-text tiddler=<<postState>>  field="postPoint" class="tc-edit-texteditor" placeholder="一句话总结"/>
+<$edit-text tiddler=<<postState>>  field="postUp" class="tc-edit-texteditor" placeholder="回复的条目"/>
 postTopic: <$transclude $variable="edit-tags-template-x-span" tagField="postTopic" tagListFilter="[has[postTopic]get[postTopic]enlist-input[]unique[]]" tid=<<postState>> />
 
 postRef: <$transclude $variable="edit-tags-template-x-span" tagField="postRef" tagListFilter="[has[postRef]get[postRef]enlist-input[]unique[]]" tid=<<postState>> />

@@ -1,6 +1,6 @@
 created: 20250604081302213
 creator: 马不前
-modified: 20250604081417007
+modified: 20250808195233644
 modifier: 马不前
 tags: Configuration $:/tags/Stylesheet
 title: jefftay-style-modified
@@ -149,14 +149,7 @@ sub, sup {
   top: -0.5em;
 }sub {
   bottom: -0.25em;
-}/* 让链接在 hover 状态下显示下划线 */
-/*
-a {
-  color: #1abc9c;
-}a:hover {
-  text-decoration: underline;
-  background-color: bisque;
 }
-*/pre, code {
+pre, code {
     line-height: 1.25;
 }

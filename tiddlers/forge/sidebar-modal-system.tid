@@ -1,0 +1,15 @@
+caption: 系统
+created: 20250829083656242
+creator: 马不前
+modified: 20250829084303587
+modifier: 马不前
+tags: sidebar-modal
+title: sidebar-modal-system
+
+\import [[timeline-no-limit]]
+\procedure no-list-stystem() [!prefix[$:/state/]!prefix[$:/temp/]]
+
+<div class="sh-multicol3 ">
+<$transclude $variable="timeline-x" dateField="modified" format={{$:/language/RecentChanges/DateFormat}} limit={{$:/config/RecentLimit}} subfilter="all[shadows+tiddlers]prefix[$:/]is[tiddler]subfilter<no-list-stystem>"/>
+
+</div>

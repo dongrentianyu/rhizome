@@ -1,0 +1,18 @@
+code-body: yes
+created: 20250828022925811
+creator: 马不前
+modified: 20250828043935949
+modifier: 马不前
+tags: Forge-other
+title: itonnote-colour
+
+\procedure colour(name)
+\whitespace trim
+<$transclude tiddler={{$:/palette}} index=<<name>> >
+	<$transclude tiddler="$:/palettes/Vanilla" index=<<name>>>
+		<$transclude tiddler={{{ [[$:/config/DefaultColourMappings/]addsuffix<name>] }}}  >
+			<$transclude tiddler="$:/palettes/Notion" index=<<name>> />
+		</$transclude>
+	</$transclude>
+</$transclude>
+\end

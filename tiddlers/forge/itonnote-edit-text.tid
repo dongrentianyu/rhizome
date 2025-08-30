@@ -1,0 +1,24 @@
+created: 20250828033827112
+creator: 马不前
+modified: 20250828043908917
+modifier: 马不前
+tags: Forge-other
+title: itonnote-edit-text
+
+!! 下面是原生配置表所没有的
+
+<$list filter="[[$:/palettes/Notion]indexes[]] -[[$:/palettes/Vanilla]indexes[]]" variable="missing-css">
+
+* <$link to={{{ [[$:/config/DefaultColourMappings/]addsuffix<missing-css>] }}} ><<missing-css>></$link>
+** <$edit-text tiddler={{{ [[$:/config/DefaultColourMappings/]addsuffix<missing-css>] }}} field="text" tag=input default={{{ [[$:/palettes/Notion]getindex<missing-css>] }}} class="w-100"/>
+
+</$list>
+
+<center>
+<$button >
+<$action-confirm $message="是否要删除文本字段？" $prompt={{$:/state/promptUser}}>
+<$action-deletefield $tiddler="HelloThere" $field="text"/>
+</$action-confirm>
+将上述配置导入到{{$:/palette}} 中
+</$button>
+</center>

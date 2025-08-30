@@ -1,0 +1,12 @@
+author: Cameron Fischer
+core-version: >=5.3.0
+dependents: 
+description: TiddlyWiki5 plugin for the vis-network library
+list: readme license
+name: Vis-Network
+plugin-type: plugin
+source: https://github.com/flibbles/tw5-vis-network
+stability: STABILITY_2_STABLE
+title: $:/plugins/flibbles/vis-network
+type: application/json
+version: 10.0.0

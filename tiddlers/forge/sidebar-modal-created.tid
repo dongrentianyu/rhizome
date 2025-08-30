@@ -2,12 +2,12 @@ caption: 创建
 class: multicol3
 created: 20250412152950404
 creator: 马不前
-modified: 20250412153445420
+modified: 20250829082821827
 modifier: 马不前
 tags: sidebar-modal
 title: sidebar-modal-created
 
 <div class="sh-multicol3 ">
-<$transclude $variable="timeline" dateField="created" format={{$:/language/RecentChanges/DateFormat}} limit={{$:/config/RecentLimit}}/>
+<$transclude $variable="timeline" dateField="created" format={{$:/language/RecentChanges/DateFormat}} limit={{$:/config/RecentLimit}} subfilter="!in-tagtree-of:inclusive[Forge]"/>
 
 </div>

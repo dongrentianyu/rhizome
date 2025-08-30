@@ -1,7 +1,7 @@
 caption: 工具
 created: 20250526080345452
 creator: 马不前
-modified: 20250526082921978
+modified: 20250829082444560
 modifier: 马不前
 tags: sidebar-modal
 title: sidebar-modal-tools
@@ -12,7 +12,6 @@ title: sidebar-modal-tools
 <div style="column-count: 3; column-gap: 20px; padding: 20px;">
 <$set name="tv-config-toolbar-icons" value="yes">
 <$set name="tv-config-toolbar-text" value="yes">
-
 <$list filter="[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]" variable="listItem">
 		<$list filter="[<config-title>!match[hide]]" storyview="pop" variable="ignore">
 			<$let >

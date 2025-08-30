@@ -1,0 +1,30 @@
+code-body: yes
+created: 20250829083438263
+creator: 马不前
+modified: 20250829083529178
+modifier: 马不前
+tags: 自定义宏
+title: timeline-no-limit
+
+<!-- Override one or both of the following two macros with a global or local macro of the same name 
+if you need to change how titles are displayed on a timeline -->
+
+\procedure timeline-title() <$view field="title"/>
+\procedure timeline-link() <$link to={{!!title}}><<timeline-title>></$link>
+\procedure timeline-x(limit:"100",format:"DDth MMM YYYY",subfilter:"",dateField:"modified")
+\whitespace trim
+<div class="tc-timeline">
+<$set name="tv-tids" filter=`[$(subfilter)$has<dateField>!sort<dateField>limit<limit>]`>
+<$list filter="[enlist<tv-tids>eachday<dateField>]">
+<div class="tc-menu-list-item">
+<$view field=<<dateField>> format="date" template=<<format>>/>
+<$list filter=`[enlist<tv-tids>sameday:$(dateField)${!!$(dateField)$}]`>
+<div class="tc-menu-list-subitem">
+<<timeline-link>>
+</div>
+</$list>
+</div>
+</$list>
+</$set>
+</div>
+\end

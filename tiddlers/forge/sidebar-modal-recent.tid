@@ -2,11 +2,12 @@ caption: 最近
 class: multicol3
 created: 20250412152201482
 creator: 马不前
-modified: 20250412153422380
+modified: 20250829082959198
 modifier: 马不前
 tags: sidebar-modal
 title: sidebar-modal-recent
 
 <div class="sh-multicol3 ">
-<$transclude tiddler="$:/core/ui/SideBar/Recent" mode="block"/>
+<$transclude $variable="timeline" dateField="modified" format={{$:/language/RecentChanges/DateFormat}} limit={{$:/config/RecentLimit}} subfilter="!in-tagtree-of:inclusive[Forge]"/>
+
 </div>

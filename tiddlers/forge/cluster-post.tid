@@ -1,7 +1,7 @@
 code-body: yes
 created: 20250715150634934
 creator: 马不前
-modified: 20250715154854606
+modified: 20250807132242456
 modifier: 马不前
 tags: cluster
 title: cluster-post
@@ -52,6 +52,14 @@ title: cluster-post
 <%endif%>
 \end
 
+\procedure postUp()
+<%if [<currentTiddler>has[postUp]] %>
+	<$link to={{!!postUp}}>{{!!postUp}}</$link>
+<%else%>
+<small>Null</small>
+<%endif%>
+\end
+
 <div style="font-size: 1.25em;line-height: 1.2em;" >
 
 |tc-max-width tc-first-col-min-width tc-edit-max-width tc-table-no-border tc-first-link-nowrap|k
@@ -59,6 +67,7 @@ title: cluster-post
 |Topic |<<postTopic>>|
 |Ref |<<postRef>>|
 |Point |<<postPoint>>|
+|Up |<<postUp>>|
 |<$transclude mode="block"/>|<|
 
 </div>

@@ -1,6 +1,6 @@
 created: 20250603214257430
 creator: 马不前
-modified: 20250603214336051
+modified: 20250819123521687
 modifier: 马不前
 tags: homepage-Control-Panel
 title: homepage-Control-Panel-default
@@ -9,21 +9,31 @@ title: homepage-Control-Panel-default
 \function config-title() [[$:/config/homepage/buttons/Visibility]get[text]jsonget<listItem>substitute[]]
 
 <div style="column-count: 3; column-gap: 20px;  padding: 20px;" >
-
 <$set name="tv-config-toolbar-icons" value="yes">
-
 <$set name="tv-config-toolbar-text" value="yes">
-
 	<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]" variable="listItem">
 		<$list filter="[<config-title>!match[hide]]" storyview="pop" variable="ignore">
-			<$let >
-				<$transclude $tiddler=<<listItem>> $mode="block"/>
-			</$let>
+			<$transclude $tiddler=<<listItem>> $mode="block"/>
 		</$list>
 	</$list>
+<%if [all[shadows+tiddlers]tag[$:/tags/Layout]] %>
+<$list filter="[all[shadows+tiddlers]tag[$:/tags/Layout]]" variable="layoutItem">
+<$set name="descriptionContent" filter={{{ [<layoutItem>get[description]] }}} >
 
+<$button class=<<tv-config-toolbar-class>> tooltip=<<descriptionContent>>  aria-label=<<descriptionContent>> >
+<$action-setfield $tiddler="$:/layout" text=<<layoutItem>> />
+<%if [<tv-config-toolbar-icons>match[yes]] %>
+<$transclude $tiddler={{{ [<layoutItem>get[icon]] }}}  />
+<%endif%>
+<%if [<tv-config-toolbar-text>match[yes]] %>
+<span class="tc-btn-text">
+<$text text={{{ [<layoutItem>get[name]addsuffix[ Layout]] }}}/>
+</span>
+<%endif%>
+</$button>
 </$set>
-
+</$list>
+<%endif%>
 </$set>
-
+</$set>
 </div>

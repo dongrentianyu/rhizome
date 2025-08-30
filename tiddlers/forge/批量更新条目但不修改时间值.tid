@@ -1,0 +1,25 @@
+created: 20250805100024381
+creator: 马不前
+modified: 20250805100102976
+modifier: 马不前
+tags: 太微自用模块
+title: 批量更新条目但不修改时间值
+
+<$edit-text tiddler="$:/state/self/batch-modified" class="tc-edit-texteditor w-100" placeholder="请输入筛选器表达式"  tag="input"/>
+
+<$button>
+<$list filter="[subfilter{$:/state/self/batch-modified}]">
+<$action-setfield $tiddler=<<currentTiddler>> selectState="selected" $timestamp="no"/>
+</$list>
+更新
+</$button>
+<$button>
+<$list filter="[subfilter{$:/state/self/batch-modified}]">
+<$action-deletefield $tiddler=<<currentTiddler>> $field="selectState"  $timestamp="no"/>
+</$list>
+还原更新
+</$button>
+<$button>
+<$action-deletefield $tiddler="$:/state/self/batch-modified" $field="text"  $timestamp="no"/>
+清空输入框 
+</$button>
