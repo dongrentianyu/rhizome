@@ -1,0 +1,13 @@
+code-body: yes
+created: 20250830063802483
+creator: 马不前
+modified: 20250830122457702
+modifier: 马不前
+tags: Visitor-view
+title: VV-content
+
+<%if [[$:/state/vv/main]has[text]] %>
+<$transclude tiddler={{$:/state/vv/main}} mode="inline"/>
+<%else%>
+{{VV-layout-main}}
+<%endif%>

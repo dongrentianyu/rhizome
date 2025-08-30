@@ -1,0 +1,15 @@
+created: 20250830121630665
+creator: 马不前
+modified: 20250830134956023
+modifier: 马不前
+tags: VV-layout-recommended VV-Resizer
+title: VV-Resizer-recommended-center
+
+<$linkcatcher to="$:/state/vv/recommended">
+<div class="vv-reader" >
+<h2 style="text-align:center;"> <$text text={{{ [{$:/state/vv/recommended}] }}} /></h2>
+<div class="vv-reader-content" >
+<$transclude tiddler={{{ [{$:/state/vv/recommended}!is[blank]] }}} mode="block"/>
+</div>
+</div>
+</$linkcatcher>

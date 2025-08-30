@@ -1,29 +1,120 @@
 created: 20250822122836488
 creator: 马不前
-modified: 20250822124331586
+modified: 20250830135155727
 modifier: 马不前
 tags: Visitor-view $:/tags/Stylesheet
 title: VV-css
 
-.VV-button{
-    font-size: 24px;
-    line-height: 1.25em;
-    margin: 10px;
+.vv-body {
+    /* 确保 body 元素没有默认的边距和内边距 */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    font-size: 1.25em;
 }
-.VV-main{
+.vv-main{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    align-content: stretch;
-    width: 90%;
-    height: 90vh;
-    overflow: auto; /* 当内容溢出时显示滚动条 */
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    max-height: 100vh;
+    width: 100%;
+}
+.vv-main p {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.vv-title {
+    margin-top: 2em;
+    padding: 0;
+}
+.vv-title h1{
+   font-size: 3.5em;
+   margin-bottom: 0em;
+}
+.vv-title h2{
+    color: #ccc;
+}
+.vv-button-group {
+    margin-top: 3em; /* 在标题和按钮之间创建空间 */
+}
+.vv-button{
+    background-color: #1a1a1a;
+    color: white;
+    line-height: 1.2em;
+    margin: 5px;
+    font-size: 1.5em;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* border: 2px solid #ccc; */
+    border-radius: 10px !important;
+    background-color: transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.vv-button:hover {
+    background-color: <<colour message-background>>;
+    border-color: <<colour message-border>>;
+    color: #1a1a1a;
+}
+.vv-reader{
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+}
+.vv-reader-content{
+    margin: 0 10px 10px 10px;
+    padding: 20px;
+    height: 80%;
+    overflow: auto;
     /* 隐藏滚动条（适用于 WebKit 浏览器，如 Chrome、Safari） */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    border-radius: 10px;
+}
+.vv-sidebar{
+    margin: 0 10px 10px 10px;
     padding: 10px;
-    margin: 10px;
+    margin-top: 2em;
+    margin-bottom: 20px;
+    height: 70%;
+    overflow: auto;
+    /* 隐藏滚动条（适用于 WebKit 浏览器，如 Chrome、Safari） */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+/* 以下是对Resizer插件的样式调整，通常是去除了按钮边框和更改了分隔条的样式 */
+.tc-panel-expand-btn {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 5px;
+	border-radius: 3px;
+	z-index: 1;
+}
+.tc-panel-collapse-btn,
+.tc-panel-expand-btn {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 5px;
+	border-radius: 3px;
+	z-index: 1;
+	border: 0px;
+}
+.tc-panel-splitter-vertical,
+.tc-panel-splitter-horizontal {
+	flex-shrink: 0;
+	position: relative;
+	background: #1a1a1a;
+	transition: background 0.2s ease;
 }

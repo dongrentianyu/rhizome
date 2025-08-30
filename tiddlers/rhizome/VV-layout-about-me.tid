@@ -1,0 +1,25 @@
+caption: About me
+created: 20250830063252674
+creator: 马不前
+modified: 20250830112731178
+modifier: 马不前
+tags: VV-layout
+title: VV-layout-about-me
+
+<div class="vv-reader" >
+<div class="vv-reader-content" >
+
+! About me
+
+{{马不前}}
+
+
+</div>
+<center>
+<$button class="tc-btn-invisible vv-button" tooltip="回到主界面" aria-label="回到主界面">
+<$action-setfield $tiddler="$:/layout" text="VV-layout" />
+<$action-setfield $tiddler="$:/state/vv/main" text="" />
+回到主界面
+</$button>
+</center>
+</div>

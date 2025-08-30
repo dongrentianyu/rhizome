@@ -3,14 +3,14 @@ created: 20250819150324010
 creator: 马不前
 description: Visitor view
 icon: $:/core/images/excise
-modified: 20250822122542548
+modified: 20250830131028431
 modifier: 马不前
 name: VV
 tags: $:/tags/Layout Visitor-view
 title: VV-layout
 
 \whitespace trim
-\import [subfilter{$:/core/config/GlobalImportFilter}]
+\import [subfilter{$:/core/config/GlobalImportFilter}] Resizer-css
 \define containerClasses()
 tc-page-container tc-language-$(languageTitle)$ your-plugin-name-container
 \end
@@ -23,7 +23,7 @@ tc-page-container tc-language-$(languageTitle)$ your-plugin-name-container
 	<$messagecatcher $tm-navigate=<<redirected-navigate-actions>>>
 		{{$:/core/ui/CommandPaletteTemplate}}
 		<div class=<<containerClasses>>>
-			{{vv-layout-main}}
+			{{VV-content}}
 		</div>
 	</$messagecatcher>
 </$navigator>
