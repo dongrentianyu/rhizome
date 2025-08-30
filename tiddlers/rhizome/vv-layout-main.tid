@@ -1,6 +1,6 @@
 created: 20250819150748056
 creator: 马不前
-modified: 20250830122457695
+modified: 20250830144719850
 modifier: 马不前
 tags: VV-layout
 title: VV-layout-main
@@ -18,6 +18,7 @@ title: VV-layout-main
 </$button>
 <br>
 <$button class="tc-btn-invisible vv-button" tooltip="查看最近更新" aria-label="最近更新">
+<$action-setfield $tiddler="$:/state/vv/main" text="VV-layout-lastUpdated" />
  最近更新 
 </$button>
 <$button class="tc-btn-invisible vv-button" tooltip="查看推荐阅读" aria-label="推荐阅读">

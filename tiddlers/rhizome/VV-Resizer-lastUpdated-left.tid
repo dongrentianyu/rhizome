@@ -1,0 +1,21 @@
+created: 20250830144428785
+creator: 马不前
+modified: 20250830150624389
+modifier: 马不前
+tags: VV-Resizer VV-layout-lastUpdated
+title: VV-Resizer-lastUpdated-left
+
+<div class="vv-reader" >
+<div class="vv-sidebar" >
+<$linkcatcher to="$:/state/vv/lastUpdated">
+<<list-links "[!is[system]!sort[modified]limit[10]]">>
+</$linkcatcher>
+</div>
+<center>
+<$button class="tc-btn-invisible vv-button" tooltip="回到主界面" aria-label="主界面">
+<$action-setfield $tiddler="$:/layout" text="VV-layout" />
+<$action-setfield $tiddler="$:/state/vv/main" text="" />
+ 返回 
+</$button>
+</center>
+</div>

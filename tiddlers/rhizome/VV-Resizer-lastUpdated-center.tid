@@ -1,0 +1,15 @@
+created: 20250830144219636
+creator: 马不前
+modified: 20250830144353088
+modifier: 马不前
+tags: VV-Resizer VV-layout-lastUpdated
+title: VV-Resizer-lastUpdated-center
+
+<$linkcatcher to="$:/state/vv/lastUpdated">
+<div class="vv-reader" >
+<h2 style="text-align:center;"> <$text text={{{ [{$:/state/vv/lastUpdated}] }}} /></h2>
+<div class="vv-reader-content" >
+<$transclude tiddler={{{ [{$:/state/vv/lastUpdated}!is[blank]] }}} mode="block"/>
+</div>
+</div>
+</$linkcatcher>

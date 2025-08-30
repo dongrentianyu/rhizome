@@ -1,0 +1,22 @@
+caption: 最近更新
+created: 20250830143921920
+creator: 马不前
+modified: 20250830144631847
+modifier: 马不前
+tags: VV-layout
+title: VV-layout-lastUpdated
+
+<div class="tc-three-panels vv-reader">
+<$transclude 
+$variable="collapsible-three-column-panels" 
+leftContent="VV-Resizer-lastUpdated-left" 
+centerContent="VV-Resizer-lastUpdated-center" 
+rightContent="VV-Resizer-lastUpdated-right" 
+leftWidth="10%" 
+rightWidth="10%" 
+minWidth="5%" 
+minHeight="350px" 
+maxWidth={{{ [[calc(85% - ]mediaquery[(pointer: coarse)]addsuffix[20px)]] :else[[calc(85% - 5px)]] }}} 
+leftStateTiddler="$:/state/vv/lastUpdated/left" 
+rightStateTiddler="$:/state/vv/lastUpdated/right"/>
+</div>
