@@ -1,7 +1,7 @@
 caption: 推荐阅读
 created: 20250830115617879
 creator: 马不前
-modified: 20250830131007677
+modified: 20250830151121058
 modifier: 马不前
 tags: VV-layout
 title: VV-layout-recommended
@@ -12,8 +12,8 @@ $variable="collapsible-three-column-panels"
 leftContent="VV-Resizer-recommended-left" 
 centerContent="VV-Resizer-recommended-center" 
 rightContent="VV-Resizer-recommended-right" 
-leftWidth="10%" 
-rightWidth="10%" 
+leftWidth="25%" 
+rightWidth="25%" 
 minWidth="5%" 
 minHeight="350px" 
 maxWidth={{{ [[calc(85% - ]mediaquery[(pointer: coarse)]addsuffix[20px)]] :else[[calc(85% - 5px)]] }}} 
