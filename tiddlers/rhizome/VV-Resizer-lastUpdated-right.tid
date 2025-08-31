@@ -1,6 +1,6 @@
 created: 20250830144529275
 creator: 马不前
-modified: 20250830144558251
+modified: 20250831125742001
 modifier: 马不前
 tags: VV-Resizer VV-layout-lastUpdated
 title: VV-Resizer-lastUpdated-right
@@ -8,11 +8,11 @@ title: VV-Resizer-lastUpdated-right
 <div class="vv-reader" >
 <div class="vv-sidebar" >
 <$linkcatcher to="$:/state/vv/lastUpdated">
-<$list filter="[all[current]!is[system]!is[shadow]]">
+<%if [{$:/state/vv/lastUpdated}!is[system]!is[shadow]] %>
 <$tiddler tiddler={{$:/state/vv/lastUpdated}} >
 	<$transclude $tiddler="$:/plugins/mabuqian/gumo-customisation/node-explorer-colorful"/>
 </$tiddler>
-</$list>
+<%endif%>
 </$linkcatcher>
 </div>
 </div>

@@ -1,6 +1,6 @@
 created: 20250831081040088
 creator: 马不前
-modified: 20250831081116896
+modified: 20250831125633080
 modifier: 马不前
 tags: VV-Resizer VV-layout-MOC
 title: VV-Resizer-MOC-right
@@ -8,11 +8,11 @@ title: VV-Resizer-MOC-right
 <div class="vv-reader" >
 <div class="vv-sidebar" >
 <$linkcatcher to="$:/state/vv/MOC">
-<$list filter="[all[current]!is[system]!is[shadow]]">
+<%if [{$:/state/vv/MOC}!is[system]!is[shadow]] %>
 <$tiddler tiddler={{$:/state/vv/MOC}} >
 	<$transclude $tiddler="$:/plugins/mabuqian/gumo-customisation/node-explorer-colorful"/>
 </$tiddler>
-</$list>
+<%endif%>
 </$linkcatcher>
 </div>
 </div>

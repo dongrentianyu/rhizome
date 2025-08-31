@@ -1,19 +1,23 @@
 caption: About me
+code-body: yes
 created: 20250830063252674
 creator: 马不前
-modified: 20250831093019412
+modified: 20250831131433695
 modifier: 马不前
 tags: VV-layout
 title: VV-layout-about-me
 
 <div class="vv-reader" >
-<div class="vv-reader-content" >
-
-! About me
+<div class="vv-reader-single-title"><$text text={{{ [{$:/state/vv/about-me}!is[blank]else[About me]] }}} /></div>
+<div class="vv-reader-single-content" >
+<$linkcatcher to="$:/state/vv/about-me">
+<%if [[$:/state/vv/about-me]has[text]] %>
+<$transclude tiddler={{{ [{$:/state/vv/about-me}!is[blank]] }}} mode="block"/>
+<%else%>
 
 {{马不前}}
-
-
+<%endif%>
+</$linkcatcher>
 </div>
 <center>
 <$button class="tc-btn-invisible vv-button-small" tooltip="回到主界面" aria-label="回到主界面">

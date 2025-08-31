@@ -1,13 +1,13 @@
 created: 20250822122231422
 creator: 马不前
-modified: 20250831082549417
+modified: 20250831094932962
 modifier: 马不前
 tags: Visitor-view
 title: VV-readme
 
 * 状态条目
 ** `$:/state/vv/main` 表示一级，主要的层级
-** `$:/state/vv/main/recommended` 类似的，表示二级状态条目
+** `$:/state/vv/recommended` 类似的，表示二级状态条目
 * 字词翻译
 ** 推荐阅读: Recommended Reading
 ** 最近更新: Recent Updates

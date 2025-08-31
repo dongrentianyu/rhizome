@@ -1,6 +1,6 @@
 created: 20250830121836773
 creator: 马不前
-modified: 20250830135308223
+modified: 20250831125705046
 modifier: 马不前
 tags: VV-layout-recommended VV-Resizer
 title: VV-Resizer-recommended-right
@@ -8,11 +8,11 @@ title: VV-Resizer-recommended-right
 <div class="vv-reader" >
 <div class="vv-sidebar" >
 <$linkcatcher to="$:/state/vv/recommended">
-<$list filter="[all[current]!is[system]!is[shadow]]">
+<%if [{$:/state/vv/recommended}!is[system]!is[shadow]] %>
 <$tiddler tiddler={{$:/state/vv/recommended}} >
 	<$transclude $tiddler="$:/plugins/mabuqian/gumo-customisation/node-explorer-colorful"/>
 </$tiddler>
-</$list>
+<%endif%>
 </$linkcatcher>
 </div>
 </div>

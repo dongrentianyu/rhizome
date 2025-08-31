@@ -1,6 +1,6 @@
 created: 20250822122836488
 creator: 马不前
-modified: 20250831093200444
+modified: 20250831132226393
 modifier: 马不前
 tags: Visitor-view $:/tags/Stylesheet
 title: VV-css
@@ -90,11 +90,28 @@ title: VV-css
     margin: 0;
     padding: 0;
 }
+.vv-reader-single-title{
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    padding-top: 30px;
+}
+.vv-reader-single-content{
+    margin: 0 10px 10px 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    height: 70vh;
+    overflow: auto;
+    /* 隐藏滚动条（适用于 WebKit 浏览器，如 Chrome、Safari） */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
 .vv-reader-content{
     margin: 0 10px 10px 10px;
-    margin-bottom: 20px;
     padding: 20px;
-    height: 85%;
+    height: 70%;
     overflow: auto;
     /* 隐藏滚动条（适用于 WebKit 浏览器，如 Chrome、Safari） */
     scrollbar-width: none; /* Firefox */
