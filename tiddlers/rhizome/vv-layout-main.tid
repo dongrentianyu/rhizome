@@ -1,6 +1,6 @@
 created: 20250819150748056
 creator: 马不前
-modified: 20250831075818428
+modified: 20250831081852189
 modifier: 马不前
 tags: VV-layout
 title: VV-layout-main
@@ -43,9 +43,14 @@ title: VV-layout-main
 </$button>
 <br>
 <$button class="tc-btn-invisible vv-button" tooltip="查看本站 MOC" aria-label=" MOC ">
+<$action-setfield $tiddler="$:/state/vv/main" text="VV-layout-MOC" />
+<%if [[$:/state/vv/MOC]!has[text]] %>
+<$action-setfield $tiddler="$:/state/vv/MOC" text={{{ [[VV-defalut]getindex[MOC]] }}} />
+<%endif%>
  MOC 
 </$button>
 <$button class="tc-btn-invisible vv-button" tooltip="查看本站统计" aria-label="统计">
+<$action-setfield $tiddler="$:/state/vv/main" text="VV-layout-statistics" />
  统计 
 </$button>
 <br>

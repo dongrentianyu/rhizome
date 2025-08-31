@@ -1,0 +1,21 @@
+created: 20250831080805580
+creator: 马不前
+modified: 20250831080848140
+modifier: 马不前
+tags: VV-Resizer VV-layout-MOC
+title: VV-Resizer-MOC-left
+
+<div class="vv-reader" >
+<div class="vv-sidebar" >
+<$linkcatcher to="$:/state/vv/MOC">
+<<list-links "[tag[谈讬]]">>
+</$linkcatcher>
+</div>
+<center>
+<$button class="tc-btn-invisible vv-button-small" tooltip="回到主界面" aria-label="主界面">
+<$action-setfield $tiddler="$:/layout" text="VV-layout" />
+<$action-setfield $tiddler="$:/state/vv/main" text="" />
+ 返回 
+</$button>
+</center>
+</div>
