@@ -1,0 +1,15 @@
+created: 20250831064815186
+creator: 马不前
+modified: 20250831065955083
+modifier: 马不前
+tags: VV-Resizer VV-layout-random
+title: VV-Resizer-random-center
+
+<$linkcatcher to="$:/state/vv/random">
+<div class="vv-reader" >
+<h2 style="text-align:center;"> <$text text={{{ [{$:/state/vv/random}] }}} /></h2>
+<div class="vv-reader-content" >
+<$transclude tiddler={{{ [{$:/state/vv/random}!is[blank]] }}} mode="block"/>
+</div>
+</div>
+</$linkcatcher>

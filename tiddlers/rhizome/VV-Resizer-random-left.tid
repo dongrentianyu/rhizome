@@ -1,0 +1,28 @@
+created: 20250831064642824
+creator: 马不前
+modified: 20250831075647867
+modifier: 马不前
+tags: VV-Resizer VV-layout-random
+title: VV-Resizer-random-left
+
+<div class="vv-reader" >
+<div class="vv-sidebar-random" >
+<$linkcatcher to="$:/state/vv/random">
+<<list-links "[[$:/state/vv/random]get[random]enlist-input[]]">>
+</$linkcatcher>
+</div>
+<center>
+<$button class="tc-btn-invisible vv-button-small" tooltip="随机列表" aria-label="随机展示">
+<$wikify name="random-list-wikify" text={{VV-layout-random-filter}} >
+<$action-setfield $tiddler="$:/state/vv/random" random=<<random-list-wikify>> />
+</$wikify>
+ 随机 
+</$button>
+<br>
+<$button class="tc-btn-invisible vv-button-small" tooltip="回到主界面" aria-label="主界面">
+<$action-setfield $tiddler="$:/layout" text="VV-layout" />
+<$action-setfield $tiddler="$:/state/vv/main" text="" />
+ 返回 
+</$button>
+</center>
+</div>

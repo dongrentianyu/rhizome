@@ -1,0 +1,9 @@
+code-body: yes
+created: 20250831074739425
+creator: 马不前
+modified: 20250831075743163
+modifier: 马不前
+tags: VV-layout-random
+title: VV-layout-random-filter
+
+<$list filter="[all[shadows]prefix[$:/core/images/]choose-random[4]addsuffix[ ]]" />

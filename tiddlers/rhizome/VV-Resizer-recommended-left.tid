@@ -1,6 +1,6 @@
 created: 20250830120656498
 creator: 马不前
-modified: 20250830135415633
+modified: 20250831071538692
 modifier: 马不前
 tags: VV-layout-recommended VV-Resizer
 title: VV-Resizer-recommended-left
@@ -12,7 +12,7 @@ title: VV-Resizer-recommended-left
 </$linkcatcher>
 </div>
 <center>
-<$button class="tc-btn-invisible vv-button" tooltip="回到主界面" aria-label="主界面">
+<$button class="tc-btn-invisible vv-button-small" tooltip="回到主界面" aria-label="主界面">
 <$action-setfield $tiddler="$:/layout" text="VV-layout" />
 <$action-setfield $tiddler="$:/state/vv/main" text="" />
  返回 
