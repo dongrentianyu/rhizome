@@ -3,7 +3,7 @@ created: 20250819150324010
 creator: 马不前
 description: Visitor view
 icon: $:/core/images/excise
-modified: 20250830131028431
+modified: 20250831082351366
 modifier: 马不前
 name: VV
 tags: $:/tags/Layout Visitor-view
@@ -23,7 +23,11 @@ tc-page-container tc-language-$(languageTitle)$ your-plugin-name-container
 	<$messagecatcher $tm-navigate=<<redirected-navigate-actions>>>
 		{{$:/core/ui/CommandPaletteTemplate}}
 		<div class=<<containerClasses>>>
-			{{VV-content}}
+			<%if [[$:/state/vv/main]has[text]] %>
+				<$transclude tiddler={{$:/state/vv/main}} mode="inline"/>
+			<%else%>
+				{{VV-layout-main}}
+			<%endif%>
 		</div>
 	</$messagecatcher>
 </$navigator>

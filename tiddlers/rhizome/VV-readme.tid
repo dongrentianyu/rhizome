@@ -1,6 +1,6 @@
 created: 20250822122231422
 creator: 马不前
-modified: 20250830132037751
+modified: 20250831082549417
 modifier: 马不前
 tags: Visitor-view
 title: VV-readme
@@ -17,3 +17,5 @@ title: VV-readme
 ** 涉及到Resizer相关的，都放在VV-Resizer下
 ** VV-Resizer-recomended-left
 * 条目默认值，或参数值，放在VV-default里
+* 新写的条目，需要作为默认值存放的
+** 放在了VV-content 标签下

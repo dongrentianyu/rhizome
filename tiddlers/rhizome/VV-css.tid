@@ -1,6 +1,6 @@
 created: 20250822122836488
 creator: 马不前
-modified: 20250831072032055
+modified: 20250831093200444
 modifier: 马不前
 tags: Visitor-view $:/tags/Stylesheet
 title: VV-css
@@ -92,8 +92,9 @@ title: VV-css
 }
 .vv-reader-content{
     margin: 0 10px 10px 10px;
+    margin-bottom: 20px;
     padding: 20px;
-    height: 80%;
+    height: 85%;
     overflow: auto;
     /* 隐藏滚动条（适用于 WebKit 浏览器，如 Chrome、Safari） */
     scrollbar-width: none; /* Firefox */
