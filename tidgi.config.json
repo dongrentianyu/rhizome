@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "$schema": "https://raw.githubusercontent.com/tiddly-gittly/TidGi-Desktop/master/src/services/workspaces/tidgi.config.schema.json",
+  "id": "PCSsh-IGi1enhRprpNVoy",
+  "name": "rhizome",
+  "storageService": "github",
+  "userName": "马不前",
+  "enableHTTPAPI": true,
+  "backupOnInterval": false,
+  "syncOnStartup": false,
+  "gitUrl": "https://github.com/dongrentianyu/rhizome"
+}
